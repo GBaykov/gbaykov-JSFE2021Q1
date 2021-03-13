@@ -27,20 +27,20 @@
       <button class="btn btn-letters">Letters</button>
     </div>
     <div class="piano">
-      <div class="piano-key" data-letter="D" data-note="c" data-code="KeyD"></div>
-      <div class="piano-key" data-letter="F" data-note="d"></div>
-      <div class="piano-key" data-letter="G" data-note="e"></div>
-      <div class="piano-key" data-letter="H" data-note="f"></div>
-      <div class="piano-key" data-letter="J" data-note="g"></div>
-      <div class="piano-key" data-letter="K" data-note="a"></div>
-      <div class="piano-key" data-letter="L" data-note="b"></div>
+      <div class="piano-key" data-letter="D" data-note="c" data-code="KeyD" ></div>
+      <div class="piano-key" data-letter="F" data-note="d" data-code="KeyF" ></div>
+      <div class="piano-key" data-letter="G" data-note="e" data-code="KeyG" ></div>
+      <div class="piano-key" data-letter="H" data-note="f" data-code="KeyH" ></div>
+      <div class="piano-key" data-letter="J" data-note="g" data-code="KeyJ" ></div>
+      <div class="piano-key" data-letter="K" data-note="a"  data-code="KeyK" ></div>
+      <div class="piano-key" data-letter="L" data-note="b" data-code="KeyL" ></div>
       <div class="keys-sharp">
-        <div class="piano-key sharp" data-letter="R" data-note="c♯"></div>
-        <div class="piano-key sharp" data-letter="T" data-note="d♯"></div>
+        <div class="piano-key sharp" data-letter="R" data-note="c♯" data-code="KeyR" ></div>
+        <div class="piano-key sharp" data-letter="T" data-note="d♯" data-code="KeyT" ></div>
         <div class="piano-key sharp none"></div>
-        <div class="piano-key sharp" data-letter="U" data-note="f♯"></div>
-        <div class="piano-key sharp" data-letter="I" data-note="g♯"></div>
-        <div class="piano-key sharp" data-letter="O" data-note="a♯"></div>
+        <div class="piano-key sharp" data-letter="U" data-note="f♯" data-code="KeyU" ></div>
+        <div class="piano-key sharp" data-letter="I" data-note="g♯" data-code="KeyI" ></div>
+        <div class="piano-key sharp" data-letter="O" data-note="a♯" data-code="KeyO" ></div>
       </div>
     </div>
     <button class="fullscreen openfullscreen"></button>
@@ -53,83 +53,21 @@
       </a>
     </div>
   </footer>
-  <audio data-code="KeyD" data-key="68" src="assets/audio/a.mp3"></audio>
-  <audio data-key="70" src="assets/audio/a♯.mp3"></audio>
-  <audio data-key="71" src="assets/audio/b.mp3"></audio>
-  <audio data-key="72" src="assets/audio/c.mp3"></audio>
-  <audio data-key="74" src="assets/audio/c♯.mp3"></audio>
-  <audio data-key="75" src="assets/audio/d.mp3"></audio>
-  <audio data-key="76" src="assets/audio/d♯.mp3"></audio>
-  <audio data-key="82" src="assets/audio/e.mp3"></audio>
-  <audio data-key="84" src="assets/audio/f.mp3"></audio>
-  <audio data-key="85" src="assets/audio/f♯.mp3"></audio>
-  <audio data-key="73" src="assets/audio/g.mp3"></audio>
-  <audio data-key="79" src="assets/audio/g♯.mp3"></audio>
-  <script>
-
-const piano = document.querySelector('.piano');
-const pianoКeys = document.querySelectorAll('.piano-key');
-
-
-function playAudio(src) {
-    const audio = new Audio();
-    audio.src = src;
-    audio.currentTime = 0;
-    audio.play();
-  }
-  // фунукция для определения зажатой кнопки мыши. Начало//
-  let isMouseDown = false;
-document.body.onmousedown = function() { 
-  isMouseDown = true;
-}
-document.body.onmouseup = function() {
-  isMouseDown = false;
-}
- //функция для определения зажатой кнопки мыши. Конец//
-
-piano.addEventListener('click', (event) => {
-    if(event.target.classList.contains('piano-key')) {
-        const note = event.target.dataset.note;
-        const src = `/assets/audio/${note}.mp3`;
-        playAudio(src);
-            pianoКeys.forEach((el) => {
-              if(el.classList.contains('active')) {
-              el.classList.remove('active');
-      }
-    }); event.target.classList.add('active');
-    }   
-  });
- 
-
-piano.addEventListener('mouseover', (event) => {
-    if(event.target.classList.contains('piano-key')) {
-        
-      const note = event.target.dataset.note;
-        const src = `/assets/audio/${note}.mp3`;
-        if (isMouseDown) {
-          piano.addEventListener('mousedown',playAudio(src) );
-}  
-piano.removeEventListener('mouseup',playAudio );
-    }   
-  });
-        
- 
-  
-  function playSound(e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-    if (!audio) return;
-    audio.currentTime = 0;
-    audio.play();
-  }
-  window.addEventListener('keydown', playSound)
-
-  
+  <audio data-code="KeyK" data-key="68" src="assets/audio/a.mp3"></audio>
+  <audio data-code="KeyO" data-key="70" src="assets/audio/a♯.mp3"></audio>
+  <audio data-code="KeyL" data-key="71" src="assets/audio/b.mp3"></audio>
+  <audio data-code="KeyD" data-key="72" src="assets/audio/c.mp3"></audio>
+  <audio data-code="KeyR" data-key="74" src="assets/audio/c♯.mp3"></audio>
+  <audio data-code="KeyF" data-key="75" src="assets/audio/d.mp3"></audio>
+  <audio data-code="KeyT" data-key="76" src="assets/audio/d♯.mp3"></audio>
+  <audio data-code="KeyG" data-key="82" src="assets/audio/e.mp3"></audio>
+  <audio data-code="KeyH" data-key="84" src="assets/audio/f.mp3"></audio>
+  <audio data-code="KeyU" data-key="85" src="assets/audio/f♯.mp3"></audio>
+  <audio data-code="KeyJ" data-key="73" src="assets/audio/g.mp3"></audio>
+  <audio data-code="KeyI" data-key="79" src="assets/audio/g♯.mp3"></audio>
   
 
-
-
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
