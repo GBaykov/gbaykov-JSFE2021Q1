@@ -22,7 +22,7 @@ document.body.onmouseup = function() {
  piano.addEventListener('mousedown', (event) => {
     if(event.target.classList.contains('piano-key')) {
         const note = event.target.dataset.note;
-        const src = `/assets/audio/${note}.mp3`;
+        const src = `assets/audio/${note}.mp3`;
         playAudio(src);
         pianoКeys.forEach((el) => {
           if(el.classList.contains('piano-key-active', 'piano-key-active-pseudo')) {
@@ -54,7 +54,7 @@ piano.addEventListener('mouseover', (event) => {
     if(event.target.classList.contains('piano-key')) {
         
       const note = event.target.dataset.note;
-        const src = `/assets/audio/${note}.mp3`;
+        const src = 'assets/audio/${note}.mp3`;
         if (isMouseDown) {
           piano.addEventListener('mousedown',playAudio(src) );
           pianoКeys.forEach((el) => {
