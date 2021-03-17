@@ -426,6 +426,7 @@ color: #F7F7F7
 
 
 }
+
  .header_wrapper{
     
     display: flex;
@@ -442,16 +443,18 @@ color: #F7F7F7
 .header_logo-link{
     margin-right:16px; 
 }
+
  .header_list{
     display: flex;
     flex-wrap: wrap;  
+   
  }
  .header_item{
      margin-right: 61px;
     
  }
  .header_item:last-child{
-    
+    margin-right: 155px
  }
  .header_link{
     font-family: "Open Sans";
@@ -462,6 +465,7 @@ color: #F7F7F7
      color: #F7F7F7;
     text-decoration: none;
  }
+ 
  .right_header {
     position: absolute;
     top: 50%;
@@ -472,7 +476,7 @@ color: #F7F7F7
     opacity: .75; 
  }
 #sign_in{
-    background: url('assets/img/svg/sign\ in.svg in.svg');
+    background: url('assets/img/svg/sign\ in.svg');
     width: 120px;
     font-family: "Roboto";
     font-size: 23px;
@@ -484,7 +488,9 @@ box-sizing: border-box;
 position: absolute;
 margin-top: -0.625em;
 border: 0;
+margin-left: 37px;
 }
+
 
  /*Header styles end*/
 
@@ -694,24 +700,34 @@ text-decoration: none;
 .footer_wrapper_i{
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: space-between ;
 }
 .footer_item{
-    padding-right: 85px;
+    margin-right: 90px;
     
 }
 .footer_item:last-child{
-    padding-right: 0;
+    margin-right: -15px;
 }
 .icons{
-    padding-right: 26px;
+    margin-right: 26px;
+    margin-top: 7px;
 }
 .icons:last-child{
-    padding-right: 0;
+    margin-left:-55px;
+    
 }
 .footer_item:hover,.icons:hover {
     opacity: 75%;
 }
 .footer_item:active,.icons:active {
     opacity: 50%;
+}
+.Roboto{
+    font-family: "Roboto";
+font-style: normal;
+font-weight: normal;
+font-size: 32px;
+line-height: 60px;
+color: #F7F7F7 
 }
