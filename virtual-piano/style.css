@@ -141,15 +141,17 @@ body {
 	bottom: -45px;
 	left: 20px;
 	transition: 0.3s;
-	pointer-events: none
+	pointer-events: none;
 }
 .piano-key::after {
 	display: none;
 	content: attr(data-letter);
+	pointer-events: none
 }
 .piano-key:hover::before,
 .piano-key:hover::after {
 	color: #d7dfe6;
+	pointer-events: none
 }
 
 .sharp:active {
@@ -159,20 +161,25 @@ body {
 .piano-key.sharp::before,
 .piano-key.sharp::after {
 	bottom: 175px;
-	left: 7px;
+	left: 7px;	
+	pointer-events: none
 }
 .piano-key.letter::before {
 	display: none;
+		pointer-events: none
 }
 .piano-key.letter::after {
 	display: block;
+		pointer-events: none
 }
 .piano-key-letter::before {
 	content: attr(data-letter);
+		pointer-events: none
 }
 
 .piano-key-remove-mouse:active::before {
 	color: #a2abb3;
+		pointer-events: none
 }
 
 .piano-key-active-pseudo:hover::after,
@@ -180,6 +187,7 @@ body {
 .piano-key-active::after,
 .piano-key-active::before {
 	color: #00b4a4;
+		pointer-events: none
 }
 
 .fullscreen {
@@ -300,11 +308,13 @@ body {
 		bottom: -35px;
 		left: 7px;
 		font-size: 22px;
+			pointer-events: none
 	}
 	.piano-key.sharp::before,
 	.piano-key.sharp::after {
 		bottom: 115px;
 		left: 3px;
+			pointer-events: none
 	}
 	.btn-container {
 		width: 244px;
