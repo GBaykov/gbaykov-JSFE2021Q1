@@ -54,7 +54,11 @@ piano.addEventListener('mouseover', (event) => {
     if(event.target.classList.contains('piano-key')) {
         
       const note = event.target.dataset.note;
+ virtual-piano
+        const src = 'assets/audio/${note}.mp3`;
+=======
         const src = `assets/audio/${note}.mp3`;
+ gh-pages
         if (isMouseDown) {
           piano.addEventListener('mousedown',playAudio(src) );
           pianoКeys.forEach((el) => {
