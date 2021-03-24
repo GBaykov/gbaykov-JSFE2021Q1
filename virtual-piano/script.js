@@ -94,3 +94,4 @@ piano.removeEventListener('mouseup',playAudio );
     } else if (document.fullscreenEnabled )  document.exitFullscreen();
   }
   document.querySelector('.fullscreen').addEventListener('click',toggleScreen);
+
