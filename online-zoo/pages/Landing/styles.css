@@ -496,9 +496,127 @@ line-height: 21px;
  /* HEADER ENDS*/
 
  /* favorite STARTS*/
+.favorite{
+    background: url("/assets/images/bgi-jpg.jpg") no-repeat top;
+    position: relative;
+    min-width: 1920px;
+    height: 940px;
+    overflow:hidden;
+}
+
+.favorite__wrapper{
+    
+}
+.favorite__watch{
+    
+}
+
+.favorite__watch-text{
+    position: absolute;
+    left: 360px;
+top: 206px;
+    width: 793px;
+height: 208px;
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 89px;
+line-height: 104px;
+color: #FEFEFE;
+}
+.favorite-btn{
+    position: absolute;
+width: 245px;
+height: 55px;
+left: 360px;
+top: 451px;
+cursor: pointer;
+}
+
+.favorite__gallery{
+    position: absolute;
+    
+}
+
+.line{
+    position: absolute;
+    left: 840px;
+    top: 588px;
+    /*right: 0px;*/
+    
+}
+.favorite__photoes{
+    position: absolute;
+    display: flex;
+    flex:wrap;
+    margin-left: 975px;
+    margin-top: 495px;
+    flex-direction: row;
+    justify-content:center;
+    
+}
+.favorite__animal{
+    
+    margin-top: -45px;
+    
+    
+    }
+    .favorite__animal:last-child{
+        margin-right: 0px;
+          
+    }
+    .favorite__animal:first-child{
+        margin-left: -46px;
+    }
+
+.panda{
+    width: 140px;
+height: 203px;
+margin-top: 45px;
+}
+.panda:hover{
+    /*width: 245px;
+height: 352px; */
+transform: scale(1.73);
+}
+
+.scrolle-favorits{
+    position: absolute;
+    left: 1161px;
+top: 778px;
+}
+
+.photo-count{
+    position: absolute;
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 28px;
+color: #FEFEFE;
+left: 96px;
+top: 0px;
+}
+.number-favorite{
+    position: absolute;
+    left: 96px;
+top: 100px;
+}
+.line-favorite{
+    position: absolute;
+width: 245px;
+height: 5px;
+left: 0px;
+top: 59px;
+}
+.line-number-favorite{
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    left: 30px;
+    top: 0px;
+}
 
 
 
-
- 
 /* favorite ENDS*/
