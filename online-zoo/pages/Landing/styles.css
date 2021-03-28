@@ -410,7 +410,6 @@ textarea {
 box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
 width: 1920px;
 height: 94px;
-
   }
 
   .header__wrapper {
@@ -421,7 +420,7 @@ height: 94px;
     justify-content:space-between;
     align-items:flex-end;
     padding-top: 15px;
-    
+   
   }
   .logo-light {
     width: 59px;
@@ -495,3 +494,11 @@ line-height: 21px;
    background: #FFFFFF;
 }
  /* HEADER ENDS*/
+
+ /* favorite STARTS*/
+
+
+
+
+ 
+/* favorite ENDS*/
