@@ -634,7 +634,130 @@ top: 722px;
     margin-bottom:0;
 } 
 
-
-
-
 /* favorite ENDS*/
+
+/* How it works STARTS*/
+
+.how{
+    background: #FFFFFF;
+    height: 883px;
+}
+.how-wrapper{
+    max-width: 790px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.how-header{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 56px;
+color: #333333;
+margin-bottom: 30px;
+}
+.how-text{
+    width: 790px;
+height: 80px;
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+color: #4F4F4F;
+margin-bottom: 30px;
+}
+.how-photo{
+    margin-bottom: 29px;
+}
+.how-counter{
+    
+    position: relative;
+margin-left: 272px;
+}
+.how-number{
+   
+    margin-left: 96px;
+    top: 0px;
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+}
+.how-scrolle{
+    margin-top: 8px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.how-dot{
+    position: absolute;
+    margin-top: -15px;
+}
+.how-btn{
+    margin-left: 272px;
+}
+
+
+/* How it works ENDS*/
+
+
+/* inspires STARTS*/
+
+.table{
+    position: absolute;
+    width: 1920px;
+    height: 413px;
+    background: #F2F2F2;
+    margin-top: -100px;
+}
+.inspires{
+    margin: 0 auto;
+    margin-top: 90px;
+width: 1200px;
+
+margin-left: 230px;
+}
+.taple-logo{
+    text-align: center;
+}
+.table-header{
+    text-align: center;
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 20px;
+line-height: 23px;
+}
+
+.table-text{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+}
+
+.table-first{
+    
+    
+}
+.table-first:last-child{
+   
+   
+}
+tr{
+
+}
+td{
+    width: 380px;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 10px 15px;
+}
+
+
+
+/* inspires ENDS*/
