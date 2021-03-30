@@ -710,13 +710,13 @@ margin-left: 272px;
     width: 1920px;
     height: 413px;
     background: #F2F2F2;
-    margin-top: -100px;
+    margin-top: -190px;
 }
 .inspires{
     margin: 0 auto;
     margin-top: 90px;
 width: 1200px;
-
+padding-top: 90px;
 margin-left: 335px;
 }
 .taple-logo{
@@ -868,3 +868,57 @@ margin-bottom: 14px;
 
 
 /* Pets in Zoo ENDS*/
+
+/* Pay and feed STARTS*/ 
+.pay{
+    width: 1920px;
+height: 754px;
+    background: #F2F2F2;
+}
+
+.pay-wrapper{
+    margin: 0 auto;
+}
+.pay-header{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 56px;
+text-align: center;
+color: #333333;
+padding-top: 100px;
+margin-bottom: 30px;
+}
+.pay-text{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+text-align: center;
+color: #4F4F4F;
+margin-bottom: 92px;
+}
+.pay-algoritm{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+.arrLine{
+    margin-top: 115px;
+}
+
+.pay-donate{
+    margin-left: 838px;
+}
+
+
+
+
+
+/* Pay and feed ENDS*/
