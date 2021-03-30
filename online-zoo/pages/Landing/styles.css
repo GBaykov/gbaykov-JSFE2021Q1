@@ -763,13 +763,106 @@ table{
 /* inspires ENDS*/
 
 /* Pets in Zoo STARTS*/
+.pets{
+    width: 1920px;
+    height: 854px;
+    
+}
+.pets-wrapper{
+    margin: 0 auto;
+    margin-top: 100px; 
+}
+.photo-wrapper{
+   
+}
+.pets-header{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 56px;
+text-align: center;
+color: #333333;
+margin-bottom: 35px;
+}
+.pets-photo{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1300px;
+    margin: 0 auto; 
+    margin-bottom: 30px;
+    
+}
+.pets-counter{
+    margin-bottom: 30px;
+}
+.arrow{
+    margin-top: 93px;
+    cursor: pointer;
+}
+.pets-counter{
+    text-align: center;
+    position: relative;
+}
+.pets-number{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 28px;
+color: #333333;
+margin-bottom: 5x;
+cursor: pointer;
+}
+.pets-btn{
+    margin-left: 836px;
+    
+}
+.pets-dot{
+    position: absolute;
+    margin-left: 838px;
+    margin-top: -15px;
+}
+.pets-scrolle{
+    cursor: pointer;
 
-
-
-
-
-
-
+}
+.photo-p{
+    position:relative;
+    
+}
+.photo-p:hover{
+    opacity: 0.8;
+    
+}
+.pets-elem{
+    overflow: hidden;
+}
+.pets-hiden{
+    position: absolute;
+    margin-top: -124px;
+    margin-left: 20px;
+    visibility:hidden;
+}
+.pets-elem:hover .pets-hiden {
+    visibility:visible; 
+    
+}
+.pets-hiden:hover{
+     
+}
+.pets-hiden-text{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+color: #FFFFFF;
+width: 194px;
+margin-bottom: 14px;
+}
 
 
 
