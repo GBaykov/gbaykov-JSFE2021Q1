@@ -706,7 +706,7 @@ margin-left: 272px;
 /* inspires STARTS*/
 
 .table{
-    position: absolute;
+    position: relative;
     width: 1920px;
     height: 413px;
     background: #F2F2F2;
@@ -717,7 +717,7 @@ margin-left: 272px;
     margin-top: 90px;
 width: 1200px;
 
-margin-left: 230px;
+margin-left: 335px;
 }
 .taple-logo{
     text-align: center;
@@ -761,3 +761,17 @@ table{
 
 
 /* inspires ENDS*/
+
+/* Pets in Zoo STARTS*/
+
+
+
+
+
+
+
+
+
+
+
+/* Pets in Zoo ENDS*/
