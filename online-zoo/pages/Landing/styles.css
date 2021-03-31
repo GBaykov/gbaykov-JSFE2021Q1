@@ -395,6 +395,7 @@ textarea {
 
   html {
       box-sizing: border-box;
+      
   }
   *, *::before, *::after {
       box-sizing: inherit;
@@ -923,7 +924,7 @@ margin-bottom: 92px;
 
 /* Testimonials STARTS*/
 .Testimonials-wrapper{
-    width: 1920px;
+    width: 1920PX;
 height: 810px;
 }
 .Test-header{
@@ -1014,8 +1015,9 @@ color: #333333;
 .comment-scrolle{
     position: relative;
     top: 4px;
-    left: 825px;
+    margin-left: 833px;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 .comment-line{
     position: absolute;
@@ -1033,11 +1035,45 @@ color: #333333;
     margin-left: 836px;   
 }
 
-
-
-
-
-
-
 /* Testimonials ENDS*/
 
+/*MAP sSTARTS*/
+
+.map{
+    width: 1920px;
+    height: 904px;
+   
+    background: #F2F2F2;
+}
+.map-wrapper{
+    text-align: center;
+}
+.map-header{
+    text-align: center;
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 56px;
+text-align: center;
+color: #333333;
+margin-top: 100px;
+margin-bottom: 60px;
+}
+.map-main{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.map-btn{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+/*MAP sSTARTS*/
