@@ -919,6 +919,125 @@ margin-bottom: 92px;
 
 
 
-
-
 /* Pay and feed ENDS*/
+
+/* Testimonials STARTS*/
+.Testimonials-wrapper{
+    width: 1920px;
+height: 810px;
+}
+.Test-header{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 48px;
+line-height: 56px;
+text-align: center;
+color: #333333;
+    margin-top: 100px;
+    margin-bottom: 62px;
+}
+.reviews{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+.rewiews-comment{
+    width: 585px;
+    height: 310px;
+background: #FEFEFE;
+box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
+border-radius: 5px;
+align-items: center;
+}
+.reviews-elem{
+    text-align: center; 
+}
+.name{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #333333;
+    position: relative;
+    top: 65px;
+    margin-right: 3px;
+}
+.comment{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    width: 440px;
+    color: #4F4F4F;
+    margin: 0 auto;
+    position: relative;
+    top: 85px;
+    text-align: left;
+}
+.user-border{
+    position: relative;
+    top: 47px;
+    left: 25px;
+}
+.left-com{
+    position: relative;
+    top: 47px;
+    right: 34px;
+}
+.right-com{
+    position: relative;
+    top: 47px;
+}
+.rew-arr{
+margin-top: 140px;
+
+}
+.comment-counter{
+    margin-top: 49px;
+    text-align: center;
+}
+.comment-number{
+    font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 28px;
+color: #333333;
+}
+.comment-scrolle{
+    position: relative;
+    top: 4px;
+    left: 825px;
+    margin-bottom: 50px;
+}
+.comment-line{
+    position: absolute;
+    
+}
+.comment-dot{
+    position: absolute;
+    left: 30px;
+}
+
+
+
+
+.comment-btn{
+    margin-left: 836px;   
+}
+
+
+
+
+
+
+
+/* Testimonials ENDS*/
+
