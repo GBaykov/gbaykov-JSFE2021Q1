@@ -402,6 +402,11 @@ textarea {
   }
 
 /* HEADER STARTS*/
+.container-main {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
 .header {
     
 }
@@ -409,7 +414,7 @@ textarea {
     margin: 0 auto;
     background: #FFFFFF;
 box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
-width: 1920px;
+
 height: 94px;
   }
 
@@ -500,9 +505,10 @@ line-height: 21px;
 .favorite{
     background: url("/assets/images/bgi-jpg.jpg") no-repeat top;
     position: relative;
-    min-width: 1920px;
+    
     height: 940px;
     overflow:hidden;
+    background-size:cover
 }
 
 .favorite__wrapper{
@@ -708,10 +714,11 @@ margin-left: 272px;
 
 .table{
     position: relative;
-    width: 1920px;
+    
     height: 413px;
     background: #F2F2F2;
     margin-top: -190px;
+    background-size:cover
 }
 .inspires{
     margin: 0 auto;
@@ -765,7 +772,7 @@ table{
 
 /* Pets in Zoo STARTS*/
 .pets{
-    width: 1920px;
+    
     height: 854px;
     
 }
@@ -872,7 +879,7 @@ margin-bottom: 14px;
 
 /* Pay and feed STARTS*/ 
 .pay{
-    width: 1920px;
+    
 height: 754px;
     background: #F2F2F2;
 }
@@ -924,7 +931,7 @@ margin-bottom: 92px;
 
 /* Testimonials STARTS*/
 .Testimonials-wrapper{
-    width: 1920PX;
+    
 height: 810px;
 }
 .Test-header{
@@ -1040,7 +1047,7 @@ color: #333333;
 /*MAP sSTARTS*/
 
 .map{
-    width: 1920px;
+    
     height: 904px;
    
     background: #F2F2F2;
