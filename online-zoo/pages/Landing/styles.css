@@ -1047,7 +1047,7 @@ color: #333333;
 /*MAP sSTARTS*/
 
 .map{
-    
+    position: relative;
     height: 904px;
    
     background: #F2F2F2;
@@ -1064,7 +1064,7 @@ font-size: 48px;
 line-height: 56px;
 text-align: center;
 color: #333333;
-margin-top: 100px;
+padding-top: 100px;
 margin-bottom: 60px;
 }
 .map-main{
@@ -1076,11 +1076,37 @@ margin-bottom: 60px;
     text-align: center;
 }
 
+.svg-wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.svg1{
+    position: absolute;
+    margin-left:470px;
+    margin-top: -458px;
+}
+
+  .svg2{
+    position: absolute;
+    margin-left:593px;
+    margin-top: -430px;
+}
+.svg3{
+    position: absolute;
+    margin-left:920px;
+    margin-top: -344px;
+}
+.svg4{
+    position: absolute;
+    margin-left:1242px ;
+    margin-top:-442px ; 
+}
+
+path:hover {
+    fill: #4BD8B5;
+  }
 
 
 
-
-
-
-
-/*MAP sSTARTS*/
+/*MAP END*/
