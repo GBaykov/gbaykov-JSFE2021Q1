@@ -443,6 +443,7 @@ color: #333333;
 font-size: 18px;
 line-height: 21px;
 text-decoration: none;
+cursor: default;
   }
   .logo-href{
     font-family: Roboto;
@@ -484,14 +485,14 @@ text-decoration: none;
     color: #333333;
     text-decoration: none;  
  }
- .first-child {
+ .activ-link {
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
     border-bottom: 1px solid #333333;
-   
+   cursor:default
  }
- .first-child:hover {
+ .activ-link:hover {
   
     text-decoration: none; 
  }
@@ -523,6 +524,8 @@ text-decoration: none;
    background: #FFFFFF;
 }
  /* HEADER ENDS*/
+
+
  .main{
      display: flex;
      flex-wrap: wrap;
@@ -530,18 +533,114 @@ text-decoration: none;
  }
 
  .sidebar{
-
-    width: 157px;
     height: 597px;
-     background-color:red;
-     margin: 50px 50px 0;
+     
+     margin-left:26px;
+     margin-top: 60px;
       position: sticky;
       top: 94px;
       bottom: 751px;
+      text-align: center;
  }
- section{
-    height: calc(1755px -845px);
+ .sidebar-item {
+    margin-bottom: 10px;
  }
+ .side-img{
+    border-radius: 50%;
+    
+ }
+
+.activ-side{
+    width: 137px;
+height: 137px;
+padding: 10px;
+border: 3px solid red;
+margin-bottom: 5px;
+border-radius: 50%;
+cursor: auto;
+
+}
+.main-content{
+    margin-top: 60px;
+    margin-left: 151px;
+}
+.content-header{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 56px;
+    color: #333333;
+    margin-bottom: 40px;
+}
+
+
+.litle-videos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-videos{
+    margin-bottom: 30px;
+}
+.small-video{
+margin-right: 26px;
+position: relative;
+}
+.transparent{
+    position: absolute;
+    width: 246px;
+    height: 141px;
+margin-top: -145px;
+}
+
+.dots{
+    margin-top: 30px;
+    text-align: center;
+
+}
+.dot:hover{
+    opacity: .5;
+}
+
+
+ .animal-info-sect{
+     position: absolute;
+    width: 380px;
+    left: 1180px;
+top: 250px;
+
+}
+.info-head {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    color: #333333;
+    margin-bottom: 6px;
+}
+.info-text{
+    font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 16px;
+color: #4F4F4F;
+margin-bottom: 13px;
+}
+
+.info-text-animal{
+    margin-bottom: 35px;
+}
+.feed:hover{
+    opacity: .8;
+}
+
+
+
+
+
+
 
 
 /*FOOTER START*/
@@ -585,6 +684,7 @@ font-style: normal;
 font-weight: 900;
 font-size: 36px;
 line-height: 42px;
+cursor: default;
 }
 .footer-online{
     font-family: Roboto;
@@ -594,6 +694,7 @@ line-height: 42px;
     line-height: 21px;
     letter-spacing: 0.08em;
     margin-top: -10px;
+    cursor: default;
 }
 
 
