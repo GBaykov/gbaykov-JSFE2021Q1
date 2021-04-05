@@ -518,7 +518,7 @@ text-decoration: none;
 
  /* favorite STARTS*/
 .favorite{
-    background: url("/assets/images/bgi-jpg.jpg") no-repeat top;
+    background: url("../../assets/images/bgi-jpg.jpg") no-repeat top;
     position: relative;
     
     height: 940px;
