@@ -522,14 +522,20 @@ text-decoration: none;
    border-radius:50%;
    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
    background: #FFFFFF;
+
 }
+.header__links:hover{
+color:blueviolet
+}
+
+
  /* HEADER ENDS*/
 
 
  /*MAP START*/
 
 .main{
-    height: 1287px;
+    height: 1227px;
 }
  .main-wrapper{
     text-align: center;
@@ -628,7 +634,33 @@ path:hover {
     fill: #49D6DF;
     
   }
-
+.svg1{
+    position: absolute;
+    margin-left: 475px;
+    margin-top: -420px;
+}
+.svg2{
+    position: absolute;
+    margin-left: 597px;
+    margin-top: -398px;
+}
+.svg3{
+    position: absolute; 
+    margin-left: 925px;
+    margin-top: -308px;
+}
+.svg4{
+    position: absolute; 
+    margin-left: 1246px;
+    margin-top: -407px;
+}
+.map-btn{
+    display: inline-block;
+    margin-top: 45px;
+}
+.map-btn:hover{
+opacity: 0.8;
+}
 
 
 
@@ -676,7 +708,8 @@ font-style: normal;
 font-weight: 900;
 font-size: 36px;
 line-height: 42px;
-cursor: default;
+color: #FEFEFE;
+
 }
 .footer-online{
     font-family: Roboto;
@@ -686,7 +719,8 @@ cursor: default;
     line-height: 21px;
     letter-spacing: 0.08em;
     margin-top: -10px;
-    cursor: default;
+    color: #FEFEFE;
+   
 }
 
 
@@ -876,6 +910,7 @@ color: #FEFEFE;
 }
 .right-btn:hover{
 cursor: pointer;
+opacity: 0.8;
 }
 
 
