@@ -523,6 +523,9 @@ text-decoration: none;
    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
    background: #FFFFFF;
 }
+.main-switcher:hover{
+    opacity: 0.5;
+}
  /* HEADER ENDS*/
 
 
@@ -684,7 +687,7 @@ font-style: normal;
 font-weight: 900;
 font-size: 36px;
 line-height: 42px;
-cursor: default;
+color: #FEFEFE;
 }
 .footer-online{
     font-family: Roboto;
@@ -694,7 +697,7 @@ cursor: default;
     line-height: 21px;
     letter-spacing: 0.08em;
     margin-top: -10px;
-    cursor: default;
+    color: #FEFEFE;
 }
 
 
