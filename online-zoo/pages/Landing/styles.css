@@ -1484,6 +1484,7 @@ color: #FEFEFE;
 }
 .right-btn:hover{
 cursor: pointer;
+opacity: 0.8;
 }
 
 
@@ -1504,3 +1505,6 @@ color: #BDBDBD;
 }
 
 /*FOOTER END*/
+span{
+    font-size: 0.625em
+}
