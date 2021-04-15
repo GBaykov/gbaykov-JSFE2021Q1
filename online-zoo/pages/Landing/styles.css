@@ -420,7 +420,7 @@ height: 94px;
 
   .header__wrapper {
     margin: 0 auto;
-    width: 1620px;
+    max-width: 1620px;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
@@ -429,7 +429,7 @@ height: 94px;
    
   }
   .logo-light {
-    width: 59px;
+    max-width: 59px;
     height: 42px;
     font-family: Roboto;
 font-style: normal;
@@ -497,7 +497,7 @@ text-decoration: none;
 }
 .switcher-bg{
     
-   width: 54px;
+    width: 54px;
    height: 30px;
    left: 0px;
    top: 0px;
@@ -506,7 +506,7 @@ text-decoration: none;
 }
 .switcher {
     position: absolute;
-   width: 20px;
+    width: 20px;
    height: 20px;
    left: 6px;
    top: 5px;
@@ -537,7 +537,7 @@ text-decoration: none;
     position: absolute;
     left: 360px;
 top: 206px;
-    width: 793px;
+max-width: 793px;
 height: 208px;
     font-family: Roboto;
 font-style: normal;
@@ -548,7 +548,7 @@ color: #FEFEFE;
 }
 .favorite-btn{
     position: absolute;
-width: 245px;
+    max-width: 245px;
 height: 55px;
 left: 360px;
 top: 451px;
@@ -656,23 +656,52 @@ top: -100px;
     left: 96px;
 top: 100px;
 }
-.scrolle-dot{
+
+.interactiv-scrolle{
     position: absolute;
-width: 245px;
-height: 5px;
-left: 30px;
-top: 34px;
+    top:35px
 }
-.scrolle-line{
-    position: absolute;
-    width: 30px;
+
+
+
+/* input - range top of Whath start  */
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 2.5px 0;
+    width: 245px;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: rgba(189, 189, 189, 0.57);
+    border: 0px solid #000101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    border: 0px solid #000000;
     height: 10px;
-    left: 00px;
-    top: 35px;
-}
+    width: 30px;
+    background: #333333;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -2.5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgba(189, 189, 189, 0.57);;
+  }
+
+  /* input - range top of Whath end  */
+
+
+
+
+
+
+
 .interactiv-scrolle:hover{
     cursor: pointer;
-    opacity: 0.8;
+    
 }
 .counte-favorite{
     font-size: 0.625em;
@@ -744,19 +773,27 @@ margin-left: 272px;
     font-size: 24px;
     line-height: 28px;
 }
-.how-scrolle{
-    margin-top: 8px;
+/* input - range top of HOW start  */
+.how-scrolle {
     margin-bottom: 30px;
+}
+
+
+input.how-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 0px solid #000000;
+    height: 10px;
+    width: 62px;
+    background: #333333;
     cursor: pointer;
-}
-.how-scrolle:hover{
-cursor: pointer;
-opacity: 0.8;
-}
-.how-dot{
-    position: absolute;
-    margin-top: -15px;
-}
+    
+    margin-top: -2.5px;
+  }
+
+  
+  
+
+  /* input - range top of HOW end  */
 .how-btn{
     margin-left: 272px;
 }
@@ -764,6 +801,8 @@ opacity: 0.8;
     cursor: pointer;
     opacity: 0.8;
     }
+
+
 
 
 /* How it works ENDS*/
@@ -782,7 +821,7 @@ opacity: 0.8;
 .inspires{
     margin: 0 auto;
     margin-top: 90px;
-width: 1200px;
+    max-width: 1200px;
 padding-top: 90px;
 margin-left: 335px;
 }
@@ -818,7 +857,7 @@ tr{
 
 }
 td{
-    width: 380px;
+    max-width: 380px;
 }
 table{
     border-collapse: separate;
@@ -833,7 +872,7 @@ table{
 .pets{
     
     height: 854px;
-    
+    margin-bottom: -100px;
 }
 .pets-wrapper{
     margin: 0 auto;
@@ -857,7 +896,7 @@ margin-bottom: 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1300px;
+    max-width: 1300px;
     margin: 0 auto; 
     margin-bottom: 30px;
     
@@ -983,7 +1022,7 @@ margin-bottom: 92px;
     flex-wrap: wrap;
     position: relative;
     justify-content: space-between;
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 60px;
 }
@@ -1007,6 +1046,7 @@ margin-bottom: 92px;
 .Testimonials-wrapper{
     
 height: 810px;
+margin-bottom: -100px;
 }
 .Test-header{
     font-family: Roboto;
@@ -1023,7 +1063,7 @@ color: #333333;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
-    width: 1300px;
+    max-width: 1300px;
     margin: 0 auto;
     position: relative;
 }
@@ -1101,8 +1141,8 @@ color: #333333;
 .comment-scrolle{
     position: relative;
     top: 4px;
-    margin-left: 833px;
-    margin-bottom: 50px;
+    
+    margin-bottom: 35px;
     cursor: pointer;
 }
 .comment-line{
@@ -1138,12 +1178,14 @@ color: #333333;
 
 .map{
     position: relative;
-    height: 904px;
-   
+    max-height: 904px;
+   max-width:1920px ;
     background: #F2F2F2;
+    padding-bottom: 130px;
 }
 .map-wrapper{
     text-align: center;
+
 }
 .map-header{
     text-align: center;
@@ -1160,6 +1202,11 @@ margin-bottom: 60px;
 .map-main{
     text-align: center;
     margin-bottom: 35px;
+    background: url('../../assets/images/Map.png') no-repeat;
+height: 497px;
+max-width: 62.39583%;
+
+margin: 0 auto;
 }
 
 .map-btn{
@@ -1239,7 +1286,7 @@ path:hover {
     margin-left: 117px;
     color: #FEFEFE;
     padding-top: 100px;
-    width: 1620px;
+    max-width: 1620px;
     border-bottom: 0.5px solid #FEFEFE;
     padding-bottom: 60px;
     margin-bottom: 30px;
@@ -1297,7 +1344,7 @@ margin-bottom: 33px;
 .input-text{
     background-color: transparent;
     background: #333333;
-   width: 383px;
+    width: 383px;
    border: 0px;
    border-bottom: 1px solid #BDBDBD;
    margin-bottom: 20px;
