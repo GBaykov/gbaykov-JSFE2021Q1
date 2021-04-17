@@ -1837,10 +1837,32 @@ margin-top: -328px;
 }
 
 
+}
+
+/*1200PX(1200-1919) END*/
+
+
+/*1200PX(640-1199) START*/
+
+@media screen and (max-width:1199px) {
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 }
 
-/*1200PX(1200-1919) END*/
+
+
+
+
+

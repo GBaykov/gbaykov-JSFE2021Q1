@@ -371,8 +371,8 @@ textarea {
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url('../../assets/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../assets/fonts/roboto-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../../../assets/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../../../assets/fonts/roboto-v20-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
   /* roboto-500 - latin */
   @font-face {
@@ -380,8 +380,8 @@ textarea {
     font-style: normal;
     font-weight: 500;
     src: local(''),
-         url('../../assets/fonts/roboto-v20-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../assets/fonts/roboto-v20-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../../../assets/fonts/roboto-v20-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../../../assets/fonts/roboto-v20-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
   /* roboto-900 - latin */
   @font-face {
@@ -389,8 +389,8 @@ textarea {
     font-style: normal;
     font-weight: 900;
     src: local(''),
-         url('../../assets/fonts/roboto-v20-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../../assets/fonts/roboto-v20-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../../../assets/fonts/roboto-v20-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../../../assets/fonts/roboto-v20-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 
   html {
@@ -927,3 +927,211 @@ color: #BDBDBD;
 }
 
 /*FOOTER END*/
+
+
+
+
+/*ADAPTIV RESPONSIV START*/
+
+/*1200PX(1200-1919) START*/
+
+@media screen and (max-width:1919px) {
+ 
+    .header__wrapper {
+        
+        max-width: 900px;
+        /* margin: 0 auto;
+        max-width: 1620px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        align-items:flex-end;
+        padding-top: 15px; */
+       
+      }
+    
+.favorite{
+    height: 926px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.favorite__watch-text{
+    top: 128px;
+    left: 150px;
+}
+.favorite-btn {
+    left: 150px;
+top: 372px;
+}
+.social{
+    left: 150px;
+    top: 747px;
+}
+.line{
+    left: 477px;
+    top: 615px;
+}
+
+.favorite__photoes{
+    margin-left: 615px;
+    margin-top: 477px;
+}
+.favorite__animal {
+    margin-right: 30px;
+}
+
+.animals-gallery{
+    width: 180px;
+height: 261px;
+}
+.panda{
+    width: 245px;
+height: 352px;
+margin-top: -50px;
+}
+.scrolle-favorits {
+    position: absolute;
+    left: 831px;
+    top: 809px;
+}
+
+.container-main{
+    margin: 0 auto;
+    text-align: center;
+max-width: 1200px;
+}
+.main{
+    max-width: 1200px;
+    height: 715px;
+}
+.content-wrapper{
+    text-align: left;
+}
+
+.sidebar{
+    height: 524px;
+    margin-left: 16px;
+}
+
+.side-img{
+    width: 96px;
+height: 96px;
+}
+.activ-side{
+    width: 120px;
+height: 120px;
+}
+
+.arrow-up{
+    margin-bottom: 20px;
+}
+.arrow-down{
+    margin-top: 20px;
+}
+
+
+
+
+.main-content{
+    margin-left: 62px;
+}
+.main-videos{
+    position: relative;
+width: 527px;
+height: 297px;
+margin-bottom: 27px;
+}
+
+.small-video{
+    position: relative;
+    width: 164px;
+    height: 94px;
+    margin-right: 18px;
+
+}
+
+
+iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.transparent{
+    width: 164px;
+    height: 94px;
+    margin-top: 0;   
+}
+.animal-info-sect{
+    top: 250px;
+    left: 62.25%;
+    text-align: left;
+    width: 253px;
+}
+.animal-diet{
+    width: 253px;
+height: 96px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    height: 737px;
+}
+
+.footer-wrapper{
+    max-width: 900px;
+    margin: 0 auto;
+    
+}
+.footer-left{
+    width: 384px;
+    
+}
+.footer-right{
+    position: absolute;
+    display: block;
+    margin-left: 460px;
+}
+
+.right-btn-div{
+    display: block;
+    margin-left: -5px;
+    margin-top:  40px;
+}
+
+.footer-list{
+    margin-bottom: 60px;
+}
+
+.footer-bottom{
+    margin-top: 31px;
+    margin-left: 310px;
+}
+
+
+}
+
+/*1200PX(1200-1919) END*/
+
+
+
+
