@@ -931,7 +931,43 @@ color: #BDBDBD;
 
 
 
+
+
+
+
+
+
 /*ADAPTIV RESPONSIV START*/
+.header-burger{
+    width: 40px;
+height: 21px;
+position: relative;
+display: none;
+}
+
+.burger-line{
+    position: absolute;
+display: block;
+width: 100%;
+background-color: black;
+height: 3px;
+}
+.line-first{
+top: 0;
+}
+.line-second{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.line-third{
+    bottom: 0;
+    width: 33px;
+    right: 0;
+}
+
+
+
+
 
 /*1200PX(1200-1919) START*/
 
@@ -1075,24 +1111,6 @@ height: 96px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer{
     height: 737px;
 }
@@ -1133,5 +1151,273 @@ height: 96px;
 /*1200PX(1200-1919) END*/
 
 
+
+
+
+
+/*640PX(640-1199) START*/
+
+@media screen and (max-width:1199px) {
+ 
+    .header{
+        position: fixed;
+        max-width: 640px;
+        z-index: 10;
+    }
+    .header__wrapper {
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: 600px;
+        /* margin: 0 auto;
+        max-width: 1620px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        align-items:flex-end;
+        padding-top: 15px; */
+       
+      }
+    .wrapper{
+        max-width: 640px;
+    }
+.header-burger{
+    display: block;
+    top: 5px;
+}
+.header__nav{
+    display: none;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+right: 0;
+
+text-align: right;
+
+}
+.header_item{
+    width: 100%;
+}
+
+
+.main-switcher{
+    top: 10px;
+    margin-left: 376px;
+}
+
+
+
+
+
+.container-main{
+    margin: 0 auto;
+    text-align: center;
+max-width: 640px;
+}
+.main{
+    max-width: 640px;
+    height: 1082px;
+}
+.content-wrapper{
+    text-align: left;
+}
+
+.sidebar{
+    height: 524px;
+    margin-left: 7px;
+    top: 160px;
+}
+
+.side-img{
+    width: 70px;
+height: 70px;
+}
+.activ-side{
+    width: 90px;
+height: 90px;
+padding: 3px;
+}
+
+
+.sidebar-item{
+    margin-bottom: 10px;
+}
+.arrow-up{
+    margin-bottom: 20px;
+}
+.arrow-down{
+    margin-top: 20px;
+}
+
+
+
+
+
+.content-header{
+    width: 361px;
+height: 56px;
+margin-left: 10px;
+margin-bottom: 35px;
+}
+.main-content{
+    position: absolute;
+    display: block;
+    margin-left: 123px;
+    margin-top: 154px;
+}
+.main-videos{
+    position: relative;
+    width: 497px;
+    height: 280px;
+margin-bottom: 15px;
+}
+
+.small-video{
+    position: relative;
+    width: 155px;
+height: 89px;
+    margin-right: 16px;
+    margin-bottom: 0px;
+
+}
+.small-video:last-child{
+    margin-right: 0;
+}
+
+
+
+iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.transparent{
+    width: 155px;
+height: 89px;
+    margin-top: 0;   
+}
+
+.animal-info-sect{
+    position: absolute;
+    margin-left: -272px;
+    margin-top: 470px;
+    display: block;
+    
+    text-align: left;
+    width: 497px;
+height: 193px;
+}
+.animal-diet{
+    width: 497px;
+height: 96px;
+}
+.feed-btn{
+    margin-top: -71px;
+    
+}
+
+
+
+
+
+.footer{
+    height: 1068px;
+    margin-top: 50px;
+    max-width: 640px;
+    margin: 0 auto;
+    margin-top:-6px
+}
+.footer-centring{
+    max-width: 600px;
+}
+.footer-wrapper{
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-left: 20px;
+    padding-top: 86px;
+    padding-bottom: 322px;
+    
+}
+.footer-left{
+    width: 384px;
+    
+}
+.footer-right{
+    position: absolute;
+    display: block;
+    margin-left: 0;
+    margin-top: 82px;
+    width: 190px;
+}
+
+.footer-list{
+    margin-bottom: 60px;
+    width: 50px;
+height: 91px;
+}
+
+.list-link{
+margin-bottom: 5px;
+display: block;
+}
+.footer-links{
+   
+    width: 50px;
+height: 91px;
+margin-bottom: 440px;
+}
+.contuctUs{
+    margin-top: 75px;
+    
+}
+.us{
+    margin-bottom: 40px;
+}
+.email{
+    margin-bottom: 20px;
+}
+.textarea{
+    margin-bottom: 15px;
+}
+.submit-p{
+    margin-top: -6px;
+}
+
+.online-centre{
+    position: absolute;
+    margin-top: 7px;
+    margin-bottom: 35px;
+}
+.address{
+    position: absolute;
+    margin-top: 58px;
+}
+.footer-social{
+    position: absolute;
+    
+    margin-top: 170px;
+   
+}
+.footer-bottom{
+    margin-top: 31px;
+    margin-left: 20px;
+}
+.right-btn-div{
+    
+    display: block;
+    position: absolute;
+    margin-left: 325px;
+    margin-top:  -600px;
+}
+
+
+
+
+}
+
+/*640PX(640-1199) END*/
 
 
