@@ -1414,10 +1414,308 @@ margin-bottom: 440px;
 }
 
 
-
-
 }
-
 /*640PX(640-1199) END*/
 
 
+/*320PX(320-639) START*/
+
+@media screen and (max-width:639px) {
+ 
+    .header{
+        position: fixed;
+        max-width: 320px;
+        z-index: 10;
+        
+    }
+    .header__wrapper {
+        margin-left: 10px;
+        margin-right: 10px;
+        max-width: 300px;
+        /* margin: 0 auto;
+        max-width: 1620px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        align-items:flex-end;
+        padding-top: 15px; */
+       
+      }
+    .wrapper{
+        max-width: 320px;
+    }
+.header-burger{
+    display: block;
+    top: 5px;
+}
+.header__nav{
+    display: none;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+right: 0;
+
+text-align: right;
+
+}
+.header_item{
+    width: 100%;
+}
+
+
+.main-switcher{
+    top: 10px;
+    margin-left: 105px;
+}
+
+
+
+
+
+.container-main{
+    margin: 0 auto;
+    text-align: center;
+max-width: 320px;
+}
+.main{
+    max-width: 320px;
+    height: 782px;
+}
+.content-wrapper{
+    text-align: left;
+}
+
+.sidebar{
+    height: 266px;
+    margin-left: 5px;
+    top: 130px;
+}
+
+.side-img{
+    width: 40px;
+height: 40px;
+}
+.activ-side{
+    width: 65px;
+height: 65px;
+padding: 2px;
+margin-bottom: 0;
+}
+
+
+.sidebar-item{
+    margin-bottom: 5px;
+}
+.arrow-up{
+    margin-bottom: 10px;
+}
+.arrow-down{
+    margin-top: 10px;
+}
+
+
+
+
+
+.content-header{
+    width: 361px;
+height: 56px;
+margin-left: 7px;
+margin-bottom: 20px;
+width: 184px;
+height: 28px;
+font-size: 24px;
+line-height: 28px;
+}
+.main-content{
+    position: absolute;
+    display: block;
+    margin-left: 95px;
+    margin-top: 127px;
+    overflow: hidden;
+}
+.main-videos{
+    position: relative;
+    width: 205px;
+height: 116px;
+margin-bottom: 10px;
+}
+
+.small-video{
+    position: relative;
+    width: 98px;
+height: 56.26px;
+    margin-right: 9px;
+    margin-bottom: 0px;
+
+}
+.small-video:last-child{
+    position: absolute;
+    margin-right: 0;
+    visibility: hidden;
+}
+.dots{
+    margin-top: 17px;
+    margin-left: -10px;
+}
+
+
+iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.transparent{
+    width: 98px;
+height: 56.26px;
+    margin-top: 0;   
+}
+
+
+.animal-info-sect{
+    position: absolute;
+    margin-left: -112px;
+    margin-top: 169px;
+    display: block;
+    
+    text-align: left;
+    max-width: 205px;
+height: 193px;
+}
+.info-text-animal{
+    max-width: 205px;
+}
+.animal-diet{
+    max-width: 205px;
+height: 96px;
+}
+.feed-btn{
+    margin-top: -30px;
+    
+}
+.info-head{
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    max-width: 205px;
+}
+.info-text{
+    max-width: 205px;
+margin-bottom: 15px;
+font-size: 12px;
+line-height: 14px;
+}
+
+
+
+.footer{
+    height: 1100px;
+    margin-top: 50px;
+    max-width: 320px;
+    margin: 0 auto;
+    margin-top:-6px
+}
+.footer-centring{
+    max-width: 300px;
+}
+.footer-wrapper{
+    position: relative;
+    
+    margin: 0 auto;
+    margin-left: 10px;
+    padding-top: 40px;
+    padding-bottom:412px;
+    width: 300px;
+    border-bottom: 0.5px solid #FEFEFE;
+}
+.footer-left{
+    width: 300px;
+    
+}
+.footer-right{
+    position: absolute;
+    display: block;
+    margin-left: 0;
+    margin-top: 95px;
+    width: 190px;
+}
+
+.footer-list{
+    margin-bottom: 60px;
+    width: 50px;
+height: 91px;
+}
+
+.list-link{
+margin-bottom: 5px;
+display: block;
+}
+.footer-links{
+   
+    width: 50px;
+height: 91px;
+margin-bottom: 440px;
+}
+.contuctUs{
+    margin-top: 88px;
+    max-width: 300px;
+    
+}
+.form{
+   width: 300px;
+}
+.us{
+    margin-bottom: 40px;
+    width: 300px;
+}
+.input-text{
+    width: 300px;
+}
+.email{
+    margin-bottom: 15px;
+    width: 300px;
+}
+.textarea{
+    margin-bottom: 15px;
+    width: 300px;
+}
+.submit-p{
+    margin-top: -4px;
+    margin-left: 170px;
+}
+
+
+.online-centre{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 2px;
+    margin-bottom: 35px;
+}
+.address{
+    position: absolute;
+    margin-top: 32px;
+}
+.footer-social{
+    position: absolute;
+    
+    margin-top: 146px;
+   
+}
+.footer-bottom{
+    margin-top: 28px;
+    margin-left: 10px;
+}
+.right-btn-div{
+    
+    display: block;
+    position: absolute;
+    margin-left: 10px;
+    margin-top:  212px;
+}
+
+
+}
+/*320PX(320-639) END*/
