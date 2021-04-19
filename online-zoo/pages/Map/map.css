@@ -613,15 +613,9 @@ span{
 .scrolle{
     margin-top: 2px;
     position: relative;
-    margin-left: 812px;
+    margin: 0 auto;
 }
-.line{
-    position: absolute;
-    }
-    .dot{
-        position: absolute;
-        margin-left: 30px;
-    }
+
 
 
 
@@ -632,11 +626,14 @@ span{
     }
  
     
-    
+   
 
 path:hover {
     fill: #49D6DF;
     
+  }
+  .map-div{
+    position: relative;
   }
 .svg1{
     position: absolute;

@@ -1891,7 +1891,7 @@ margin-top: -328px;
     .header__wrapper {
         margin-left: 20px;
         margin-right: 20px;
-        max-width: 600px;
+        width: 600px;
         /* margin: 0 auto;
         max-width: 1620px;
         display: flex;
@@ -1907,6 +1907,7 @@ margin-top: -328px;
 .header-burger{
     display: block;
     top: 5px;
+    
 }
 .header__nav{
     display: none;
@@ -1926,8 +1927,358 @@ text-align: right;
 
 .main-switcher{
     top: 10px;
-    margin-left: 376px;
+    left: 204px;
+    
 }
+
+.container-main{
+    max-width: 640px;
+    margin: 0 auto;
+}
+    .main{
+        max-width: 640px;
+}
+
+
+
+
+
+.favorite{
+    height: 1030px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.favorite__watch-text{
+    width: 599px;
+height: 150px;
+left: 21px;
+top: 216px;
+
+font-size: 64px;
+line-height: 75px;
+}
+.favorite-btn {
+    left: 20px;
+top: 396px;
+}
+.social{
+    left: 20px;
+    top: 820px;
+    height: 115px;
+}
+.line{
+    left: 53px;
+    top: 684px;
+}
+
+.favorite__photoes{
+    margin-left: 123px;
+    margin-top: 549px;
+}
+.favorite__animal {
+    margin-right: 30px;
+}
+
+.animals-gallery{
+    width: 180px;
+height: 261px;
+}
+.panda{
+    width: 245px;
+height: 352px;
+margin-top: -50px;
+}
+.scrolle-favorits {
+    position: absolute;
+    left: 339px;
+    top: 877px;
+}
+
+
+
+
+.how{
+    margin: 0 auto;
+    max-height: 883px;
+    max-width: 640px;
+}
+.how-wrapper{
+    max-width: 600px;
+}
+.how-header{
+    left: 20px;
+}
+.how-text{
+    width: 600px;
+height: 112px;
+margin-bottom: 30px;
+}
+.how-photo{
+
+}
+.how-img{
+    width: 600px;
+    height: 323px;
+}
+.how-counter{
+    margin-left: 180px;
+}
+
+
+.how-scrolle{
+    margin-top: 5px;
+}
+.how-btn{
+    margin-left: 180px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 2.5px 0;
+    width: 245px;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: rgba(189, 189, 189, 0.57);
+    border: 0px solid #000101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    border: 0px solid #000000;
+    height: 10px;
+    width: 30px;
+    background: #333333;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -2.5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgba(189, 189, 189, 0.57);;
+  }
+  input.how-range::-webkit-slider-thumb {
+    width: 80px;
+    height: 10px;
+  }
+  /* input - range top of Whath end  */
+
+  
+
+
+
+
+.table{
+    height: 865px;
+    max-width: 640px;
+}
+.table-wrapper{
+    margin: 0 auto;
+   margin-top: 95px;
+    
+}
+.inspires{
+    max-width: 287px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+table td {
+    display: block;
+   
+    
+}
+
+.table-img{
+    position: absolute;
+    width: 640px;
+    height: 875px;
+    z-index: 8;
+}
+
+
+
+
+
+
+
+
+
+
+.photo-p{
+    width: 210px;
+height: 301px;
+}
+
+.pets{
+    height: 766px;
+}
+.pets-photo{
+    max-width: 600px;
+    height: 301px;
+    justify-content: left;
+    overflow: hidden; 
+    margin-bottom: 35px;
+}
+.pets-leat-arr{
+    visibility: hidden;
+    position: absolute;
+}
+.pets-elem{
+    margin-right: 20px;
+}
+.pets-elem:nth-child(3n) {
+    margin-right: 0;
+}
+.arrow{
+    margin-top: 70px;
+}
+.pets-counter{
+    margin-bottom: 35px;
+}
+.pets-btn{
+    margin-left: 195px;
+}
+
+
+
+.pay{
+    height: 1393px;
+    max-width:640px ;
+    margin: 0 auto;
+}
+.pay-algoritm{
+    max-width: 245px;
+    margin-bottom: 50px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+.algoritm-elem{
+    margin-bottom: 32px;
+}
+.arrLine{
+    transform: rotate(90deg);
+    margin-top: 0px;
+    margin-left: -25px;
+}
+.arrPay{
+    width: 40px;
+    margin-bottom: 30px;
+}
+.pay-header{
+    margin-bottom: 15px;
+}
+.pay-text{
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 538px;
+height: 32px;
+text-align: center;
+
+}
+.pay-donate{
+    display: block;
+    margin-left: 198px;
+    margin-top: 20px;
+
+}
+
+
+
+
+.Testimonials{
+    height: 796px;
+    margin-bottom: -100px;
+    max-width: 640px;
+}
+.Testimonials-wrapper{
+    max-width: 640px;
+    
+    margin: 0 auto;
+}
+.Test-header{
+    margin-bottom: 45px;
+}
+.reviews{
+    margin:  0 auto;
+    width: 585px;
+height: 310px;
+overflow: hidden;
+}
+.rewiews-comment{
+    width: 585px;
+height: 310px;
+}
+.user-border{
+    top: 47px;
+}
+.comment-btn{
+    margin-left: 196px;
+}
+.comment{
+    width: 440px;
+height: 32px;
+}
+.rew-arr{
+    position: absolute;
+    visibility: hidden;
+}
+
+
+
+
+.map{
+    max-width: 640px;
+    height: 666px;
+    margin: 0 auto;
+}
+.map-header{
+    margin-bottom: 50px;
+}
+.map-img{
+    width: 600px;
+    height: 290px;
+    
+}
+.map-main{
+    max-width: 600px;
+    height: 290px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.svg1 {
+    position: absolute;
+    margin-left: 0;
+margin-top: 0;
+    top:7px;
+left: 47px;    
+}
+.svg2 {
+    margin-left: 0;
+    margin-top: 0;
+    top:18px;
+left: 106px;
+}
+.svg3 {
+    margin-left: 0;
+    margin-top: 0; 
+    top:68px;
+left: 270px;
+    
+}
+.svg4 {
+    margin-left: 0;
+    margin-top: 0;  
+    top:12px;
+left: 430px;
+}
+
+.map-btn{
+    margin-top: 40px;
+}
+
+
 
 
 
@@ -2085,6 +2436,230 @@ text-align: right;
     top: 10px;
     margin-left: 105px;
 }
+
+
+.favorite{
+    height: 926px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.favorite__watch-text{
+    top: 128px;
+    left: 150px;
+}
+.favorite-btn {
+    left: 150px;
+top: 372px;
+}
+.social{
+    left: 150px;
+    top: 747px;
+}
+.line{
+    left: 477px;
+    top: 615px;
+}
+
+.favorite__photoes{
+    margin-left: 615px;
+    margin-top: 477px;
+}
+.favorite__animal {
+    margin-right: 30px;
+}
+
+.animals-gallery{
+    width: 180px;
+height: 261px;
+}
+.panda{
+    width: 245px;
+height: 352px;
+margin-top: -50px;
+}
+.scrolle-favorits {
+    position: absolute;
+    left: 831px;
+    top: 809px;
+}
+
+
+.how{
+    max-height: 883px;
+}
+.how-wrapper{
+    max-width: 746px;
+}
+.how-text{
+    width: 746px;
+height: 96px;
+margin-bottom: 14px;
+}
+.how-photo{
+
+}
+.how-img{
+    width: 746px;
+    height: 323px;
+}
+.how-counter{
+    margin-left: 252px;
+}
+
+
+.how-scrolle{
+    margin-top: 5px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 2.5px 0;
+    width: 245px;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: rgba(189, 189, 189, 0.57);
+    border: 0px solid #000101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    border: 0px solid #000000;
+    height: 10px;
+    width: 30px;
+    background: #333333;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -2.5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgba(189, 189, 189, 0.57);;
+  }
+  input.how-range::-webkit-slider-thumb {
+    width: 80px;
+    height: 10px;
+  }
+  /* input - range top of Whath end  */
+
+  .how-btn{
+      margin-left: 253px;
+  }
+
+
+.table{
+    min-width: 100%;
+}
+.table-wrapper{
+   margin-top: 95px;
+    
+}
+.inspires{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.photo-p{
+    width: 210px;
+height: 301px;
+}
+
+.pets{
+    height: 752px;
+}
+.pets-photo{
+    max-width: 1000px;
+}
+.arrow{
+    margin-top: 70px;
+}
+.pets-btn{
+    margin-left: 39.83%;
+}
+
+
+
+.pay{
+    height: 702px;
+    max-width:100% ;
+    margin: 0 auto;
+}
+.pay-algoritm{
+    max-width: 900px;
+    margin-bottom: 50px;
+}
+.arrPay{
+    width: 48px;
+}
+.pay-text{
+    margin-bottom: 50px;
+}
+.pay-donate{
+    margin-left: 39.83%;
+
+}
+.Testimonials{
+    height: 810px;
+    margin-bottom: -100px;
+}
+.Testimonials-wrapper{
+    max-width: 1200px;
+    height: 710px;
+    margin: 0 auto;
+}
+.reviews{
+    max-width: 1000px;
+}
+.rewiews-comment{
+    width: 440px;
+height: 310px;
+}
+.comment-btn{
+    margin-left: 39.666667%;
+}
+.comment{
+    width: 326px;
+height: 48px;
+}
+
+
+
+.map{
+    max-width: 1200px;
+}
+
+.map-img{
+    max-width: 900px;
+    
+}
+.map-main{
+    height: 436px;
+}
+
+.svg1 {
+    
+margin-left: 82px;
+margin-top: -328px;
+}
+.svg2 {
+    
+    margin-left: 175px;
+    margin-top: -305px;
+}
+.svg3 {
+    margin-left: 420px;
+    margin-top: -240px; 
+}
+.svg4 {
+    margin-left: 662px;
+    margin-top: -315px;  
+}
+
+.map-btn{
+    margin-top: 0px;
+}
+
+
 
 
 
