@@ -1155,10 +1155,6 @@ height: 83px;
 
 
 
-
-
-
-
 .footer{
     height: 737px;
 }
@@ -1190,7 +1186,7 @@ height: 83px;
 
 .footer-bottom{
     margin-top: 31px;
-    margin-left: 310px;
+    margin-left: 150px;
 }
 
 
@@ -1211,10 +1207,14 @@ height: 83px;
         position: fixed;
         max-width: 640px;
         z-index: 10;
+        top: 0;
+        left: auto;
     }
     .header__wrapper {
+        margin:  0 auto;
         margin-left: 20px;
         margin-right: 20px;
+        
         max-width: 600px;
         /* margin: 0 auto;
         max-width: 1620px;
@@ -1225,8 +1225,14 @@ height: 83px;
         padding-top: 15px; */
        
       }
-    .wrapper{
+      .container-main{
         max-width: 640px;
+        height: 2017px;
+      }
+    .wrapper{
+        
+        max-width: 640px;
+        
     }
 .header-burger{
     display: block;
@@ -1252,6 +1258,143 @@ text-align: right;
     top: 10px;
     margin-left: 376px;
 }
+
+
+
+
+.main{
+    max-width: 640px;
+    margin: 0 auto;
+    height: 955px;
+    
+}
+.main-wrapper{
+    margin-top: 154px;
+    max-width: 640px;
+    
+}
+.map-head{
+    max-width: 600px;
+    margin-left: 20px;
+}
+.map-text{
+    margin-bottom: 35px;
+    max-width: 600px;
+    height: 112px;
+    
+}
+.animal-scrolle{
+    
+}
+
+.animal-hiden-wrap{
+    overflow: hidden;
+    max-width: 540px;
+    height:157px ;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 25px;
+}
+.animal-icons{
+    
+    max-width: 600px;
+    margin: 0 auto;
+    
+}
+.ani-ico{
+    margin-right: 10px;
+}
+
+.ani-ico:nth-child(4n){
+margin-right: 0;
+margin-left: 5px;
+}
+
+.activ-icon{
+    margin-left: 0;
+}
+
+
+.counter{
+    margin: 0 auto;
+    
+}
+.scrolle{
+    margin: 0 auto;
+}
+.number{
+    margin-left: 10px;
+}
+
+
+.main-map{
+max-width: 640px;
+margin:  0 auto;
+margin-top: 35px;
+}
+.map-div{
+    max-width: 600px;
+    margin:  0 auto;
+    position: relative;
+}
+.map-img{
+    max-width: 600px;
+    height: 290px;
+}
+.svg-wrap{
+
+}
+.svg1{
+    position: absolute;
+    margin-left: 0;
+    margin-top: 0;
+left: 54px;
+top: 10px;
+
+}
+.svg2{
+    margin-left: 0;
+    margin-top: 0;  
+    left: 103px;
+top: 16px;
+
+}
+.svg3{
+    margin-left: 0;
+    margin-top: 0;  
+    left: 268px;
+top: 69px;
+
+}
+.svg4{
+    margin-left: 0;
+    margin-top: 0;
+    left: 433px;
+top: 28px;
+
+}
+.svg-size{
+    width: 66.13px;
+height: 93.37px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
