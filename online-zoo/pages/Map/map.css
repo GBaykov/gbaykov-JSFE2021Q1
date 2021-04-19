@@ -587,7 +587,11 @@ border-radius: 50%;
     
 }
 .animal-icons{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 361px;
     margin-bottom: 32px;
+    
 }
 
 .counter{
@@ -953,6 +957,39 @@ color: #BDBDBD;
 /*FOOTER END*/
 
 
+/* input - range top of Whath start  */
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 2.5px 0;
+    width: 245px;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: rgba(189, 189, 189, 0.57);
+    border: 0px solid #000101;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    border: 0px solid #000000;
+    height: 10px;
+    width: 30px;
+    background: #333333;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -2.5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgba(189, 189, 189, 0.57);;
+  }
+
+  /* input - range top of Whath end  */
+
+
+
+
+
 
 /*ADAPTIV RESPONSIV START*/
 .header-burger{
@@ -1002,7 +1039,123 @@ top: 0;
         padding-top: 15px; */
        
       }
+      .header__nav{
+          margin-left: 90px;
+      }
+      .header_item:last-child{
+          margin-right: 0;
+      }
     
+.main{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 1050px;
+    
+}
+.main-wrapper{
+    
+    
+}
+.map-text{
+    margin-bottom: 35px;
+    
+}
+.animal-scrolle{
+    
+}
+
+.animal-hiden-wrap{
+    overflow: hidden;
+    max-width: 740px;
+    height:157px ;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 25px;
+}
+.animal-icons{
+    
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+.arr-ani{
+   
+}
+.ani-ico:nth-child(5n){
+margin-right: 0;
+}
+
+.counter{
+    margin: 0 auto;
+    
+}
+.scrolle{
+    margin: 0 auto;
+}
+.number{
+    margin-left: 10px;
+}
+
+
+.main-map{
+max-width: 1200px;
+margin:  0 auto;
+margin-top: 50px;
+}
+.map-div{
+    max-width: 800px;
+    margin:  0 auto;
+    position: relative;
+}
+.map-img{
+    max-width: 800px;
+    height: 388px;
+}
+.svg-wrap{
+
+}
+.svg1{
+    position: absolute;
+    margin-left: 0;
+    margin-top: 0;
+left: 73px;
+top: 49px;
+
+}
+.svg2{
+    margin-left: 0;
+    margin-top: 0;  
+    left: 154px;
+top: 75px;
+
+}
+.svg3{
+    margin-left: 0;
+    margin-top: 0;  
+    left: 373px;
+top: 140px;
+
+}
+.svg4{
+    margin-left: 0;
+    margin-top: 0;
+    left: 589px;
+top: 65px;
+
+}
+.svg-size{
+    width: 58px;
+height: 83px;
+}
+
+
+
+
+
+
+
 
 
 
