@@ -1389,23 +1389,6 @@ height: 93.37px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer{
     height: 1068px;
     margin-top: 50px;
@@ -1550,8 +1533,197 @@ text-align: right;
 
 .main-switcher{
     top: 10px;
-    margin-left: 105px;
+    margin-left: 100px;
 }
+
+
+
+.container-main{
+    max-width: 320px;
+    max-height: 1844px;
+  }
+.wrapper{
+    
+    max-width: 320px;
+    
+}
+.header-burger{
+display: block;
+top: 5px;
+}
+.header__nav{
+display: none;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+right: 0;
+
+text-align: right;
+
+}
+.header_item{
+width: 100%;
+}
+
+
+
+
+
+
+
+.main{
+max-width: 320px;
+margin: 0 auto;
+height: 750px;
+
+}
+.main-wrapper{
+margin-top: 129px;
+max-width: 320px;
+
+}
+.map-head{
+max-width: 280px;
+margin-left: 20px;
+height: 28px;
+font-size: 24px;
+line-height: 28px;
+margin-bottom: 10px;
+}
+.map-text{
+margin-bottom: 40px;
+max-width: 280px;
+height: 182px;
+font-size: 12px;
+line-height: 14px;
+
+}
+.animal-scrolle{
+
+}
+
+.animal-hiden-wrap{
+overflow: hidden;
+max-width: 230px;
+height:85px ;
+
+flex-wrap: nowrap;
+margin-left: 0;
+margin-right: 0;
+margin: 0 auto;
+margin-bottom: 20px;
+
+}
+.animal-icons{
+
+max-width: 280px;
+margin: 0 auto;
+
+}
+.ani-ico{
+margin-right: 0;
+width: 60px;
+height: 60px;
+}
+
+.ani-ico:nth-child(3n){
+margin-right: 0;
+margin-left: 0;
+}
+
+.activ-icon{
+margin-left: 5px;
+margin-right: 5px;
+width: 85px;
+height: 85px;
+padding: 2px;
+
+}
+.arr-ani{
+    margin: 0;
+    width: 17px;
+    margin-top: -25px;
+
+}
+
+.counter{
+margin: 0 auto;
+margin-left: 20px;
+
+}
+.scrolle{
+margin: 0 auto;
+}
+.number{
+
+}
+
+
+.main-map{
+max-width: 320px;
+margin:  0 auto;
+margin-top: 35px;
+}
+.map-div{
+max-width: 280px;
+margin:  0 auto;
+position: relative;
+}
+.map-img{
+max-width: 280px;
+height: 145px;
+}
+.svg-wrap{
+
+}
+.svg1{
+position: absolute;
+margin-left: 0;
+margin-top: 0;
+left: 20px;
+top: 2px;
+
+}
+.svg2{
+margin-left: 0;
+margin-top: 0;  
+left: 49px;
+top: 9.7px;
+
+}
+.svg3{
+margin-left: 0;
+margin-top: 0;  
+left: 124px;
+top: 36px;
+
+}
+.svg4{
+margin-left: 0;
+margin-top: 0;
+left: 200px;
+top: 8px;
+
+}
+.svg-size{
+width: 33px;
+height: 46.37px;
+}
+
+
+.map-btn{
+    margin-top: 35px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
