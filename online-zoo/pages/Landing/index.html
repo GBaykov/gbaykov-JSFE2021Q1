@@ -42,6 +42,11 @@
                     <p class="switcher-bg"></p>
                     <p class="switcher"></p>
                 </div>
+                <div class="header-burger burger">
+                    <span class="burger-line line-first"></span>
+                    <span class="burger-line line-second"></span>
+                    <span class="burger-line line-third"></span>
+                </div>
             </div>
         </div>
     </header>
@@ -95,13 +100,10 @@
                         
                     </div>
                     <div class="interactiv-scrolle">
-                        <div class="scrolle-line">
-                            <img src="../../assets/icons/line-favorite.svg" alt="" class="">
-                        </div>
-                        <div class="scrolle-dot">
-                            <img src="../../assets/icons/number-favorite.svg" alt="" class="">
-                        </div>
+                        
+                        <input class="galary__range" type="range" min="1" max="8" step="1" value="2"> 
                     </div>
+                    
                     
                     
                 </div>
@@ -156,19 +158,14 @@
                      on precious species and their habitat.
                 </div>
                 <p class="how-photo">
-                    <img src="../../assets/images/deer.png" alt="deer">
+                    <img class='how-img' src="../../assets/images/deer.png" alt="deer">
                 </p>
                 <div class="how-counter">
                     <div class="how-number">
                         <p class="number-how">01/<span class="counte-how">04</span></p>
                     </div>
                     <div class="how-scrolle">
-                        <div class="how-line">
-                            <img src="../../assets/icons/howLine.svg" alt="">
-                        </div>
-                        <div class="how-dot">
-                            <img src="../../assets/icons/howDote.svg" alt="">
-                        </div>
+                        <input class="galary__range how-range" type="range" min="1" max="4" step="1" value="1"  > 
                     </div>
                 </div>
                 <a href="" class="how-btn">
@@ -178,6 +175,9 @@
         </div>
         <div class="table">
             <div class="table-wrapper">
+                <div class="table-img">
+                    <img src="../../assets/images/table.png'" alt="">
+                </div>
                 <table class="inspires">
                     <tr class="taple-logo">
                         <td class="table-first">
@@ -225,7 +225,7 @@
                 </p>
                 
                     <div class="pets-photo">
-                        <div class="pets-elem arrow">
+                        <div class="pets-elem arrow pets-leat-arr">
                             <img src="../../assets/icons/leftArrow.svg" alt="" 
                             class="arrow">
                         </div>
@@ -267,12 +267,7 @@
                     <div class="pets-counter">
                         <p class="pets-number">01/<span>08</span> </p>
                         <div class="pets-scrolle">
-                            <div class="pets-line">
-                                <img src="../../assets/icons/line-favorite.svg" alt="">
-                            </div>
-                            <div class="pets-dot">
-                                <img src="../../assets/icons/petsDot.svg" alt="">
-                            </div>
+                            <input class="galary__range" type="range" min="1" max="8" step="1" value="1"  > 
                         </div>
                 
 
@@ -291,13 +286,13 @@
                         <img src="../../assets/icons/Visa.svg" alt="">
                     </div>
                     <div class="algoritm-elem arrLine">
-                        <img src="../../assets/icons/ArrowLine.svg" alt="" >
+                        <img src="../../assets/icons/ArrowLine.svg" alt="" class="arrPay">
                     </div>
                     <div class="algoritm-elem">
                         <img src="../../assets/icons/Zoos.svg" alt="">
                     </div>
                     <div class="algoritm-elem arrLine">
-                        <img src="../../assets/icons/ArrowLine.svg" alt="">
+                        <img src="../../assets/icons/ArrowLine.svg" alt="" class="arrPay">
                     </div>
                     <div class="algoritm-elem">
                         <img src="../../assets/icons/panda.svg" alt="">
@@ -333,12 +328,7 @@
                 <div class="comment-counter">
                     <p class="comment-number">02/<span>08</span> </p>
                     <div class="comment-scrolle">
-                        <div class="comment-line">
-                            <img src="../../assets/icons/line-favorite.svg" alt="">
-                        </div>
-                        <div class="comment-dot">
-                            <img src="../../assets/icons/petsDot.svg" alt="">
-                        </div>
+                        <input class="galary__range" type="range" min="1" max="8" step="1" value="2"  > 
                     </div>
             
 
@@ -352,43 +342,44 @@
             <div class="map-wrapper">
                 <p class="map-header">Map</p>
                 <div class="map-main">
-                    <img src="../../assets/images/Map.png" alt="">
+                    <img src="../../assets/images/Map.png" alt="" class="map-img" >
+                    <div class="svg-wrap">
+                        <div class="svg1 forHint" title="Eagle">
+                            <svg class="svg-map" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M33.0663 0C14.8332 0 0 14.8349 0 33.0702C0 50.7103 30.2303 90.9005 31.5181 92.6046C31.8799 93.091 32.4596 93.375 33.0665 93.375C33.6733 93.375 34.253 93.091 34.6148 92.6046C35.9024 90.9005 66.1329 50.7104 66.1329 33.0702C66.1325 14.8349 51.2994 0 33.0663 0ZM33.0663 50.578C23.4148 50.578 15.5606 42.7229 15.5606 33.0702C15.5606 23.4176 23.4148 15.5624 33.0663 15.5624C42.7177 15.5624 50.572 23.4176 50.572 33.0702C50.572 42.7229 42.7177 50.578 33.0663 50.578Z" fill="#C4C4C4"/>
+                                </svg>     
+                                <p class="hint">
+                                    <img src="../../assets/images/tooltip.png" alt="">
+                                </p>                    
+                           </div>
+                           <div class="svg2 forHint" title="Crocodile">
+                            <svg class="svg-map" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M33.0663 0C14.8332 0 0 14.8349 0 33.0702C0 50.7103 30.2303 90.9005 31.5181 92.6046C31.8799 93.091 32.4596 93.375 33.0665 93.375C33.6733 93.375 34.253 93.091 34.6148 92.6046C35.9024 90.9005 66.1329 50.7104 66.1329 33.0702C66.1325 14.8349 51.2994 0 33.0663 0ZM33.0663 50.578C23.4148 50.578 15.5606 42.7229 15.5606 33.0702C15.5606 23.4176 23.4148 15.5624 33.0663 15.5624C42.7177 15.5624 50.572 23.4176 50.572 33.0702C50.572 42.7229 42.7177 50.578 33.0663 50.578Z" fill="#C4C4C4"/>
+                                </svg>   
+                                <p class="hint">
+                                    <img src="../../assets/images/tooltip.png" alt="">
+                                </p>                      
+                           </div>
+                           <div class="svg3 forHint" title="Gorilla">
+                            <svg class="svg-map" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M33.0663 0C14.8332 0 0 14.8349 0 33.0702C0 50.7103 30.2303 90.9005 31.5181 92.6046C31.8799 93.091 32.4596 93.375 33.0665 93.375C33.6733 93.375 34.253 93.091 34.6148 92.6046C35.9024 90.9005 66.1329 50.7104 66.1329 33.0702C66.1325 14.8349 51.2994 0 33.0663 0ZM33.0663 50.578C23.4148 50.578 15.5606 42.7229 15.5606 33.0702C15.5606 23.4176 23.4148 15.5624 33.0663 15.5624C42.7177 15.5624 50.572 23.4176 50.572 33.0702C50.572 42.7229 42.7177 50.578 33.0663 50.578Z" fill="#C4C4C4"/>
+                                </svg>   
+                                <p class="hint">
+                                    <img src="../../assets/images/tooltip.png" alt="">
+                                </p>                      
+                           </div>
+                           <div class="svg4 forHint" title="Panda">
+                            <svg class="svg-map" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M33.0663 0C14.8332 0 0 14.8349 0 33.0702C0 50.7103 30.2303 90.9005 31.5181 92.6046C31.8799 93.091 32.4596 93.375 33.0665 93.375C33.6733 93.375 34.253 93.091 34.6148 92.6046C35.9024 90.9005 66.1329 50.7104 66.1329 33.0702C66.1325 14.8349 51.2994 0 33.0663 0ZM33.0663 50.578C23.4148 50.578 15.5606 42.7229 15.5606 33.0702C15.5606 23.4176 23.4148 15.5624 33.0663 15.5624C42.7177 15.5624 50.572 23.4176 50.572 33.0702C50.572 42.7229 42.7177 50.578 33.0663 50.578Z" fill="#C4C4C4"/>
+                                </svg>   
+                                <p class="hint">
+                                    <img src="" alt="">
+                                </p>                     
+                           </div>
+                            
+                    </div>
                 </div>
-                <div class="svg-wrap">
-                    <div class="svg1 forHint" title="Eagle">
-                        <svg width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M33.0663 0C14.8332 0 0 14.8349 0 33.0702C0 50.7103 30.2303 90.9005 31.5181 92.6046C31.8799 93.091 32.4596 93.375 33.0665 93.375C33.6733 93.375 34.253 93.091 34.6148 92.6046C35.9024 90.9005 66.1329 50.7104 66.1329 33.0702C66.1325 14.8349 51.2994 0 33.0663 0ZM33.0663 50.578C23.4148 50.578 15.5606 42.7229 15.5606 33.0702C15.5606 23.4176 23.4148 15.5624 33.0663 15.5624C42.7177 15.5624 50.572 23.4176 50.572 33.0702C50.572 42.7229 42.7177 50.578 33.0663 50.578Z" fill="#C4C4C4"/>
-                            </svg>     
-                            <p class="hint">
-                                <img src="../../assets/images/tooltip.png" alt="">
-                            </p>                    
-                       </div>
-                       <div class="svg2 forHint" title="Crocodile">
-                        <svg width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M33.0663 0C14.8332 0 0 14.8349 0 33.0702C0 50.7103 30.2303 90.9005 31.5181 92.6046C31.8799 93.091 32.4596 93.375 33.0665 93.375C33.6733 93.375 34.253 93.091 34.6148 92.6046C35.9024 90.9005 66.1329 50.7104 66.1329 33.0702C66.1325 14.8349 51.2994 0 33.0663 0ZM33.0663 50.578C23.4148 50.578 15.5606 42.7229 15.5606 33.0702C15.5606 23.4176 23.4148 15.5624 33.0663 15.5624C42.7177 15.5624 50.572 23.4176 50.572 33.0702C50.572 42.7229 42.7177 50.578 33.0663 50.578Z" fill="#C4C4C4"/>
-                            </svg>   
-                            <p class="hint">
-                                <img src="../../assets/images/tooltip.png" alt="">
-                            </p>                      
-                       </div>
-                       <div class="svg3 forHint" title="Gorilla">
-                        <svg width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M33.0663 0C14.8332 0 0 14.8349 0 33.0702C0 50.7103 30.2303 90.9005 31.5181 92.6046C31.8799 93.091 32.4596 93.375 33.0665 93.375C33.6733 93.375 34.253 93.091 34.6148 92.6046C35.9024 90.9005 66.1329 50.7104 66.1329 33.0702C66.1325 14.8349 51.2994 0 33.0663 0ZM33.0663 50.578C23.4148 50.578 15.5606 42.7229 15.5606 33.0702C15.5606 23.4176 23.4148 15.5624 33.0663 15.5624C42.7177 15.5624 50.572 23.4176 50.572 33.0702C50.572 42.7229 42.7177 50.578 33.0663 50.578Z" fill="#C4C4C4"/>
-                            </svg>   
-                            <p class="hint">
-                                <img src="../../assets/images/tooltip.png" alt="">
-                            </p>                      
-                       </div>
-                       <div class="svg4 forHint" title="Panda">
-                        <svg width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M33.0663 0C14.8332 0 0 14.8349 0 33.0702C0 50.7103 30.2303 90.9005 31.5181 92.6046C31.8799 93.091 32.4596 93.375 33.0665 93.375C33.6733 93.375 34.253 93.091 34.6148 92.6046C35.9024 90.9005 66.1329 50.7104 66.1329 33.0702C66.1325 14.8349 51.2994 0 33.0663 0ZM33.0663 50.578C23.4148 50.578 15.5606 42.7229 15.5606 33.0702C15.5606 23.4176 23.4148 15.5624 33.0663 15.5624C42.7177 15.5624 50.572 23.4176 50.572 33.0702C50.572 42.7229 42.7177 50.578 33.0663 50.578Z" fill="#C4C4C4"/>
-                            </svg>   
-                            <p class="hint">
-                                <img src="../../assets/images/tooltip.png" alt="">
-                            </p>                     
-                       </div>
-                        
-                </div>
+              
                 
                    
                 <a href="../../pages/Zoos page/Panda/panda.html" class="map-btn">
