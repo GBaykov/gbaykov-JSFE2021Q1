@@ -52,7 +52,7 @@
         </label>
         <button class="btn btn-save">Save picture</button>
       </div>
-      <img src="assets/img/img.jpg" alt="image" />
+      <img id="main-img" src="assets/img/img.jpg" alt="image" />
     </div>
   </main>
   <footer class="footer">
@@ -72,10 +72,9 @@
     function handleUpdate() {
       const suffix = this.dataset.sizing || '';
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix); 
-      
-      document.documentElement.setProperty('output.value', this.value); 
     }
-
+ 
+    inputs.forEach(input => input.addEventListener('input', handleUpdate)); //на событие инпут применяются фильтры
 
 
 //Передача в output-ы числовых свойств input-ов
@@ -85,9 +84,64 @@
     }));
 
 
+
+    //СМЕНА КАРТИНКИ
+
+const base = 'https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/';
+const images = ['01.jpg', '02.jpg', '03.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg', '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg'];
+let i = 0;
+const body = document.querySelector('body');
+const btn = document.querySelector('.btn-next');
+let image = document.getElementById("main-img");
+
+
+let partOfDay = '' //функция определения части дня
+let partOfDayF = function() {
+  let date = new Date();
+if(date.getHours() >= 6 && date.getHours() < 12) {
+  return partOfDay ='morning';
+}
+else if(date.getHours() >= 12 && date.getHours() < 18) {
+  return partOfDay ='day';
+}
+else if(date.getHours() >= 18 && date.getHours() < 24) {
+  return partOfDay ='evening';
+}
+else if(date.getHours() >= 0 && date.getHours() < 6) {
+  return partOfDay ='night';
+}
+}
+
+
+function viewBgImage(src) {  
+  const img = new Image();
+  img.src = src;
+  img.onload = () => {      
+    image.src =  `${src}`
+  }; 
+}
+
+function getImage() {
+  const index = i % images.length;
+  const imageSrc = base + `${partOfDayF()}/`+ images[index];
+  viewBgImage(imageSrc);
+  i++;
+  btn.disabled = true;
+  setTimeout(function() { btn.disabled = false }, 1000);
+} 
+
+btn.addEventListener('click', getImage);
+
+
     
-    inputs.forEach(input => input.addEventListener('input', handleUpdate)); //на событие инпут применяются фильтры
-    
+
+
+
+
+
+
+
+
 
 
   </script>
