@@ -18,33 +18,34 @@
     <div class="filters">
       <label>
         Blur:
-        <input name="blur" data-sizing="px" type="range" min="0" max="10" value="0" />
+        <input name="blur" data-sizing="px" data-def="0" type="range" min="0" max="10" value="0" />
         <output name="result">0</output>
       </label>
       <label>
         Invert:
-        <input name="invert" data-sizing="%" type="range" min="0" max="100" value="0" />
+        <input name="invert" data-sizing="%" data-def="0" type="range" min="0" max="100" value="0" />
         <output name="result">0</output>
       </label>
       <label>
         Sepia:
-        <input name="sepia" data-sizing="%" type="range" min="0" max="100" value="0" />
+        <input name="sepia" data-sizing="%" data-def="0" type="range" min="0" max="100" value="0" />
         <output name="result">0</output>
       </label>
       <label>
         Saturate:
-        <input name="saturate" data-sizing="%" type="range" min="0" max="200" value="100" />
+        <input name="saturate" data-sizing="%" data-def="100" type="range" min="0" max="200" value="100" />
         <output name="result">100</output>
       </label>
       <label>
         Hue rotate:
-        <input name="hue" data-sizing="deg" type="range" min="0" max="360" value="0" />
+        <input name="hue" data-sizing="deg" data-def="0" type="range" min="0" max="360" value="0" />
         <output name="result">0</output>
       </label>
     </div>
     <div class="editor">
       <div class="btn-container">
-        <button class="btn btn-reset">Reset</button>
+        
+      <button class="btn btn-reset">Reset</button>
         <button class="btn btn-next btn-active">Next picture</button>
         <label class="btn btn-load" for="btnInput">
           Load picture
@@ -138,7 +139,7 @@ btn.addEventListener('click', getImage);
 //ЗАГРУЗКА IMG С КОМПА
 const fileInput = document.querySelector('input[type="file"]');
 const imageContainer = document.querySelector('.image-container');
-//const apendImage = getElementById("main-img");
+
 
 fileInput.addEventListener('change', function(e) {
   const file = fileInput.files[0];
@@ -147,7 +148,6 @@ fileInput.addEventListener('change', function(e) {
     //const imgIm = new Image();
     //imgIm.src = reader.result;
     image.src =  reader.result;
-    
     //image.innerHTML = "";
     //image.append(imgIm);
   }
@@ -159,8 +159,29 @@ fileInput.addEventListener('change', function(e) {
 
 
 
+//работа с RESET
+
+const btnRes = document.querySelector('.btn-reset');
+btnRes.addEventListener('click', resFilters);
+
+function resFilters() {
+  
+  inputs.forEach(input => {
+   // img.style.cssText = ""; 
+    input.value = input.dataset.def;
+    input.nextElementSibling.value = input.value;
+    
+  });
+}
+
+ 
 
 
+
+
+
+
+  
 
 
 
