@@ -135,6 +135,26 @@ btn.addEventListener('click', getImage);
 
     
 
+//ЗАГРУЗКА IMG С КОМПА
+const fileInput = document.querySelector('input[type="file"]');
+const imageContainer = document.querySelector('.image-container');
+//const apendImage = getElementById("main-img");
+
+fileInput.addEventListener('change', function(e) {
+  const file = fileInput.files[0];
+  const reader = new FileReader();
+  reader.onload = () => {
+    //const imgIm = new Image();
+    //imgIm.src = reader.result;
+    image.src =  reader.result;
+    
+    //image.innerHTML = "";
+    //image.append(imgIm);
+  }
+  reader.readAsDataURL(file);
+  
+});
+
 
 
 
