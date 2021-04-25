@@ -79,7 +79,7 @@
 
 
 //Передача в output-ы числовых свойств input-ов
-    const outputs = document.querySelectorAll('output');//пока не пригодилось
+   // const outputs = document.querySelectorAll('output');//пока не пригодилось
     inputs.forEach(input => input.addEventListener('input', ()=> { 
       input.nextElementSibling.value = input.value;//присвоение
     }));
@@ -165,12 +165,25 @@ const btnRes = document.querySelector('.btn-reset');
 btnRes.addEventListener('click', resFilters);
 
 function resFilters() {
-  
   inputs.forEach(input => {
-   // img.style.cssText = ""; 
+   // img.style.cssText = ""; совет в чате (не получилось)
+    
+    
+    //if(input.name == 'saturate'){
+     // input.value = 100;
+    //} else {
+     // input.value = 0;
+    //};    то же самое, что и следующая строка, но длиннее
     input.value = input.dataset.def;
     input.nextElementSibling.value = input.value;
-    
+
+    const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(`--${input.name}`, 0 + suffix); 
+
+    if(input.name === 'saturate') {
+      const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(`--${input.name}`, 1 + suffix); // костыль, потому что saturate ведет себя странно. При 0 - все чернобелое(как 0), при нужных 100 - все слишком неадекватно. Возможно 1 = 100%
+    }
   });
 }
 
