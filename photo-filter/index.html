@@ -51,9 +51,10 @@
           Load picture
           <input class="btn-load--input" id="btnInput" name="upload" type="file" placeholder="Load picture" />
         </label>
-        <button class="btn btn-save">Save picture</button>
+        <button id="btn-save" class="btn btn-save">Save picture</button>
       </div>
       <img id="main-img" src="assets/img/img.jpg" alt="image" />
+      <canvas></canvas>
     </div>
   </main>
   <footer class="footer">
@@ -190,7 +191,7 @@ function resFilters() {
 }
 
  
-//  добавление fullscreen  через запрос как в virtual-piano, НЕ через добавление класса(зачем изобретать колесо) KISS
+//  добавление fullscreen  через запрос как в virtual-piano, KISS
 let toggleScreen = function () {
     if (document.fullscreenElement === null) {
       document.documentElement.requestFullscreen()
@@ -200,6 +201,51 @@ let toggleScreen = function () {
 
 
 
+  //СОХРАНЕНИЕ, СКАЧИВАНИЕ
+  const canvas = document.querySelector('canvas');
+const download = document.getElementById('btn-save');
+
+function drawImage() {
+  const imgCont = document.querySelector('img');
+    const img = new Image();
+    img.setAttribute('crossOrigin', 'anonymous'); 
+    img.src = imgCont.src;
+    img.onload = function() {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext("2d");
+      
+    const blur = document.querySelector('input[name="blur"]');
+      let blurVal = blur.value;
+    const invert = document.querySelector('input[name="invert"]');
+      let invertVal = invert.value;
+    const sepia = document.querySelector('input[name="sepia"]');
+      let sepiaVal = sepia.value;
+    const saturate = document.querySelector('input[name="saturate"]');
+      let saturateVal = saturate.value;
+    const hue = document.querySelector('input[name="hue"]');
+      let hueVal = hue.value;
+  let filterForCanvas = `blur(${blurVal}px) invert(${invertVal}%) sepia(${sepiaVal}%) saturate(${saturateVal}%) hue-rotate(${hueVal}deg)`;
+  
+  ctx.filter = filterForCanvas;
+  
+  
+      console.log(`${filterForCanvas}`); console.log(ctx.filter);
+      
+      ctx.drawImage(img, 0, 0);
+
+      var link = document.createElement('a');
+      link.download = 'download.png';
+      link.href = canvas.toDataURL();
+      link.click();
+      link.delete;
+    };    
+  }
+download.addEventListener('click', function(e) {
+  drawImage();
+  //console.log(canvas.toDataURL());
+ 
+});
 
 
 
