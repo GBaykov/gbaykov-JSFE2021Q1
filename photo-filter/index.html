@@ -211,12 +211,18 @@ function drawImage() {
     img.setAttribute('crossOrigin', 'anonymous'); 
     img.src = imgCont.src;
     img.onload = function() {
+      let cof = 0;
+     if (img.height> canvas.height){
+       cof = Math.floor(img.height / canvas.height);  
+     } else cof = Math.floor(canvas.height / img.height);
       canvas.width = img.width;
       canvas.height = img.height;
       const ctx = canvas.getContext("2d");
       
     const blur = document.querySelector('input[name="blur"]');
-      let blurVal = blur.value;
+     
+    let blurVal = blur.value * 3; //костыль, но визуально норм
+
     const invert = document.querySelector('input[name="invert"]');
       let invertVal = invert.value;
     const sepia = document.querySelector('input[name="sepia"]');
