@@ -178,7 +178,7 @@ img {
     sepia(var(--sepia, 0%)) saturate(var(--saturate, 100%))
     hue-rotate(var(--hue, 0deg));
 }
-.canvas{
+canvas{
   display: none;
 } 
 
