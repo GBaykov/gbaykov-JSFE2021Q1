@@ -117,7 +117,8 @@ else if(date.getHours() >= 0 && date.getHours() < 6) {
 function viewBgImage(src) {  
   const img = new Image();
   img.src = src;
-  img.onload = () => {      
+  img.onload = () => {   
+    image.src = '';   
     image.src =  `${src}`
   }; 
 }
@@ -147,6 +148,7 @@ fileInput.addEventListener('change', function(e) {
   reader.onload = () => {
     //const imgIm = new Image();
     //imgIm.src = reader.result;
+    image.src = '';  
     image.src =  reader.result;
     //image.innerHTML = "";
     //image.append(imgIm);
@@ -188,6 +190,13 @@ function resFilters() {
 }
 
  
+//  добавление fullscreen  через запрос как в virtual-piano, НЕ через добавление класса(зачем изобретать колесо) KISS
+let toggleScreen = function () {
+    if (document.fullscreenElement === null) {
+      document.documentElement.requestFullscreen()
+    } else if (document.fullscreenEnabled )  document.exitFullscreen();
+  }
+  document.querySelector('.fullscreen').addEventListener('click',toggleScreen);
 
 
 
