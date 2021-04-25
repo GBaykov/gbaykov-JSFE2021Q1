@@ -53,7 +53,7 @@
         </label>
         <button id="btn-save" class="btn btn-save">Save picture</button>
       </div>
-      <img id="main-img" src="assets/img/img.jpg" alt="image" />
+      <img id="main-img" src="assets/img/img.jpeg" alt="image" />
       <canvas></canvas>
     </div>
   </main>
@@ -212,16 +212,21 @@ function drawImage() {
     img.src = imgCont.src;
     img.onload = function() {
       let cof = 0;
-     if (img.height> canvas.height){
-       cof = Math.floor(img.height / canvas.height);  
-     } else cof = Math.floor(canvas.height / img.height);
+     
       canvas.width = img.width;
       canvas.height = img.height;
       const ctx = canvas.getContext("2d");
       
     const blur = document.querySelector('input[name="blur"]');
-     
-    let blurVal = blur.value * 3; //костыль, но визуально норм
+    
+    if(canvas.width>canvas.height) {
+      cof = canvas.width / imgCont.width;
+    } else {
+      cof = canvas.height / imgCont.height;
+    }
+
+    let blurVal = blur.value * (cof); //до этого был *3 
+    //  Math.floor делает размытие слабее!
 
     const invert = document.querySelector('input[name="invert"]');
       let invertVal = invert.value;
@@ -252,12 +257,6 @@ download.addEventListener('click', function(e) {
   //console.log(canvas.toDataURL());
  
 });
-
-
-
-  
-
-
 
   </script>
 </body>
