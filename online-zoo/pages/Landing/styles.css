@@ -401,6 +401,36 @@ textarea {
       box-sizing: inherit;
   }
 
+/*ЦВЕТА базовые */
+
+:root {
+    --white-to-black:#ffffff ;  /* назвать white-to-black*/
+    --gray-to-dark: #F2F2F2; /* назвать gray-to-dark*/
+    --white-to-dark:#ffffff  ;
+    --text-to-white:#333333 ;
+    --text-to-black: #ffffff  ;
+
+  }
+
+.dark-mode{
+    --white-to-black: #3C3C3C;
+    --gray-to-dark: #4F4F4F;
+    --white-to-dark:#4F4F4F;
+    --text-to-white:#ffffff ;
+    --text-to-black: #333333;
+}
+
+  
+/*ЦВЕТА базовые КОНЕЦ*/
+
+
+
+
+
+
+
+
+
 /* HEADER STARTS*/
 .container-main {
     margin: 0 auto;
@@ -412,7 +442,7 @@ textarea {
 }
 .wrapper {
     margin: 0 auto;
-    background: #FFFFFF;
+    background: var(--white-to-black);
 box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
 
 height: 94px;
@@ -434,7 +464,7 @@ height: 94px;
     font-family: Roboto;
 font-style: normal;
 font-weight: 900;
-color: #333333;
+color: var(--text-to-white);
 font-size: 18px;
 line-height: 21px;
 text-decoration: none;
@@ -443,7 +473,7 @@ text-decoration: none;
     font-family: Roboto;
 font-style: normal;
 font-weight: 900;
-color: #333333;
+color: var(--text-to-white);
 font-size: 18px;
 line-height: 21px;
 text-decoration: none;
@@ -476,7 +506,7 @@ text-decoration: none;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
-    color: #333333;
+    color: var(--text-to-white);
     text-decoration: none;  
  }
  
@@ -487,7 +517,7 @@ text-decoration: none;
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid var(--text-to-white);
     cursor: default;
  }
 
@@ -495,15 +525,7 @@ text-decoration: none;
     position: relative;
     cursor: pointer;
 }
-.switcher-bg{
-    
-    width: 54px;
-   height: 30px;
-   left: 0px;
-   top: 0px;
-   background: #F2F2F2;
-   border-radius: 190px;
-}
+
 .switcher {
     position: absolute;
     width: 20px;
@@ -512,7 +534,7 @@ text-decoration: none;
    top: 5px;
    border-radius:50%;
    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
-   background: #FFFFFF;
+   background: var(--gray-to-dark);;
 }
  /* HEADER ENDS*/
 
@@ -726,13 +748,13 @@ top: 722px;
 /* How it works STARTS*/
 
 .how{
-    background: #FFFFFF;
+    background: var(--white-to-black);
     height: 883px;
 }
 .how-wrapper{
     max-width: 790px;
     margin: 0 auto;
-    margin-top: 100px;
+    padding-top: 100px;
 }
 .how-header{
     font-family: Roboto;
@@ -740,7 +762,7 @@ font-style: normal;
 font-weight: 900;
 font-size: 48px;
 line-height: 56px;
-color: #333333;
+color: var(--text-to-white);
 margin-bottom: 30px;
 }
 .how-text{
@@ -751,7 +773,7 @@ font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 16px;
-color: #4F4F4F;
+color: var(--text-to-white);
 margin-bottom: 30px;
 }
 .how-photo{
@@ -784,7 +806,7 @@ input.how-range::-webkit-slider-thumb {
     border: 0px solid #000000;
     height: 10px;
     width: 62px;
-    background: #333333;
+    background: var(--text-to-white);
     cursor: pointer;
     
     margin-top: -2.5px;
@@ -814,7 +836,7 @@ input.how-range::-webkit-slider-thumb {
     position: relative;
     
     height: 413px;
-    background: #F2F2F2;
+    background: var(--gray-to-dark);
     margin-top: -190px;
     background-size:cover
 }
@@ -835,6 +857,7 @@ font-style: normal;
 font-weight: 900;
 font-size: 20px;
 line-height: 23px;
+color: var(--text-to-white);
 }
 
 .table-text{
@@ -843,6 +866,7 @@ font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 16px;
+color: var(--text-to-white);
 }
 
 .table-first{
@@ -870,13 +894,14 @@ table{
 
 /* Pets in Zoo STARTS*/
 .pets{
-    
+    background-color: var(--white-to-black);
     height: 854px;
     margin-bottom: -100px;
 }
 .pets-wrapper{
     margin: 0 auto;
-    margin-top: 100px; 
+    padding-top: 100px; 
+    margin-bottom: 100px;
 }
 .photo-wrapper{
    
@@ -888,7 +913,7 @@ font-weight: 900;
 font-size: 48px;
 line-height: 56px;
 text-align: center;
-color: #333333;
+color: var(--text-to-white);
 margin-bottom: 35px;
 }
 .pets-photo{
@@ -918,7 +943,7 @@ font-style: normal;
 font-weight: 900;
 font-size: 24px;
 line-height: 28px;
-color: #333333;
+color: var(--text-to-white);
 margin-bottom: 5x;
 cursor: pointer;
 }
@@ -976,7 +1001,7 @@ font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 16px;
-color: #FFFFFF;
+color: white;
 width: 194px;
 margin-bottom: 14px;
 }
@@ -990,7 +1015,7 @@ margin-bottom: 14px;
 .pay{
     
 height: 754px;
-    background: #F2F2F2;
+    background: var(--gray-to-dark);
 }
 
 .pay-wrapper{
@@ -1003,7 +1028,7 @@ font-weight: 900;
 font-size: 48px;
 line-height: 56px;
 text-align: center;
-color: #333333;
+color: var(--text-to-white);
 padding-top: 100px;
 margin-bottom: 30px;
 }
@@ -1014,7 +1039,7 @@ font-weight: normal;
 font-size: 14px;
 line-height: 16px;
 text-align: center;
-color: #4F4F4F;
+color: color: var(--text-to-white);
 margin-bottom: 92px;
 }
 .pay-algoritm{
@@ -1044,8 +1069,8 @@ margin-bottom: 92px;
 
 /* Testimonials STARTS*/
 .Testimonials-wrapper{
-    
-height: 810px;
+    background: var(--white-to-black);
+height: 910px;
 margin-bottom: -100px;
 }
 .Test-header{
@@ -1055,8 +1080,8 @@ font-weight: 900;
 font-size: 48px;
 line-height: 56px;
 text-align: center;
-color: #333333;
-    margin-top: 100px;
+color: var(--text-to-white);
+    padding-top: 100px;
     margin-bottom: 62px;
 }
 .reviews{
@@ -1070,7 +1095,7 @@ color: #333333;
 .rewiews-comment{
     width: 585px;
     height: 310px;
-background: #FEFEFE;
+background: var(--white-to-dark);
 box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
 border-radius: 5px;
 align-items: center;
@@ -1085,7 +1110,7 @@ align-items: center;
     font-size: 20px;
     line-height: 23px;
     text-align: center;
-    color: #333333;
+    color: var(--text-to-white);
     position: relative;
     top: 65px;
     margin-right: 3px;
@@ -1097,7 +1122,7 @@ align-items: center;
     font-size: 14px;
     line-height: 16px;
     width: 440px;
-    color: #4F4F4F;
+    color: var(--text-to-white);
     margin: 0 auto;
     position: relative;
     top: 85px;
@@ -1136,7 +1161,7 @@ font-style: normal;
 font-weight: 900;
 font-size: 24px;
 line-height: 28px;
-color: #333333;
+color: var(--text-to-white);
 }
 .comment-scrolle{
     position: relative;
@@ -1180,7 +1205,7 @@ color: #333333;
     position: relative;
     max-height: 904px;
    max-width:1920px ;
-    background: #F2F2F2;
+    background-color: var(--gray-to-dark);
     padding-bottom: 130px;
 }
 .map-wrapper{
@@ -1195,7 +1220,7 @@ font-weight: 900;
 font-size: 48px;
 line-height: 56px;
 text-align: center;
-color: #333333;
+color: var(--text-to-white);
 padding-top: 100px;
 margin-bottom: 60px;
 }
@@ -1558,6 +1583,41 @@ span{
 
 
 
+/* range main theme start  */
+
+input[name="theme-change"] {
+    -webkit-appearance: none;
+    margin: 2.5px 0;
+    width: 54px;
+  }
+  input[name="theme-change"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 30px;
+    width: 54px;
+    cursor: pointer;
+    background: var(--gray-to-dark);
+    border-radius: 190px;
+  }
+  input[name="theme-change"]::-webkit-slider-thumb {
+    border: 0px solid #000000;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--text-to-black);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin: 5px 0 0 0;
+  }
+  input[name="theme-change"]:focus::-webkit-slider-runnable-track {
+    background: var(--gray-to-dark);
+  }
+
+  /* range main theme end  */
+
+
+
+
+
 
 /*ADAPTIV RESPONSIV START*/
 
@@ -1598,6 +1658,17 @@ top: 0;
 /*1200PX(1200-1919) START*/
 
 @media screen and (max-width:1919px) {
+
+
+
+/* input - range top of Whath start  */
+
+
+
+
+
+
+
  
     .header__wrapper {
         
@@ -1714,6 +1785,40 @@ input[type=range] {
     height: 10px;
   }
   /* input - range top of Whath end  */
+
+
+/* range main theme start  */
+
+input[name="theme-change"] {
+    -webkit-appearance: none;
+    margin: 2.5px 0;
+    width: 54px;
+  }
+  input[name="theme-change"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 30px;
+    width: 54px;
+    cursor: pointer;
+    background: var(--gray-to-dark);
+    border-radius: 190px;
+  }
+  input[name="theme-change"]::-webkit-slider-thumb {
+    border: 0px solid #000000;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--text-to-black);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin: 5px 0 0 0;
+  }
+  input[name="theme-change"]:focus::-webkit-slider-runnable-track {
+    background: var(--gray-to-dark);
+  }
+
+  /* range main theme end  */
+
+
 
   .how-btn{
       margin-left: 253px;
