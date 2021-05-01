@@ -785,7 +785,7 @@ margin-bottom: 30px;
 margin-left: 272px;
 }
 .how-number{
-   
+    color: var(--text-to-white);
     margin-left: 96px;
     top: 0px;
     position: relative;
@@ -897,11 +897,13 @@ table{
     background-color: var(--white-to-black);
     height: 854px;
     margin-bottom: -100px;
+    
 }
 .pets-wrapper{
     margin: 0 auto;
     padding-top: 100px; 
     margin-bottom: 100px;
+    position: relative;
 }
 .photo-wrapper{
    
@@ -976,12 +978,56 @@ cursor: pointer;
 }
 
 
-
-
-
 .pets-elem{
-    overflow: hidden;
+    
 }
+.pets-elem:last-child{
+    margin-right: 0;
+}
+
+
+#carousel {
+    overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  max-width: 1240px;
+  }
+  #content {
+    display: grid;
+    grid-gap: 35px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+  }
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+   
+  }
+  
+  #prev {
+    top: 50%;
+    left: 23.484848%;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+  
+  #next {
+    top: 50%;
+    right: 23.484848%;
+    transform: translate(-50%, -50%);
+  }
+  
+
 .pets-hiden{
     position: absolute;
     margin-top: -124px;
@@ -1039,7 +1085,7 @@ font-weight: normal;
 font-size: 14px;
 line-height: 16px;
 text-align: center;
-color: color: var(--text-to-white);
+color: var(--text-to-white);
 margin-bottom: 92px;
 }
 .pay-algoritm{
