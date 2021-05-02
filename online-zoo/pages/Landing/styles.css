@@ -973,17 +973,16 @@ cursor: pointer;
     
 }
 .photo-p:hover{
-    opacity: 0.7;
+    opacity: 0.6;
     cursor: pointer;
 }
 
 
-.pets-elem{
-    
-}
+
 .pets-elem:last-child{
     margin-right: 0;
 }
+
 
 
 #carousel {
@@ -992,12 +991,17 @@ cursor: pointer;
   scrollbar-width: none;
   max-width: 1240px;
   }
+  .carousel::-webkit-scrollbar {
+    width: 0;
+  } /* width:0; убирает скроллбар!!!!! (заменить на #)*/
+
   #content {
     display: grid;
     grid-gap: 35px;
     grid-auto-flow: column;
     margin: auto;
     box-sizing: border-box;
+    
   }
   #prev,
   #next {
@@ -1016,27 +1020,31 @@ cursor: pointer;
   
   #prev {
     top: 50%;
-    left: 23.484848%;
+    left: 12.484848%;
     transform: translate(50%, -50%);
-    display: none;
+    
   }
   
   #next {
     top: 50%;
-    right: 23.484848%;
+    right: 12.484848%;
     transform: translate(-50%, -50%);
   }
   
+  .pets-elem{
+    background: #000
+}
 
 .pets-hiden{
-    position: absolute;
+    position: relative;
     margin-top: -124px;
     margin-left: 20px;
     visibility:hidden;
+    display: none;
 }
 .pets-elem:hover .pets-hiden {
     visibility:visible; 
-    
+    display: block;
 }
 .pets-hiden:hover{
      

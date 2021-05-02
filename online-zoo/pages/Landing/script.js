@@ -32,16 +32,16 @@ next.addEventListener("click", function(e)  {
   if (carousel.scrollWidth !== 0) {
     prev.style.display = "flex";
   }
-  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-    //next.style.display = "none";
-    carousel.scrollBy(-(width  )*3, 0);
+  if (content.scrollWidth - width - gap <= carousel.scrollLeft ) { //+ width
+    
+    carousel.scrollLeft = 0;
   }
 });
 prev.addEventListener("click", function(e) {
   carousel.scrollBy(-(width  ), 0);
-  if (carousel.scrollLeft - width - gap <= 0) {
-    //prev.style.display = "none";
-    carousel.scrollBy((width  )*3, 0);
+  if (carousel.scrollLeft  - gap <= 0) {//- width
+    
+    carousel.scrollLeft = carousel.scrollWidth;
   }
   if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
     next.style.display = "flex";
@@ -49,4 +49,4 @@ prev.addEventListener("click", function(e) {
 });
 
 let width = carousel.offsetWidth;
-window.addEventListener("resize", e => (width = carousel.offsetWidth));
+window.addEventListener("resize", e => (width )); //width= carousel.offsetWidth было
