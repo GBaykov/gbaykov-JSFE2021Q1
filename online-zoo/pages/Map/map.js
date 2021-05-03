@@ -29,12 +29,15 @@ switcher.addEventListener('click', function(event) {
    //const galItems = document.querySelectorAll('.favorite__animal');
    const firstCount = document.querySelector('.number');
     const galItems = icoCor.querySelectorAll('.ani-ico');
-    
-  
+    const pindexes = document.querySelectorAll('.svg-size');
+  //alert(pindexes[0])
+
+
     icoCor.addEventListener('click', e =>  {
         for(let i = 0; i <galItems.length; i++) {
             galItems[i].classList.remove('activ-icon');
         };  
+
       if (e.target.dataset.index !== undefined) {
         let count = e.target.dataset.index;
         icoRange.value = e.target.dataset.index;
@@ -43,7 +46,15 @@ switcher.addEventListener('click', function(event) {
         //if(e.target.dataset.index > 5) {
           //  setPosition(parseInt(e.target.dataset.index));
        // }
-      }
+       for(let i = 0; i <pindexes.length; i++) {
+        if(pindexes[i].dataset.pindex === e.target.dataset.index ){
+            for(let i = 0; i <pindexes.length; i++) {
+                pindexes[i].classList.remove('activ-icon');
+            }; 
+            pindexes[i].classList.add('activ-icon');
+        };
+    };  
+    };
     }); 
   
     icoRange.addEventListener('input', e =>  {
@@ -54,10 +65,29 @@ switcher.addEventListener('click', function(event) {
     //};
       //
       for(let i = 0; i <galItems.length-1; i++) {
+        for(let i = 0; i <pindexes.length; i++) {
+            
+            if(pindexes[i].dataset.pindex === galItems[i].dataset.pindex){
+                alert(pindexes[i]);
+                for(let i = 0; i <pindexes.length; i++) {
+                    pindexes[i].classList.remove('activ-icon');
+                }; 
+                pindexes[i].classList.add('activ-icon');
+            };
+        }; 
         galItems[i].classList.remove('activ-icon');
-    };galItems[count-1].classList.add('activ-icon');
+    };
+    galItems[count-1].classList.add('activ-icon');
     }); 
   
+
+
+    
+
+
+
+
+
     function setPosition(index) { //функция перелистывания картинок
       galItems.forEach((ico) => {
         
@@ -92,7 +122,9 @@ right.addEventListener('click', e =>  {
             if(icoRange.value == 9) icoRange.value = 0;
             let count = icoRange.value;
             firstCount.innerHTML = `0${count}/08`;
-        };   
+           
+            
+        };  
     };  
 }); 
 left.addEventListener('click', e =>  {
@@ -124,3 +156,23 @@ left.addEventListener('click', e =>  {
 
 
 
+const mapDiv = document.querySelector('.main-map');
+
+mapDiv.addEventListener('click', e =>  {
+
+  if (e.target.dataset.pindex !== undefined) {
+    for(let i = 0; i <galItems.length; i++) {
+        galItems[i].classList.remove('activ-icon');
+    };  
+    
+    let count = e.target.dataset.pindex;
+    icoRange.value = e.target.dataset.pindex;
+    firstCount.innerHTML = `0${count}/08`;
+    galItems[count-1].classList.add('activ-icon');
+
+for(let i = 0; i <pindexes.length; i++) {
+    pindexes[i].classList.remove('activ-icon');
+};  e.target.classList.add('activ-icon');
+
+};
+}); 
