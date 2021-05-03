@@ -18,3 +18,59 @@ switcher.addEventListener('click', function(event) {
         map.src = '../../assets/images/Map.png';
     }
     }); 
+
+
+
+//карусель иконок в MAP
+
+   
+    const icoCor = document.querySelector('.animal-hiden-wrap');
+    const icoRange = document.querySelector('input[name="ico-range"]');
+   //const galItems = document.querySelectorAll('.favorite__animal');
+   const firstCount = document.querySelector('.number');
+    const galItems = icoCor.querySelectorAll('.ani-ico');
+    
+  
+    icoCor.addEventListener('click', e =>  {
+        for(let i = 0; i <galItems.length; i++) {
+            galItems[i].classList.remove('activ-icon');
+        };  
+      if (e.target.dataset.index !== undefined) {
+        let count = e.target.dataset.index;
+        icoRange.value = e.target.dataset.index;
+        firstCount.innerHTML = `0${count}/08`;
+        e.target.classList.add('activ-icon');
+        //if(e.target.dataset.index > 5) {
+          //  setPosition(parseInt(e.target.dataset.index));
+       // }
+      }
+    }); 
+  
+    icoRange.addEventListener('input', e =>  {
+      let count = icoRange.value;
+      firstCount.innerHTML = `0${count}/08`;
+      //if(e.target.value > 5) {
+        //setPosition(parseInt(e.target.value));
+    //};
+      //
+      for(let i = 0; i <galItems.length-1; i++) {
+        galItems[i].classList.remove('activ-icon');
+    };galItems[count-1].classList.add('activ-icon');
+    }); 
+  
+    function setPosition(index) { //функция перелистывания картинок
+      galItems.forEach((ico) => {
+        
+        if (ico.classList.contains('active')) {
+          ico.classList.remove('active');
+        }
+        const icoWidth = ico.offsetWidth + parseInt(getComputedStyle(ico).marginRight);//parseInt мжно вместо +
+        
+        ico.style.transform = `translateX(${-(index -2) * icoWidth}px)`;  
+      }); //alert(galItems[0]); 
+    };
+   
+//карусель иконок в MAP КОНЕЦ
+
+
+

@@ -58,7 +58,7 @@ switcher.addEventListener('click', function(event) {
       if (div.classList.contains('active')) {
         div.classList.remove('active');
       }
-      const divWidth = div.offsetWidth + parseInt(getComputedStyle(div).marginRight); 
+      const divWidth = div.offsetWidth + +(getComputedStyle(div).marginRight);//parseInt мжно вместо +
       
       div.style.transform = `translateX(${-(index -2) * divWidth}px)`;
       
