@@ -43,14 +43,14 @@ switcher.addEventListener('click', function(event) {
       //if(e.target.classList.contains('passive')) {
        // e.target.classList.remove('passive');
       //};
-      setPosition(+(e.target.dataset.index));
+      setPosition(parseInt(e.target.dataset.index));
     }
   }); 
 
   favRange.addEventListener('input', e =>  {
     let count = favRange.value;
     firstCount.innerHTML = `0${count}/08`;
-    setPosition(+(e.target.value));
+    setPosition(parseInt(e.target.value));
   }); 
 
   function setPosition(index) { //функция перелистывания картинок
@@ -58,7 +58,7 @@ switcher.addEventListener('click', function(event) {
       if (div.classList.contains('active')) {
         div.classList.remove('active');
       }
-      const divWidth = div.offsetWidth + +(getComputedStyle(div).marginRight);//parseInt мжно вместо +
+      const divWidth = div.offsetWidth + parseInt(getComputedStyle(div).marginRight);//parseInt мжно вместо +
       
       div.style.transform = `translateX(${-(index -2) * divWidth}px)`;
       
