@@ -70,6 +70,56 @@ switcher.addEventListener('click', function(event) {
       }); //alert(galItems[0]); 
     };
    
+
+
+const left = document.querySelector('.left');
+const right = document.querySelector('.right');
+
+right.addEventListener('click', e =>  {
+
+    for(let i = 0; i <galItems.length-1; i++) {
+        if(galItems[i].classList.contains('activ-icon')){
+            galItems[i].classList.remove('activ-icon');
+            galItems[i+1].classList.add('activ-icon');
+            i++;
+            if(i==8) {
+                galItems[i].classList.remove('activ-icon');
+                galItems[0].classList.add('activ-icon');
+                continue;
+                
+            };  
+            icoRange.value = i + 1;
+            if(icoRange.value == 9) icoRange.value = 0;
+            let count = icoRange.value;
+            firstCount.innerHTML = `0${count}/08`;
+        };   
+    };  
+}); 
+left.addEventListener('click', e =>  {
+
+    for(let i = galItems.length-1; i >0; i--) {
+        if(galItems[i].classList.contains('activ-icon')){
+            galItems[i].classList.remove('activ-icon');
+            galItems[i-1].classList.add('activ-icon');
+            i--;
+            if(i<1) {
+                galItems[i].classList.remove('activ-icon');
+                galItems[0].classList.add('activ-icon');
+                continue;
+                
+            };  
+            icoRange.value = i + 1;
+            if(i === 0) icoRange.value = 9;
+            let count = icoRange.value;
+            firstCount.innerHTML = `0${count}/08`;
+        };   
+    };  
+}); 
+
+
+
+
+
 //карусель иконок в MAP КОНЕЦ
 
 
