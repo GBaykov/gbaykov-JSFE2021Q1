@@ -20,6 +20,77 @@ switcher.addEventListener('click', function(event) {
     }
     });
 
+//Карусель в блоке Watch your favorite
+
+  
+  const photoCor = document.querySelector('.favorite__photoes');
+  const favRange = document.querySelector('input[name="galary"]');
+ //const galItems = document.querySelectorAll('.favorite__animal');
+ const firstCount = document.querySelector('.number-favorite');
+ 
+  const galItems = photoCor.querySelectorAll('.favorite__animal');
+  const galPhot = photoCor.querySelectorAll('.animals-gallery');
+
+  photoCor.addEventListener('click', e =>  {
+    if (e.target.dataset.index !== undefined) {
+      //galPhot[e.target.dataset.index].classList.add('passive');
+      let count = e.target.dataset.index;
+      favRange.value = e.target.dataset.index;
+      firstCount.innerHTML = `0${count}/08`;
+      //alert(e.target.classList);
+      e.target.classList.add('active');
+      //alert(e.target.width);
+      //if(e.target.classList.contains('passive')) {
+       // e.target.classList.remove('passive');
+      //};
+      setPosition(+(e.target.dataset.index));
+    }
+  }); 
+
+  favRange.addEventListener('input', e =>  {
+    let count = favRange.value;
+    firstCount.innerHTML = `0${count}/08`;
+    setPosition(+(e.target.value));
+  }); 
+
+  function setPosition(index) { //функция перелистывания картинок
+    galItems.forEach((div) => {
+      if (div.classList.contains('active')) {
+        div.classList.remove('active');
+      }
+      const divWidth = div.offsetWidth + parseInt(getComputedStyle(div).marginRight); 
+      
+      div.style.transform = `translateX(${-(index -2) * divWidth}px)`;
+      
+    });
+  };
+
+
+//Карусель в блоке Watch your favorite КОНЕЦ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

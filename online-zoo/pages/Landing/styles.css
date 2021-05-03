@@ -548,8 +548,8 @@ text-decoration: none;
     background-size:cover
 }
 
-.favorite__wrapper{
-    
+.container-fluid{
+  
 }
 .favorite__watch{
     
@@ -604,13 +604,15 @@ cursor: pointer;
 }
 .animals-gallery{
     width: 140px;
-    height: 203px;
+    height: 203px; 
+    
 }
 .animals-gallery:hover{
-    opacity: 0.85;
+   opacity: 0.8;
 }
 .favorite__animal{
     margin-right: 46px;
+    z-index: 3px;
     
     }
 .favorite__animal:last-child{
@@ -621,12 +623,22 @@ cursor: pointer;
         
     }
 
-.panda{
+panda{
+     
+margin-top:0px;
+z-index: 1;
+}
+
+.activ {
     width: 245px;
     height: 352px; 
 margin-top:-90px;
 z-index: 1;
 }
+.passive{
+       
+}
+
 .panda:hover{
     
 }
@@ -637,16 +649,16 @@ z-index: 1;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 12px;
+    line-height: 12px;
 z-index: 2;
 margin-top: -120px;
-margin-left: 23px;
+margin-left: 13px;
 }
 .panda-text{
 height: 48px;
     margin-bottom: 14px;
-    width: 185px;
+    width: 130px;
 }
 .panda-watch{
     margin-right: 10px;
