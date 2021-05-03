@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="map.css"></link>
 
 </head>
-<body>
+<body class="body" >
     <div class="container-main">
     <header class="header">
         <div class="wrapper">
@@ -39,8 +39,7 @@
                     </ul>
                 </nav>
                 <div class="main-switcher">
-                    <p class="switcher-bg"></p>
-                    <p class="switcher"></p>
+                    <input name="theme-change" type="range" min="1" max="2" value="1">
                 </div>
                 <div class="header-burger burger">
                     <span class="burger-line line-first"></span>
@@ -81,7 +80,7 @@
             </div>
             <div class="main-map">
                 <div class="map-div">
-                    <img class="map-img" src="../../assets/images/Map.png" alt="">
+                    <img id="map-img" class="map-img" src="../../assets/images/Map.png" alt="">
                     
                         <div class="svg1" title="Eagle">
                             <svg class="svg-size" width="67" height="94" viewBox="0 0 67 94" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -230,5 +229,8 @@
 </div>
     </footer>
 </div>
+
+<script src="../../pages/Map/map.js" > </script>
+
 </body>
 </html>
