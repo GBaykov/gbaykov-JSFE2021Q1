@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../pages/Landing/styles.css"></link>
 
 </head>
-<body>
+<body class="body">
     <div class="container-main">
     <header class="header">
         <div class="wrapper">
@@ -39,9 +39,12 @@
                     </ul>
                 </nav>
                 <div class="main-switcher">
+                    <input name="theme-change" type="range" min="1" max="2" value="1">
+                </div>
+                <!-- <div class="main-switcher">
                     <p class="switcher-bg"></p>
                     <p class="switcher"></p>
-                </div>
+                </div> -->
                 <div class="header-burger burger">
                     <span class="burger-line line-first"></span>
                     <span class="burger-line line-second"></span>
@@ -52,92 +55,119 @@
     </header>
     <main class="main">
         <div class="favorite">
-            <div class="favorite__wrapper">
-                <section class="favorite__watch">
-                    <p class="favorite__watch-text">Watch your favorite animal online</p>
-                    <a href="#" class="favorite-btn">
-                            <img  src="../../assets/icons/main-btn.svg" 
-                                  alt="watch online">
-                    </a>  
-                </section>
-                <section class="favorite__gallery">
-                    <img src="../../assets/icons/line.svg" alt="line" class="line">
-                <div class="favorite__photoes">
-                    <div class="favorite__animal eagle">
-                        <img src="../../assets/images/eagleB.png" alt="eagle" 
-                        class="animals-gallery">
-                    </div>
-                    <div class="favorite__animal">
-                        <img src="../../assets/images/panda.png" alt="panda" 
-                        class="animals-gallery panda">
-                        <div class="panda-discription">
-                            <p class="panda-text">Panda’s name is Bei Bei. He 
-                                is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                            <a href="../../pages/Zoos page/Panda/panda.html" class="panda-watch">
-                                <img src="../../assets/icons/watchHid.svg" alt="" class="">
-                            </a>
-                            <a href="" class="panda-donate">
-                                <img src="../../assets/icons/donateHid.svg" alt="" class="">
-                            </a>
+            
+                <div class="favorite__wrapper" >
+                    <section class="favorite__watch">
+                        <p class="favorite__watch-text">Watch your favorite animal online</p>
+                        <a href="#" class="favorite-btn">
+                                <img  src="../../assets/icons/main-btn.svg" 
+                                      alt="watch online">
+                        </a>  
+                    </section>
+
+                    <section class="favorite__gallery">
+                        <img src="../../assets/icons/line.svg" alt="line" class="line">
+                    <div class="favorite__photoes"  >
+                        <div class="favorite__animal eagle" >
+                            <img data-index="1"  src="../../assets/images/eagleB.png" alt="eagle" 
+                            class="animals-gallery ">
                         </div>
+                        <div class="favorite__animal " >
+                            <img data-index="2"  src="../../assets/images/panda.png" alt="panda" 
+                            class="animals-gallery panda ">
+                            <div class="panda-discription">
+                                <p class="panda-text">Panda’s name is Bei Bei. He 
+                                    is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                <a href="../../pages/Zoos page/Panda/panda.html" class="panda-watch">
+                                    <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                </a>
+                                <a href="" class="panda-donate">
+                                    <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="favorite__animal gorilla" >
+                            
+                                <img data-index="3"  src="../../assets/images/gorrilaB.png" alt="gorilla" 
+                                class="animals-gallery ">
+                              
+                            </div>
+                        
+                            
+                        <div class="favorite__animal crocodile"  >
+                            <img src="../../assets/images/crocodileB.png" alt="crocodile" 
+                            class="animals-gallery "
+                            data-index="4">
+                        </div>
+                        <div class="favorite__animal fox"  >
+                            <img src="../../assets/images/fox-B.jpg" alt="fox" 
+                            class="animals-gallery" data-index="5">
+                        </div>
+
+                        <div class="favorite__animal elephant"  >
+                            <img src="../../assets/images/elephant.jpg" alt="elephant" 
+                            class="animals-gallery" data-index="6">
+                        </div>
+                        <div class="favorite__animal zibras"  >
+                            <img src="../../assets/images/zibras.jpg" alt="zibras" 
+                            class="animals-gallery" data-index="7">
+                        </div>
+                        <div class="favorite__animal gepard"  >
+                            <img src="../../assets/images/gepard.jpg" alt="gepard" 
+                            class="animals-gallery" data-index="8">
+                        </div>
+                        <div class="favorite__animal gepard"  >
+                            <img src="" alt="gepard" 
+                            class="animals-gallery" data-index="9">
+                        </div>
+
                     </div>
-                    <div class="favorite__animal gorilla">
-                        <img src="../../assets/images/gorrilaB.png" alt="gorilla" 
-                        class="animals-gallery">
-                    </div>
-                    <div class="favorite__animal crocodile" >
-                        <img src="../../assets/images/crocodileB.png" alt="crocodile" 
-                        class="animals-gallery">
-                    </div>
-                    <div class="favorite__animal fox">
-                        <img src="../../assets/images/fox-B.jpg" alt="fox" 
-                        class="animals-gallery">
-                    </div>
-                </div>
-                <div class="scrolle-favorits">
-                    <div class="photo-count">
-                        <p class="number-favorite">02/<span class="counte-favorite">08</span></p>
+                    <div class="scrolle-favorits">
+                        <div class="photo-count">
+                            <span class="number-favorite">02/08</span>
+                        </div>
+                        <div class="interactiv-scrolle">
+                            
+                            <input name='galary' id="galary__range" class="galary__range" type="range" min="1" max="8" step="1" value="2"> 
+                        </div>
+                        
+                        
                         
                     </div>
-                    <div class="interactiv-scrolle">
+    
+                    </section>    
+                    
+                    
+                    <div class="social">
+                        <ul class="social-list">
+                            <li class="social-list__links">
+                                <a href="https://www.instagram.com/" class="list-links">
+                                    <img src="../../assets/icons/instagram.svg" alt="" class="social-links">
+                                </a>
+                            </li>
+                            <li class="social-list__links">
+                                <a href="https://twitter.com/" class="list-links">
+                                    <img src="../../assets/icons/twitter.svg" alt="" class="social-links">
+                                </a>
+                            </li>
+                            <li class="social-list__links">
+                                <a href="https://www.youtube.com/" class="list-links">
+                                    <img src="../../assets/icons/YouTube.svg" alt="" class="social-links">
+                                </a>
+                            </li>
+                            <li class="social-list__links">
+                                <a href="https://vk.com/feed" class="list-links">
+                                    <img src="../../assets/icons/vk.svg" alt="" class="social-links">
+                                </a>
+                            </li>
+                        </ul>
                         
-                        <input class="galary__range" type="range" min="1" max="8" step="1" value="2"> 
                     </div>
-                    
-                    
-                    
+    
                 </div>
-
-                </section>    
-                
-                
-                <div class="social">
-                    <ul class="social-list">
-                        <li class="social-list__links">
-                            <a href="https://www.instagram.com/" class="list-links">
-                                <img src="../../assets/icons/instagram.svg" alt="" class="social-links">
-                            </a>
-                        </li>
-                        <li class="social-list__links">
-                            <a href="https://twitter.com/" class="list-links">
-                                <img src="../../assets/icons/twitter.svg" alt="" class="social-links">
-                            </a>
-                        </li>
-                        <li class="social-list__links">
-                            <a href="https://www.youtube.com/" class="list-links">
-                                <img src="../../assets/icons/YouTube.svg" alt="" class="social-links">
-                            </a>
-                        </li>
-                        <li class="social-list__links">
-                            <a href="https://vk.com/feed" class="list-links">
-                                <img src="../../assets/icons/vk.svg" alt="" class="social-links">
-                            </a>
-                        </li>
-                    </ul>
-                    
-                </div>
-
-            </div>
+            
+            
         </div>
         <div class="how">
             <div class="how-wrapper">
@@ -224,53 +254,480 @@
                     Pets in Zoo
                 </p>
                 
-                    <div class="pets-photo">
-                        <div class="pets-elem arrow pets-leat-arr">
-                            <img src="../../assets/icons/leftArrow.svg" alt="" 
-                            class="arrow">
-                        </div>
-                        <div class="pets-elem">
-                            <img src="../../assets/images/panda-m.png"  width="277" 
-                            height="399" alt="" class="photo-p" >
-                            <div class="pets-hiden">
-                                <p class="pets-hiden-text">Panda’s name is Bei Bei. He 
-                                    is 2 years old. Bei Bei is from China. He loves bamboos.</p>
-                                <a href="../../pages/Zoos page/Panda/panda.html" class="pets-play-hiden">
-                                    <img src="../../assets/icons/watchHid.svg" alt="" class="">
-                                </a>
-                                <a href="" class="pets-hiden-donate">
-                                    <img src="../../assets/icons/donateHid.svg" alt="" class="">
-                                </a>
-                                
-                                
-                                
+                    <div id="carousel" class="pets-photo">
+                        <div id="content">
+                           
+                            <div class="pets-elem">
+                                <img src="../../assets/images/panda-m.png"  width="277" 
+                                height="399" alt="" class="photo-p" >
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Panda’s name is Bei Bei. He 
+                                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                    <a href="../../pages/Zoos page/Panda/panda.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/eagleB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Eagle Eagle Eagle Eaglev Eagle Eagle EagleEagle Eagle Eagle Eagle Eagle Eagle Eagle.</p>
+                                    <a href="../../pages/Zoos page/Eagle/eagle.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
                             </div>
                         </div>
-                        <div class="pets-elem">
-                            <img src="../../assets/images/eagleB.png"  width="277" 
-                            height="399" alt="" class="photo-p">
+                            <div class="pets-elem">
+                                <img src="../../assets/images/gorrilaB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila </p>
+                                    <a href="../../pages/Zoos page/Gorilla/Gorilla.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/crocodileB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodilecrocodile crocodile</p>
+                                    <a href="../../pages/Zoos page/Crocodile/Crocodile.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/panda-m.png"  width="277" 
+                                height="399" alt="" class="photo-p" >
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Panda’s name is Bei Bei. He 
+                                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                    <a href="../../pages/Zoos page/Panda/panda.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/eagleB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Eagle Eagle Eagle Eaglev Eagle Eagle EagleEagle Eagle Eagle Eagle Eagle Eagle Eagle.</p>
+                                    <a href="../../pages/Zoos page/Eagle/eagle.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
                         </div>
-                        <div class="pets-elem">
-                            <img src="../../assets/images/gorrilaB.png"  width="277" 
-                            height="399" alt="" class="photo-p">
+                            <div class="pets-elem">
+                                <img src="../../assets/images/gorrilaB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila </p>
+                                    <a href="../../pages/Zoos page/Gorilla/Gorilla.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/crocodileB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodilecrocodile crocodile</p>
+                                    <a href="../../pages/Zoos page/Crocodile/Crocodile.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/panda-m.png"  width="277" 
+                                height="399" alt="" class="photo-p" >
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Panda’s name is Bei Bei. He 
+                                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                    <a href="../../pages/Zoos page/Panda/panda.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/eagleB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Eagle Eagle Eagle Eaglev Eagle Eagle EagleEagle Eagle Eagle Eagle Eagle Eagle Eagle.</p>
+                                    <a href="../../pages/Zoos page/Eagle/eagle.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
                         </div>
-                        <div class="pets-elem">
-                            <img src="../../assets/images/crocodileB.png"  width="277" 
-                            height="399" alt="" class="photo-p">
+                            <div class="pets-elem">
+                                <img src="../../assets/images/gorrilaB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila </p>
+                                    <a href="../../pages/Zoos page/Gorilla/Gorilla.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/crocodileB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodilecrocodile crocodile</p>
+                                    <a href="../../pages/Zoos page/Crocodile/Crocodile.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/panda-m.png"  width="277" 
+                                height="399" alt="" class="photo-p" >
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Panda’s name is Bei Bei. He 
+                                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                    <a href="../../pages/Zoos page/Panda/panda.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/eagleB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Eagle Eagle Eagle Eaglev Eagle Eagle EagleEagle Eagle Eagle Eagle Eagle Eagle Eagle.</p>
+                                    <a href="../../pages/Zoos page/Eagle/eagle.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
                         </div>
-                            <div class="pets-elem arrow">
-                            <img src="../../assets/icons/rightArrow.svg" alt="" 
-                            class="arrow">
+                            <div class="pets-elem">
+                                <img src="../../assets/images/gorrilaB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila </p>
+                                    <a href="../../pages/Zoos page/Gorilla/Gorilla.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/crocodileB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodilecrocodile crocodile</p>
+                                    <a href="../../pages/Zoos page/Crocodile/Crocodile.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/panda-m.png"  width="277" 
+                                height="399" alt="" class="photo-p" >
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Panda’s name is Bei Bei. He 
+                                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                    <a href="../../pages/Zoos page/Panda/panda.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/eagleB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Eagle Eagle Eagle Eaglev Eagle Eagle EagleEagle Eagle Eagle Eagle Eagle Eagle Eagle.</p>
+                                    <a href="../../pages/Zoos page/Eagle/eagle.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
                         </div>
-    
+                            <div class="pets-elem">
+                                <img src="../../assets/images/gorrilaB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila </p>
+                                    <a href="../../pages/Zoos page/Gorilla/Gorilla.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/crocodileB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodilecrocodile crocodile</p>
+                                    <a href="../../pages/Zoos page/Crocodile/Crocodile.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/panda-m.png"  width="277" 
+                                height="399" alt="" class="photo-p" >
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Panda’s name is Bei Bei. He 
+                                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                    <a href="../../pages/Zoos page/Panda/panda.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/eagleB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Eagle Eagle Eagle Eaglev Eagle Eagle EagleEagle Eagle Eagle Eagle Eagle Eagle Eagle.</p>
+                                    <a href="../../pages/Zoos page/Eagle/eagle.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                        </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/gorrilaB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila </p>
+                                    <a href="../../pages/Zoos page/Gorilla/Gorilla.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/crocodileB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodilecrocodile crocodile</p>
+                                    <a href="../../pages/Zoos page/Crocodile/Crocodile.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/panda-m.png"  width="277" 
+                                height="399" alt="" class="photo-p" >
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Panda’s name is Bei Bei. He 
+                                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                    <a href="../../pages/Zoos page/Panda/panda.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/eagleB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Eagle Eagle Eagle Eaglev Eagle Eagle EagleEagle Eagle Eagle Eagle Eagle Eagle Eagle.</p>
+                                    <a href="../../pages/Zoos page/Eagle/eagle.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                        </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/gorrilaB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila </p>
+                                    <a href="../../pages/Zoos page/Gorilla/Gorilla.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/crocodileB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodilecrocodile crocodile</p>
+                                    <a href="../../pages/Zoos page/Crocodile/Crocodile.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/panda-m.png"  width="277" 
+                                height="399" alt="" class="photo-p" >
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Panda’s name is Bei Bei. He 
+                                        is 2 years old. Bei Bei is from China. He loves bamboos.</p>
+                                    <a href="../../pages/Zoos page/Panda/panda.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/eagleB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Eagle Eagle Eagle Eaglev Eagle Eagle EagleEagle Eagle Eagle Eagle Eagle Eagle Eagle.</p>
+                                    <a href="../../pages/Zoos page/Eagle/eagle.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                        </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/gorrilaB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila Gorrila </p>
+                                    <a href="../../pages/Zoos page/Gorilla/Gorilla.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            <div class="pets-elem">
+                                <img src="../../assets/images/crocodileB.png"  width="277" 
+                                height="399" alt="" class="photo-p">
+                                <div class="pets-hiden">
+                                    <p class="pets-hiden-text">crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodile crocodilecrocodile crocodile</p>
+                                    <a href="../../pages/Zoos page/Crocodile/Crocodile.html" class="pets-play-hiden">
+                                        <img src="../../assets/icons/watchHid.svg" alt="" class="">
+                                    </a>
+                                    <a href="" class="pets-hiden-donate">
+                                        <img src="../../assets/icons/donateHid.svg" alt="" class="">
+                                    </a>
+                            </div>
+                            </div>
+                            
+
+                            
+                    </div>
+                    <button id="prev">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.6663 16.1706L20.0167 29.5207C20.3255 29.8298 20.7376 30 21.1772 30C21.6167 30 22.0289 29.8298 22.3376 29.5207L23.3208 28.5378C23.9605 27.8973 23.9605 26.8564 23.3208 26.2169L12.1102 15.0062L23.3332 3.78314C23.642 3.47412 23.8125 3.06217 23.8125 2.6229C23.8125 2.18315 23.642 1.7712 23.3332 1.46194L22.3501 0.479263C22.0411 0.17024 21.6291 0 21.1896 0C20.7501 0 20.3379 0.17024 20.0291 0.479263L6.6663 13.8416C6.35679 14.1516 6.18679 14.5655 6.18777 15.0055C6.18679 15.4472 6.35679 15.8608 6.6663 16.1706Z" fill="#333333"/>
+                            </svg>
+                      </button>
+                
+                    <button id="next">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.3337 13.8294L9.98332 0.479264C9.67454 0.170243 9.26235 0 8.82284 0C8.38334 0 7.97114 0.170243 7.66237 0.479264L6.6792 1.46218C6.03945 2.10267 6.03945 3.14363 6.6792 3.78314L17.8898 14.9938L6.66676 26.2169C6.35799 26.5259 6.1875 26.9378 6.1875 27.3771C6.1875 27.8168 6.35799 28.2288 6.66676 28.5381L7.64993 29.5207C7.95895 29.8298 8.3709 30 8.81041 30C9.24991 30 9.66211 29.8298 9.97088 29.5207L23.3337 16.1584C23.6432 15.8484 23.8132 15.4345 23.8122 14.9945C23.8132 14.5528 23.6432 14.1392 23.3337 13.8294Z" fill="#333333"/>
+                            </svg>
+                            
+                      </button>
                     </div>
                     <div class="pets-counter">
-                        <p class="pets-number">01/<span>08</span> </p>
+                        <span class="pets-number">01</span><span class="span" >/08</span> 
                         <div class="pets-scrolle">
-                            <input class="galary__range" type="range" min="1" max="8" step="1" value="1"  > 
+                            <input name="pets-range" class="galary__range" type="range" min="1" max="8" step="1" value="1"  > 
                         </div>
                 
-
                     </div>
                 <a href="" class="pets-btn">
                     <img src="../../assets/icons/choose_btn.svg" alt="">
@@ -502,5 +959,8 @@
 </div>
     </footer>
 </div>
+
+
+<script src="../../pages/Landing/script.js"></script>
 </body>
 </html>
