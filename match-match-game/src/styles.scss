@@ -6,13 +6,26 @@ html{
   font-size: 20px;
 }
 body{
-  min-height: 100vh;
+  color: white;
+  background-color: darkslategrey;
+}
+
+main{
+  min-height: calc(100vh - 2rem);
   display: flex;
   align-items: center;
   justify-content: center;
-color: white;
-  background-color: darkslategrey;
 }
+
+footer{
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 .cards-field{
   width: 70%;
   min-height: 100%;
