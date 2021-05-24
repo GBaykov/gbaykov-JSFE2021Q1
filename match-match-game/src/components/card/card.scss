@@ -48,6 +48,8 @@ transform-origin: left;
   height: 100%;
   backface-visibility: hidden;
   border-radius: .5rem;
+  background-position:  center;
+    background-size: cover;
 }
 
   &__front {
@@ -58,9 +60,8 @@ transform-origin: left;
   &__back{
 
     background-color: gray;
-    background-image: url('./assets/card-back.png');
-    background-position:  center;
-    background-size: cover;
+    background-image: url('../../assets/card-back.png');
+
     transform: rotateY(180deg);
   }
 }
