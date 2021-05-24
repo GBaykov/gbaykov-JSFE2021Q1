@@ -1,3 +1,4 @@
+
 export class BaseComponent {
   readonly element:HTMLElement;
 
