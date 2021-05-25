@@ -15,6 +15,7 @@ main{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 97px;
 }
 
 footer{
@@ -27,7 +28,7 @@ footer{
 
 
 .cards-field{
-  margin-top: 65px;
+
   width: 70%;
   min-height: 100%;
   display: flex;
@@ -169,3 +170,33 @@ height: 36px;
 height: 36px;
   }
 }
+
+.main-aria{
+  background-color: rgb(233, 210, 210);
+  width: 1000px;
+  height: 920px;
+  padding: 36px;
+}
+
+.first-rule{
+  background-image: url('./assets/first-rule.png');
+  background-position:  center;
+  background-size: cover;
+  width: 360px;
+  height: 230px;
+}
+.second-rule{
+  background-image: url('./assets/second-rule.png');
+  background-position:  center;
+  background-size: cover;
+  width: 360px;
+  height: 132px;
+}
+.third-rule{
+  background-image: url('./assets/third-rule.png');
+  background-position:  center;
+  background-size: cover;
+  width: 360px;
+  height: 240px;
+}
+

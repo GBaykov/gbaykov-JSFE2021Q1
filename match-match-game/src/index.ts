@@ -13,8 +13,8 @@ window.onload = () => {
   if(!bodyElement) throw Error('bodyElement not found');
 
   new HeaderCompil(bodyElement);
-  new App(appElement).start();
-  // bodyElement.appendChild()
+  //new App(appElement).start();
+
 
 }
 
