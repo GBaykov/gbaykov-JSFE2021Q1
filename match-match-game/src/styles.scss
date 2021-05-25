@@ -91,3 +91,77 @@ transform: translateZ(2rem);
     transform: rotateY(180deg);
   }
 }
+
+
+.header {
+  height: 65px;
+  width: 100%;
+  background-color: rgb(63, 98, 238);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.logo{
+  font-size: 24px;
+  color:  rgb(246, 246, 250);
+  background-color: rgb(85, 202, 231);
+  height: 64px;
+}
+
+.nav {
+
+  &__about-btn {
+    font-size: 20px;
+    background-color:  rgb(243, 131, 141);
+    width: 100px;
+height: 64px;
+  }
+
+  &__score-btn {
+    font-size: 20px;
+    background-color:  rgb(243, 131, 141);
+    width: 100px;
+height: 64px;
+  }
+
+  &__setting-btn {
+    font-size: 20px;
+    background-color:  rgb(243, 131, 141);
+    width: 100px;
+height: 64px;
+  }
+}
+
+.activ-rout {
+  background-color:  rgb(188, 233, 205);
+}
+
+
+.btn {
+
+  &__register {
+    font-size: 20px;
+    background-color:  rgb(43, 231, 115);
+    width: 207px;
+height: 36px;
+  }
+
+  &__start {
+    display: none;
+    font-size: 20px;
+    background-color:  rgb(43, 231, 115);
+    width: 122px;
+height: 36px;
+  }
+
+  &__stop {
+    display: none;
+    font-size: 20px;
+    background-color:  rgb(43, 231, 115);
+    width: 122px;
+height: 36px;
+  }
+}
