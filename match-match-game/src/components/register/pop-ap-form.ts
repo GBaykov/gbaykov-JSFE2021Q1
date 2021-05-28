@@ -59,6 +59,12 @@ firstName.placeholder = 'James'
      formContainer.appendChild(cancelBtn);
      this.element.appendChild(formContainer);
      this.baseForAppend = element;
-     this.baseForAppend.appendChild(this.element);
+
+   }
+   open() {
+    this.baseForAppend.appendChild(this.element);
+   }
+   cancel() {
+    this.element.style.display = 'none';
    }
  }

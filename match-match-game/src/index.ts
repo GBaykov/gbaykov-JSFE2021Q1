@@ -5,7 +5,7 @@ import { Header, HeaderCompil } from './components/header/header';
 import { AboutAria, mainAria } from './components/about-game/about-game';
 import { registrBtn, startBtn } from './components/change-btns/change-btns';
 import { aboutBtn } from './components/nav-router/nav-router';
-import { formPopAp } from './components/register/pop-ap-form';
+import { cancelBtn, formPopAp } from './components/register/pop-ap-form';
 
 
 
@@ -24,7 +24,13 @@ window.onload = () => {
   //new App(appElement).start();
 
   registrBtn.addEventListener('click', function() {
-    new formPopAp(appElement);
+    new formPopAp(appElement).open();
+  })
+
+  cancelBtn.addEventListener('click', function() {
+    //new formPopAp(appElement).cancel();
+    appElement.innerHTML = '';
+    appElement.appendChild(mainAria);
   })
 
   aboutBtn.addEventListener('click', function() {
