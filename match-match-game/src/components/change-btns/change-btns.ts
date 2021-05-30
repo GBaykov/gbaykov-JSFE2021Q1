@@ -7,10 +7,12 @@ registrBtn.classList.add('btn__register');
 export const startBtn = document.createElement('button');
 startBtn.innerText = 'Start Game';
 startBtn.classList.add('btn__start');
+startBtn.classList.add('displayNone');
 
 export const stopBtn = document.createElement('button');
 stopBtn.innerText = 'Stop Game';
 stopBtn.classList.add('btn__stop');
+stopBtn.classList.add('displayNone');
 
 export class changeableBtn extends BaseComponent {
   constructor() {
