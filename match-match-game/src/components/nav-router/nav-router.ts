@@ -10,6 +10,7 @@ import { BaseComponent } from "../base-component";
 export const aboutBtn = document.createElement('button');
 aboutBtn.innerText = 'About Game';
 aboutBtn.classList.add('nav__about-btn');
+aboutBtn.classList.add('activ-rout');
 
 export const scoreBtn = document.createElement('button');
 scoreBtn.innerText = 'Best Score';

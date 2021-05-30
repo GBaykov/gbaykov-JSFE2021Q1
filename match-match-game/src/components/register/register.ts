@@ -15,7 +15,7 @@ return false;
 }
 }
 export function validateName(firstName:HTMLInputElement) {
-  const nameFormat:RegExp = /^[a-zA-Z0-9]{1,30}$/;
+  const nameFormat:RegExp = /^(?=.*?[a-zA-Z])[a-zA-Z0-9]{1,30}$/;
   if(firstName.value.match(nameFormat)) {
     return true;
   } else {
@@ -24,7 +24,7 @@ export function validateName(firstName:HTMLInputElement) {
 }
 
 export function validateLastName(lastName:HTMLInputElement) {
-  const lastNameFormat:RegExp = /^[a-zA-Z0-9]{1,30}$/;
+  const lastNameFormat:RegExp = /^(?=.*?[a-zA-Z])[a-zA-Z0-9]{1,30}$/;
   if(lastName.value.match(lastNameFormat)) {
     return true;
   } else {
@@ -38,7 +38,7 @@ export function formValidation() {
     playerArray[0] = firstName.value;
     playerArray[1] = lastName.value;
     playerArray[2] = email.value;
-    alert(playerArray[0]);
+    alert('Now you can close this field and start Game');
     startBtn.classList.remove('displayNone')
     registrBtn.classList.add('displayNone')
   }

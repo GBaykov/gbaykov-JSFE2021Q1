@@ -1,5 +1,6 @@
 import './styles.scss';
 import './components/register/pop-ap-form.scss';
+import './components/Best-Score/best.score.scss'
 import { App } from './app';
 import { Header, HeaderCompil } from './components/header/header';
 import { AboutAria, mainAria } from './components/about-game/about-game';
@@ -36,8 +37,6 @@ window.onload = () => {
  appElement.innerHTML = '';
     appElement.appendChild(mainAria);
    }
-
-
   })
 
   cancelBtn.addEventListener('click', function() {
@@ -61,6 +60,8 @@ window.onload = () => {
   stopBtn.addEventListener('click', function() {
     appElement.innerHTML = '';
     appElement.appendChild(mainAria);
+    stopBtn.classList.add('displayNone');
+    registrBtn.classList.remove('displayNone');
   })
 
 }
