@@ -2,8 +2,8 @@
 import { BaseComponent } from '../base-component';
 
 
-export const mainAria = document.createElement('div');
-mainAria.innerHTML = `<p class="about-text">How to play?</p>
+export const mainAria:HTMLElement = document.createElement('div');
+export const originalMainAria = `<p class="about-text">How to play?</p>
 <p  class="first-rule"> </p>
 <p  class="second-rule"> </p>
 <p  class="third-rule"> </p>
@@ -11,6 +11,7 @@ mainAria.innerHTML = `<p class="about-text">How to play?</p>
 <p class="setting-rule">Game Setting</p>
 <p class="field-rule"></p>
 `;
+mainAria.innerHTML = originalMainAria;
 mainAria.classList.add('main-aria');
 
 export class AboutAria extends BaseComponent {
@@ -22,3 +23,4 @@ this.app.appendChild(mainAria);
 
   }
 }
+

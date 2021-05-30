@@ -3,11 +3,12 @@ import './components/register/pop-ap-form.scss';
 import './components/Best-Score/best.score.scss'
 import { App } from './app';
 import { Header, HeaderCompil } from './components/header/header';
-import { AboutAria, mainAria } from './components/about-game/about-game';
+import { AboutAria, mainAria, originalMainAria } from './components/about-game/about-game';
 import { registrBtn, startBtn, stopBtn } from './components/change-btns/change-btns';
-import { aboutBtn } from './components/nav-router/nav-router';
+import { aboutBtn, scoreBtn, settingBtn } from './components/nav-router/nav-router';
 import { cancelBtn, email, formPopAp, submitBtn } from './components/register/pop-ap-form';
 import { formValidation, ValidateEmail } from './components/register/register';
+import { fakeBestScore, fakeScoreCompil } from './components/Best-Score/best-score';
 
 
 
@@ -22,6 +23,7 @@ window.onload = () => {
 
   new HeaderCompil(bodyElement);
   //new AboutAria(appElement);
+  appElement.innerHTML = '';
   appElement.appendChild(mainAria);
 
   //new App(appElement).start();
@@ -46,8 +48,12 @@ window.onload = () => {
   })
 
   aboutBtn.addEventListener('click', function() {
+    mainAria.innerHTML = originalMainAria;
     appElement.innerHTML = '';
     appElement.appendChild(mainAria);
+    scoreBtn.classList.remove('activ-rout');
+  aboutBtn.classList.add('activ-rout');
+  settingBtn.classList.remove('activ-rout');
   })
 
   startBtn.addEventListener('click', function() {
@@ -64,10 +70,14 @@ window.onload = () => {
     registrBtn.classList.remove('displayNone');
   })
 
+  scoreBtn.addEventListener('click', function() {
+    appElement.innerHTML = '';
+    mainAria.innerHTML = fakeBestScore;
+  scoreBtn.classList.add('activ-rout');
+  aboutBtn.classList.remove('activ-rout');
+  settingBtn.classList.remove('activ-rout');
+    appElement.appendChild(mainAria);
+  })
+
+
 }
-
-
-
-
-
-
