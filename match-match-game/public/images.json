@@ -19,5 +19,25 @@
      "giraffe.png",
      "parrot.png"
     ]
+  },
+  {
+    "category": "starWars",
+    "images": [
+     "clone.jpg",
+     "ren.jpg",
+     "vader.jpg",
+     "yoda.jpg"
+    ]
+  },
+  {
+    "category": "starWars",
+    "images": [
+     "clone.jpg",
+     "ren.jpg",
+     "vader.jpg",
+     "yoda.jpg",
+     "ventres.jpg",
+     "anakin.jpg"
+    ]
   }
 ]
