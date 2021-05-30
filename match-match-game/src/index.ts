@@ -9,7 +9,7 @@ import { aboutBtn, scoreBtn, settingBtn } from './components/nav-router/nav-rout
 import { cancelBtn, email, formPopAp, submitBtn } from './components/register/pop-ap-form';
 import { formValidation, ValidateEmail } from './components/register/register';
 import { fakeBestScore, fakeScoreCompil } from './components/Best-Score/best-score';
-import { sittingAria } from './components/game-settings/game-setting';
+import { difficulty, gameCards, sittingAria } from './components/game-settings/game-setting';
 
 
 
@@ -63,6 +63,8 @@ window.onload = () => {
     new App(appElement).start();
     startBtn.classList.add('displayNone');
     stopBtn.classList.remove('displayNone');
+    // alert(difficulty.value);
+    // alert(gameCards.value)
   })
 
   stopBtn.addEventListener('click', function() {
@@ -90,5 +92,6 @@ window.onload = () => {
   sittingAria(mainAria);
     appElement.appendChild(mainAria);
   })
+
 
 }

@@ -3,15 +3,17 @@ import { mainAria } from "../about-game/about-game";
 export const difficulty:HTMLSelectElement = document.createElement('select');
 difficulty.classList.add('difficulty')
 
-export const difficultyHead = document.createElement('p');
+export const difficultyHead:HTMLElement = document.createElement('p');
 difficultyHead.innerHTML = `<b>difficulty</b>`;
 
-export const easy = document.createElement('option');
-easy.innerHTML = `easy(3*3)`;
+
+
+export const easy:HTMLOptionElement = document.createElement('option');
+easy.innerHTML = `easy(4*4)`;
 easy.value = 'easy';
 
-export const hard = document.createElement('option');
-hard.innerHTML = `hard(5*5)`;
+export const hard:HTMLOptionElement = document.createElement('option');
+hard.innerHTML = `hard(6*6)`;
 hard.value = 'hard';
 
 difficulty.appendChild(easy);
@@ -23,11 +25,11 @@ gameCards.classList.add('gameCards')
 export const gameCardsHead = document.createElement('p');
 gameCardsHead.innerHTML = `<b>Game cards</b>`;
 
-export const unsorted = document.createElement('option');
+export const unsorted:HTMLOptionElement = document.createElement('option');
 unsorted.innerHTML = `unsorted`;
 unsorted.value = 'unsorted';
 
-export const starWars = document.createElement('option');
+export const starWars:HTMLOptionElement = document.createElement('option');
 starWars.innerHTML = `starWars`;
 starWars.value = 'starWars';
 

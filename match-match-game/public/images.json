@@ -8,5 +8,16 @@
      "squid.png"
 
     ]
+  },
+  {
+    "category": "unsorted",
+    "images": [
+     "deer.png",
+     "elephant.png",
+     "shark.png",
+     "squid.png",
+     "giraffe.png",
+     "parrot.png"
+    ]
   }
 ]
