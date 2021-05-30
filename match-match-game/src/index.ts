@@ -9,6 +9,7 @@ import { aboutBtn, scoreBtn, settingBtn } from './components/nav-router/nav-rout
 import { cancelBtn, email, formPopAp, submitBtn } from './components/register/pop-ap-form';
 import { formValidation, ValidateEmail } from './components/register/register';
 import { fakeBestScore, fakeScoreCompil } from './components/Best-Score/best-score';
+import { sittingAria } from './components/game-settings/game-setting';
 
 
 
@@ -48,8 +49,9 @@ window.onload = () => {
   })
 
   aboutBtn.addEventListener('click', function() {
-    mainAria.innerHTML = originalMainAria;
+
     appElement.innerHTML = '';
+    mainAria.innerHTML = originalMainAria;
     appElement.appendChild(mainAria);
     scoreBtn.classList.remove('activ-rout');
   aboutBtn.classList.add('activ-rout');
@@ -79,5 +81,14 @@ window.onload = () => {
     appElement.appendChild(mainAria);
   })
 
+  settingBtn.addEventListener('click', function() {
+    appElement.innerHTML = '';
+    mainAria.innerHTML = '';
+  scoreBtn.classList.remove('activ-rout');
+  aboutBtn.classList.remove('activ-rout');
+  settingBtn.classList.add('activ-rout');
+  sittingAria(mainAria);
+    appElement.appendChild(mainAria);
+  })
 
 }
