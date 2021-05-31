@@ -7,7 +7,7 @@ import { AboutAria, mainAria, originalMainAria } from './components/about-game/a
 import { registrBtn, startBtn, stopBtn } from './components/change-btns/change-btns';
 import { aboutBtn, scoreBtn, settingBtn } from './components/nav-router/nav-router';
 import {
-  cancelBtn, email, formPopAp, submitBtn,
+  cancelBtn, email, FormPopAp, submitBtn,
 } from './components/register/pop-ap-form';
 import { formValidation, ValidateEmail } from './components/register/register';
 import { fakeBestScore, fakeScoreCompil } from './components/Best-Score/best-score';
@@ -28,13 +28,13 @@ window.onload = () => {
   // new App(appElement).start();
 
   registrBtn.addEventListener('click', () => {
-    new formPopAp(appElement).open();
+    new FormPopAp(appElement).open();
   });
 
   submitBtn.addEventListener('click', () => {
     if (!event) throw Error('App root element not found');
     event.preventDefault();
-    if (formValidation() != false) {
+    if (formValidation() !== false) {
       appElement.innerHTML = '';
       appElement.appendChild(mainAria);
     }

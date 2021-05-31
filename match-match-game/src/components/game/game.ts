@@ -46,7 +46,7 @@ export class Game extends BaseComponent {
       return;
     }
 
-    if (this.activeCard.image != card.image) {
+    if (this.activeCard.image !== card.image) {
       await delay(FLIP_DELAY);
       await Promise.all([this.activeCard.flipToBack(), card.flipToBack()]);
     } // else {} TODE: сделать зеленой

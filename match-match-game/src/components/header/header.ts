@@ -1,22 +1,22 @@
 import { BaseComponent } from '../base-component';
-import { changeableBtn } from '../change-btns/change-btns';
-import { navRouter } from '../nav-router/nav-router';
+import { ChangeableBtn } from '../change-btns/change-btns';
+import { NavRouter } from '../nav-router/nav-router';
 
 export const logo = document.createElement('p');
 logo.innerText = 'match';
 logo.classList.add('logo');
 
 export class Header extends BaseComponent {
-  private readonly nav: navRouter;
+  private readonly nav: NavRouter;
 
   private readonly elementH:HTMLElement;
 
-  private readonly changeBtn:changeableBtn;
+  private readonly changeBtn:ChangeableBtn;
 
   constructor(element: HTMLElement) {
     super('div', ['header']);
-    this.nav = new navRouter();
-    this.changeBtn = new changeableBtn();
+    this.nav = new NavRouter();
+    this.changeBtn = new ChangeableBtn();
     this.elementH = element;
     this.element.appendChild(logo);
     this.element.appendChild(this.nav.element);

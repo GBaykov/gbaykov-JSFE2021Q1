@@ -21,16 +21,16 @@ export class App {
     const res = await fetch('./images.json');
     const categories:ImageCategoryModel[] = await res.json();
     let cat:ImageCategoryModel = categories[0];
-    if (difficulty.value == 'easy' && gameCards.value == 'unsorted') {
+    if (difficulty.value === 'easy' && gameCards.value === 'unsorted') {
       cat = categories[0];
     }
-    if (difficulty.value == 'hard' && gameCards.value == 'unsorted') {
+    if (difficulty.value === 'hard' && gameCards.value === 'unsorted') {
       cat = categories[1];
     }
-    if (difficulty.value == 'easy' && gameCards.value == 'starWars') {
+    if (difficulty.value === 'easy' && gameCards.value === 'starWars') {
       cat = categories[2];
     }
-    if (difficulty.value == 'hard' && gameCards.value == 'starWars') {
+    if (difficulty.value === 'hard' && gameCards.value === 'starWars') {
       cat = categories[3];
     }
     // else cat = categories[3];

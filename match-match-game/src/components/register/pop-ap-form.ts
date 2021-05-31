@@ -44,7 +44,7 @@ cancelBtn.innerText = 'Cancel';
 export const formContainer = document.createElement('form');
 cancelBtn.classList.add('form-container');
 
-export class formPopAp extends BaseComponent {
+export class FormPopAp extends BaseComponent {
   private readonly baseForAppend: HTMLElement;
 
   constructor(element:HTMLElement) {

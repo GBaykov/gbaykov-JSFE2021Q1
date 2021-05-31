@@ -14,7 +14,7 @@ stopBtn.innerText = 'Stop Game';
 stopBtn.classList.add('btn__stop');
 stopBtn.classList.add('displayNone');
 
-export class changeableBtn extends BaseComponent {
+export class ChangeableBtn extends BaseComponent {
   constructor() {
     super('div', ['btn']);
     this.element.appendChild(registrBtn);

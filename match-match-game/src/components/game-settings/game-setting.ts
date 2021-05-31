@@ -1,4 +1,4 @@
-import { mainAria } from '../about-game/about-game';
+//import { mainAria } from '../about-game/about-game';
 
 export const difficulty:HTMLSelectElement = document.createElement('select');
 difficulty.classList.add('difficulty');

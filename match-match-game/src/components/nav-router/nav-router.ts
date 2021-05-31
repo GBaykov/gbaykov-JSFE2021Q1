@@ -20,7 +20,7 @@ export const settingBtn = document.createElement('button');
 settingBtn.innerText = 'Game Setting';
 settingBtn.classList.add('nav__setting-btn');
 
-export class navRouter extends BaseComponent {
+export class NavRouter extends BaseComponent {
   // private readonly about: aboutBtn;
 
   constructor() {
