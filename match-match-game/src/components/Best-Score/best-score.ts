@@ -1,7 +1,7 @@
-import { mainAria } from "../about-game/about-game";
-import { aboutBtn, scoreBtn, settingBtn } from "../nav-router/nav-router";
+import { mainAria } from '../about-game/about-game';
+import { aboutBtn, scoreBtn, settingBtn } from '../nav-router/nav-router';
 
-export const fakeBestScore:string = `      <p class="best-head"></p>
+export const fakeBestScore = `      <p class="best-head"></p>
 
 <div class="best-player">
   <div class="name-mail">
@@ -74,11 +74,9 @@ export const fakeBestScore:string = `      <p class="best-head"></p>
   <div class="player-score"><b>Score:</b>420</div>
 </div>`;
 
-
 export function fakeScoreCompil() {
   mainAria.innerHTML = fakeBestScore;
   scoreBtn.classList.add('activ-rout');
   aboutBtn.classList.remove('activ-rout');
   settingBtn.classList.remove('activ-rout');
-
 }

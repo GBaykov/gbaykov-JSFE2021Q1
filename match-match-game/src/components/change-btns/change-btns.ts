@@ -1,4 +1,4 @@
-import { BaseComponent } from "../base-component";
+import { BaseComponent } from '../base-component';
 
 export const registrBtn = document.createElement('button');
 registrBtn.innerText = 'register new player';

@@ -1,4 +1,4 @@
-import { BaseComponent } from "../base-component";
+import { BaseComponent } from '../base-component';
 
 // export class aboutBtn extends BaseComponent {
 //   constructor() {
@@ -14,24 +14,21 @@ aboutBtn.classList.add('activ-rout');
 
 export const scoreBtn = document.createElement('button');
 scoreBtn.innerText = 'Best Score';
- scoreBtn.classList.add('nav__setting-btn');
+scoreBtn.classList.add('nav__setting-btn');
 
- export const settingBtn = document.createElement('button');
- settingBtn.innerText = 'Game Setting';
- settingBtn.classList.add('nav__setting-btn');
+export const settingBtn = document.createElement('button');
+settingBtn.innerText = 'Game Setting';
+settingBtn.classList.add('nav__setting-btn');
 
+export class navRouter extends BaseComponent {
+  // private readonly about: aboutBtn;
 
-export class navRouter extends  BaseComponent {
-
-  //private readonly about: aboutBtn;
-
-    constructor() {
-      super('div', ['nav'])
-      // this.about = new aboutBtn;
-      //this.element.appendChild(this.about.element);
-      this.element.appendChild(aboutBtn);
-      this.element.appendChild(scoreBtn);
-      this.element.appendChild(settingBtn);
-    }
+  constructor() {
+    super('div', ['nav']);
+    // this.about = new aboutBtn;
+    // this.element.appendChild(this.about.element);
+    this.element.appendChild(aboutBtn);
+    this.element.appendChild(scoreBtn);
+    this.element.appendChild(settingBtn);
   }
-
+}
