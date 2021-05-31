@@ -38,7 +38,7 @@ window.onload = () => {
     new FormPopAp(appElement).open();
   });
 
-  submitBtn.addEventListener('click', () => {
+  submitBtn.addEventListener('click', (event) => {
     if (!event) throw Error('App root element not found');
     event.preventDefault();
     if (formValidation() !== false) {

@@ -21,18 +21,20 @@ export class App {
     const res = await fetch('./images.json');
     const categories:ImageCategoryModel[] = await res.json();
     let cat:ImageCategoryModel = categories[0];
+    let index = 0;
     if (difficulty.value === 'easy' && gameCards.value === 'unsorted') {
-      cat = categories[0];
+      index = 0;
     }
     if (difficulty.value === 'hard' && gameCards.value === 'unsorted') {
-      cat = categories[1];
+      index = 1;
     }
     if (difficulty.value === 'easy' && gameCards.value === 'starWars') {
-      cat = categories[2];
+      index = 2;
     }
     if (difficulty.value === 'hard' && gameCards.value === 'starWars') {
-      cat = categories[3];
+      index = 3;
     }
+    cat = categories[index];
     // else cat = categories[3];
     // cat = categories[1];
     const images = cat.images.map((name) => `${cat.category}/${name}`);
