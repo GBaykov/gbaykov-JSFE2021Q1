@@ -1,6 +1,6 @@
 // import './about-game.scss';
 import { BaseComponent } from '../base-component';
-//import { sittingAria } from '../game-settings/game-setting';
+// import { sittingAria } from '../game-settings/game-setting';
 
 export const mainAria:HTMLElement = document.createElement('div');
 export const originalMainAria = `<p class="about-text">How to play?</p>

@@ -27,16 +27,3 @@ export class Header extends BaseComponent {
     this.elementH.appendChild(this.nav.element);
   }
 }
-
-export class HeaderCompil extends BaseComponent {
-  private readonly header: Header;
-
-  private readonly headComp: HTMLElement;
-
-  constructor(element: HTMLElement) {
-    super('div', ['header']);
-    this.header = new Header(this.element);
-    this.headComp = element;
-    this.headComp.appendChild(this.header.element);
-  }
-}

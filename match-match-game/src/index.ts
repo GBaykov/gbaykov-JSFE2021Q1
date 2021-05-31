@@ -2,7 +2,7 @@ import './styles.scss';
 import './components/register/pop-ap-form.scss';
 import './components/Best-Score/best.score.scss';
 import { App } from './app';
-import { Header, HeaderCompil } from './components/header/header';
+import { Header } from './components/header/header';
 import { AboutAria, mainAria, originalMainAria } from './components/about-game/about-game';
 import { registrBtn, startBtn, stopBtn } from './components/change-btns/change-btns';
 import { aboutBtn, scoreBtn, settingBtn } from './components/nav-router/nav-router';
@@ -12,6 +12,7 @@ import {
 import { formValidation, ValidateEmail } from './components/register/register';
 import { fakeBestScore, fakeScoreCompil } from './components/Best-Score/best-score';
 import { difficulty, gameCards, sittingAria } from './components/game-settings/game-setting';
+import { HeaderCompil } from './components/header/header-compil';
 
 window.onload = () => {
   const appElement = document.getElementById('app');
@@ -20,7 +21,13 @@ window.onload = () => {
   if (!appElement) throw Error('App root element not found');
   if (!bodyElement) throw Error('bodyElement not found');
 
-  new HeaderCompil(bodyElement);
+  // new HeaderCompil(bodyElement);
+  // var thing = new HeaderCompil(bodyElement);
+
+  new HeaderCompil(bodyElement).compil();
+  // headerDeclar(bodyElement);
+  // const header:HeaderCompil = new HeaderCompil(bodyElement);
+
   // new AboutAria(appElement);
   appElement.innerHTML = '';
   appElement.appendChild(mainAria);

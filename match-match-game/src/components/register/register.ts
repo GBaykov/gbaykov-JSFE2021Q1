@@ -11,7 +11,7 @@ export function ValidateEmail() {
 
   return false;
 }
-export function validateName(firstName:HTMLInputElement) {
+export function validateName() {
   const nameFormat = /^(?=.*?[a-zA-Z])[a-zA-Z0-9]{1,30}$/;
   if (firstName.value.match(nameFormat)) {
     return true;
@@ -28,7 +28,7 @@ export function validateLastName() {
 }
 
 export function formValidation() {
-  if (validateName(firstName) && validateLastName() && ValidateEmail()) {
+  if (validateName() && validateLastName() && ValidateEmail()) {
     playerArray[0] = firstName.value;
     playerArray[1] = lastName.value;
     playerArray[2] = email.value;
