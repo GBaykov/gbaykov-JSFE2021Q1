@@ -1,6 +1,8 @@
 import './styles.scss';
-import './components/register/pop-ap-form.scss';
-import './components/Best-Score/best.score.scss';
+import './components/garage-page/garage.scss';
+import './components/winners-page/winners.scss';
+
+
 import { App } from './app';
 
 
