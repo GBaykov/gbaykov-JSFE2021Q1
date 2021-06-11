@@ -42,15 +42,15 @@ export const getSortOrder = (sort:string, order:string) => {
   return '';
 }
 
-export const getWinners = async ({page, limit = 10, sort, order}: { page: string; limit: number, sort:string, order:string}) => {
-  const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${getSortOrder(sort, order)}`);
-  const items = await response.json(); //:object[]
+// export const getWinners = async ({page, limit = 10, sort, order}: { page: string; limit: number, sort:string, order:string}) => {
+//   const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${getSortOrder(sort, order)}`);
+//   const items = await response.json(); //:object[]
 
-  return {
-    items: await Promise.all(items.map(async winner => ({...winner, car: await getCar(winner.id)}))),
-    count: response.headers.get('X-Total-Count'),
-  };
-}
+//   return {
+//     items: await Promise.all(items.map(async winner => ({...winner, car: await getCar(winner.id)}))),
+//     count: response.headers.get('X-Total-Count'),
+//   };
+// }
 
 export  const getWinner = async (id:number) => (await fetch(`${winners}/${id}`)).json();
 
@@ -74,14 +74,14 @@ export const updateWinner = async (id:number, body: object) => (await fetch(`${w
   },
 })).json();
 
-export const saveWinner = async (id:number, body: object) => {
+export const saveWinner = async (id:number, time:number) => {
   const winnerStarus = await getWinnerStatus(id);
 
   if (winnerStarus === 404) {
     await createWinner({
       id,
-      wins: String,
-      time: Number
+      wins: 1,
+      time
 })
   } else {
     const winner = await getWinner(id);
