@@ -1,3 +1,4 @@
+import store from "../../store";
 
 export const renderCarImage = (color:string) => `
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink " x="0px" y="0px"
@@ -43,7 +44,9 @@ export const renderCarImage = (color:string) => `
 `;
 // style="fill:${color}"
 
-export const renderCar = ({id, name, color, isEngineStarted}:{id:number, name:string, color:string, isEngineStarted:boolean}) => `
+export const renderCar = ({
+  id, name, color, isEngineStarted,
+}:{ id:number, name:string, color:string, isEngineStarted:boolean }) => `
 <div class ="general-buttons">
     <button class = "button select-button" id="select-car-${id}">Select</button>
     <button class = "button remove-button" id="remove-car-${id}">Remove</button>
@@ -53,8 +56,8 @@ export const renderCar = ({id, name, color, isEngineStarted}:{id:number, name:st
 <div class ="road">
   <div class ="launch-pad">
     <div class = "control-panel">
-      <button class = "icon start-engine-button" id="start-engine-car-${id}" ${isEngineStarted? 'disbled': ''}>A</button>
-      <button class = "button stop-engine-button" id="stop-engine-car-${id}" ${!isEngineStarted? 'disbled': ''}>B</button>
+      <button class = "icon start-engine-button" id="start-engine-car-${id}" ${isEngineStarted ? 'disbled' : ''}>A</button>
+      <button class = "button stop-engine-button" id="stop-engine-car-${id}" ${!isEngineStarted ? 'disbled' : ''}>B</button>
     </div>
     <div class ="car" id="car-${id}">
     ${renderCarImage(color)}
@@ -64,9 +67,11 @@ export const renderCar = ({id, name, color, isEngineStarted}:{id:number, name:st
 </div>
 `;
 
-const car = {id:1, name:"Car", color:"rgb(43, 231, 115)", isEngineStarted:false}
+const car = {
+  id: 1, name: 'Car', color: 'rgb(43, 231, 115)', isEngineStarted: false,
+};
 
-export const renderGarage =() => `
+export const renderGarage = () => `
   <p>Garage ()</p>
   <p>Page #</p>
   <ul class="garage">
@@ -74,7 +79,8 @@ export const renderGarage =() => `
   </ul>
 `;
 
-//TO DO: MAKE WINNERS PAGE(renderWinners)
+// TO DO: MAKE WINNERS PAGE(renderWinners)
+
 
 export const render = async () => {
   const html = `
@@ -101,7 +107,7 @@ export const render = async () => {
         <button class="button generator-button" id="generator">Generate</button>
       </div>
       <div id="garage">
-        ${renderGarage()}
+      ${renderGarage()}
       </div>
       <div>
         <p class="message" id="message"></p>
@@ -119,4 +125,3 @@ export const render = async () => {
   root.innerHTML = html;
   document.body.appendChild(root);
 };
-
