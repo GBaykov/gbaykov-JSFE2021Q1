@@ -1,4 +1,6 @@
+import { getCar, getCars, getCarsCount } from "../../api";
 import store from "../../store";
+let car:any;
 
 export const renderCarImage = (color:string) => `
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink " x="0px" y="0px"
@@ -43,6 +45,12 @@ export const renderCarImage = (color:string) => `
 </svg>
 `;
 // style="fill:${color}"
+export class CarModel {
+  constructor( id:number, name:string, color:string, isEngineStarted:boolean  ) {
+
+  }
+
+}
 
 export const renderCar = ({
   id, name, color, isEngineStarted,
@@ -67,15 +75,16 @@ export const renderCar = ({
 </div>
 `;
 
-const car = {
+const carDef = {
   id: 1, name: 'Car', color: 'rgb(43, 231, 115)', isEngineStarted: false,
 };
+let li = `<li>${renderCar(carDef)}</li>`
 
-export const renderGarage = () => `
-  <p>Garage ()</p>
+export const renderGarage = async () => `
+  <p>Garage (${await getCarsCount(1)})</p>
   <p>Page #</p>
   <ul class="garage">
-  <li> ${renderCar(car)}</li>
+  ${li}${li}${li}${li}
   </ul>
 `;
 
@@ -107,7 +116,7 @@ export const render = async () => {
         <button class="button generator-button" id="generator">Generate</button>
       </div>
       <div id="garage">
-      ${renderGarage()}
+      ${await renderGarage()}
       </div>
       <div>
         <p class="message" id="message"></p>

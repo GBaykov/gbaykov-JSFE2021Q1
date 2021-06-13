@@ -1,8 +1,15 @@
 import {
-  getCars, getWinners
+  getCars, getCarsCount, getWinners
 } from './api';
 
-const { items: cars, count: carsCount } = await getCars(1);
+//const { items: cars, count: carsCount } = await getCars(1);
+let cars = async() => {
+  await getCars(1);
+}
+let carsCount = async() => {
+  await getCarsCount(1)
+}
+//let carsCount = await getCarsCount(1)
 
 
 const { items: winners, count: winnersCount } = await getWinners({
