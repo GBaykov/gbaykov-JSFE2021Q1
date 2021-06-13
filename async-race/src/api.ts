@@ -1,4 +1,4 @@
-export const base:string = 'http://localhost:8080/';
+export const base:string = 'http:127.0.0.1:3000/';// http://localhost:8080/
 
 export const garage:string = `${base}/garage`;
 export const engine:string = `${base}/engine`;
@@ -42,12 +42,12 @@ export const getSortOrder = (sort:string, order:string) => {
   return '';
 }
 
-export const getWinners = async ({page, limit = 10, sort, order}: { page: number; limit: number, sort:string, order:string}) => {
+export const getWinners = async ({page, limit = 10, sort, order}:{page: number, limit: number, sort:string, order:string}) => {
   const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${getSortOrder(sort, order)}`);
-  const items:object[] = await response.json(); //:object[]
+  const items:any[] = await response.json(); //:object[] должен быть массив объектов, но тогда "Свойство "id" не существует в типе "object""
 
   return {
-    //items: await Promise.all(items.map(async winner => ({...winner, car: await getCar(winner.id)}))),
+    items: await Promise.all(items.map (async winner => ({...winner, car: await getCar(winner.id)}))),
     count: response.headers.get('X-Total-Count'),
   };
 }
