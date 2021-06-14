@@ -104,7 +104,7 @@ export const render = async () => {
         <form class="form" id="create">
           <input class="input" id="create-name" name="name" type="text">
           <input class="color" id="create-color" name="color" type="color" value="#ffffff">
-          <button class="button" type="submit">Create</button>
+          <button class="button create-button " type="submit" id="create" >Create</button>
         </form>
         <form class="form" id="update">
           <input class="input" id="update-name" name="name" type="text" disabled>

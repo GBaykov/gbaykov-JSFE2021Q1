@@ -1,5 +1,5 @@
-import { deleteCar, deleteWinner, getCar } from "../api";
-import { renderGarage } from "../components/garage-page/garage";
+import { createCar, deleteCar, deleteWinner, getCar } from "../api";
+import { carDef, renderGarage } from "../components/garage-page/garage";
 import { renderWinners } from "../components/winners-page/winners";
 import { startDriving, stopDriving } from "../functions/driving";
 
@@ -34,7 +34,7 @@ const winnerslist: HTMLElement | null = document.getElementById('winners-view');
     await deleteCar(id);
     await deleteWinner(id);
 
-    document.getElementById('garage').innerHTML = renderGarage()
+    document.getElementById('garage').innerHTML = await renderGarage()
   }
   if(event.target.classList.contains('select-button')) {
 const id = event.target.id.split('-')[2];
@@ -48,6 +48,22 @@ const id = event.target.id.split('-')[2];
     document.getElementById('update-submit').disabled = false;
 
   }
+  if(event.target.classList.contains('create-button')) {
+    event.preventDefault();
+
+    alert('sdf')
+const carProb = {
+  "name": "New Red Car",
+  "color": "#ff0000" }
+  carProb.name = document.getElementById('create-name').value;
+  carProb.color = document.getElementById('create-color').value;
+  alert(carProb.name)
+     await createCar(carProb);
+     alert(carProb)
+     document.getElementById('garage').innerHTML = await renderGarage();
+
+  }
+
 })
 }
 
