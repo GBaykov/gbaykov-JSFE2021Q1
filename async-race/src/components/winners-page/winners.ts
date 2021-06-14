@@ -13,7 +13,7 @@ export const renderWinners = () => `
   </thead>
   <tbody>
     <tr>
-      <td>2 </td>
+      <td>1 </td>
       <td>${renderCarImage('black')} </td>
       <td>Lamba </td>
       <td>1 </td>

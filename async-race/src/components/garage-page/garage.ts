@@ -66,7 +66,7 @@ export const renderCar = ({
   <div class ="launch-pad">
     <div class = "control-panel">
       <button class = "icon start-engine-button" id="start-engine-car-${id}" ${isEngineStarted ? 'disbled' : ''}>A</button>
-      <button class = "button stop-engine-button" id="stop-engine-car-${id}" ${!isEngineStarted ? 'disbled' : ''}>B</button>
+      <button class = "icon stop-engine-button" id="stop-engine-car-${id}" ${!isEngineStarted ? 'disbled' : ''}>B</button>
     </div>
     <div class ="car" id="car-${id}">
     ${renderCarImage(color)}
