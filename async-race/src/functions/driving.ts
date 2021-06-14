@@ -34,14 +34,11 @@ export const stopDriving = async (id:number) => {
   const car = document.getElementById(`car-${id}`);
 
 
-  await stopEngine(id);
+  //await stopEngine(id);
   //stopAnimation(car,0, 0)
   //stopButton?.classList.toggle('enabling', false);
   //document.getElementById(`start-engine-button${id}`).disabled = false;
-
-
-  car.classList.add('translate-to-begin')
-
-  //car.style.transform = 'translateX(0px)';
+  const { velocity, distance } = await stopEngine(id);
+  car.style.transform = `translateX(${Math.pow(velocity, distance)}px)`
 window.cancelAnimationFrame(id)
 }
