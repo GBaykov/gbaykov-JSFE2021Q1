@@ -11,9 +11,8 @@ export const startDriving = async (id:number) => {
   const { velocity, distance } = await startEngine(id);
 
   const time = Math.round(distance / velocity);
-  //startButton.classList.toggle('enabling', false);
+  startButton.classList.toggle('enabling', false);
   //document.getElementById(`stop-engine-car-${id}`).disabled = false;
-
 
   const car  = document.getElementById(`car-${id}`);
   const flag = document.getElementById(`flag-${id}`);
@@ -26,3 +25,4 @@ export const startDriving = async (id:number) => {
 
   //return {success, id, time}
 }
+

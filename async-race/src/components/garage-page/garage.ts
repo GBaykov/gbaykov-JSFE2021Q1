@@ -1,5 +1,6 @@
 import { getCar, getCars, getCarsCount } from "../../api";
 import store from "../../store";
+
 import { renderWinners } from "../winners-page/winners";
 let car:any;
 
@@ -46,16 +47,12 @@ export const renderCarImage = (color:string) => `
 </svg>
 `;
 // style="fill:${color}"
-export class CarModel {
-  constructor( id:number, name:string, color:string, isEngineStarted:boolean  ) {
 
-  }
 
-}
 
 export const renderCar = ({
   id, name, color, isEngineStarted,
-}:{ id:number, name:string, color:string, isEngineStarted:boolean }) => `
+}:{id:number, name:string, color:string, isEngineStarted:boolean}) => `
 <div class ="general-buttons">
     <button class = "button select-button" id="select-car-${id}">Select</button>
     <button class = "button remove-button" id="remove-car-${id}">Remove</button>
@@ -76,7 +73,9 @@ export const renderCar = ({
 </div>
 `;
 
-const carDef = {
+
+
+export const carDef = {
   id: 1, name: 'Car', color: 'rgb(43, 231, 115)', isEngineStarted: false,
 };
 let li = `<li>${renderCar(carDef)}</li>`
@@ -85,7 +84,9 @@ export const renderGarage = async () => `
   <p>Garage (${await getCarsCount(1)})</p>
   <p>Page #</p>
   <ul class="garage">
-  ${li}
+  ${await getCars(1).then((res) => res.map((car) =>
+    `<li>${renderCar(car)}</li>`
+    ).join(''))}
   </ul>
 `;
 

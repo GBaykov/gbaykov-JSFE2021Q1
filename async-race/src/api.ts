@@ -1,17 +1,26 @@
+
+
+
 export const base = 'http://127.0.0.1:3000';// http://127.0.0.1:3000
 
 export const garage = `${base}/garage`;
 export const engine = `${base}/engine`;
 export const winners = `${base}/winners`;
 
-export const getCars = async (page:number, limit = 7) => {
+
+
+
+export const getCars = async (page:number, limit = 7):Promise<{
+  сar:CarModel[];
+}> => {
   const respons = await fetch(`${garage}?_page={${page}}&_limit={${limit}}`);
-  return  respons.json
-  // return {
-  //   items: await respons.json,
-  //   count: respons.headers.get('X-Total-Count'),
-  // };
+  return respons.json()
 };
+
+
+
+
+
 export const getCarsCount = async (page:number, limit = 7) => {
   const respons = await fetch(`${garage}?_page={${page}}&_limit={${limit}}`);
   return  respons.headers.get('X-Total-Count')

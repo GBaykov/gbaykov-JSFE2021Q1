@@ -19,7 +19,10 @@ const winnerslist: any = document.getElementById('winners-view');
   }
   if (event.target.classList.contains('start-engine-button')) {
 
-   await startDriving(1)
+  const id = event.target.id.slice(-1) //('start-engine-button-')[1]
+
+  //alert(id)
+   await startDriving(id)
   }
 
 })
