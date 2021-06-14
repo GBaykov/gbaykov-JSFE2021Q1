@@ -18,10 +18,10 @@ const startDriving = async (id:number) => {
   const flag = document.getElementById(`flag-${id}`);
   const htmlDistance: number= Math.floor(getDistanceBetweenElements(car, flag) + 100)
 
-  //store.animation[id] = animation(car, htmlDistance, time);
+   animation(car, htmlDistance, time);
 
-  const {success} = await drive(id);
-  if(!success) window.cancelAnimationFrame(store.animation[id].id);
+  //const {success} = await drive(id);
+  //if(!success) window.cancelAnimationFrame(store.animation[id].id);
 
-  return {success, id, time}
+  //return {success, id, time}
 }

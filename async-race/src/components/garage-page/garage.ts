@@ -1,5 +1,6 @@
 import { getCar, getCars, getCarsCount } from "../../api";
 import store from "../../store";
+import { renderWinners } from "../winners-page/winners";
 let car:any;
 
 export const renderCarImage = (color:string) => `
@@ -84,7 +85,7 @@ export const renderGarage = async () => `
   <p>Garage (${await getCarsCount(1)})</p>
   <p>Page #</p>
   <ul class="garage">
-  ${li}${li}${li}${li}
+  ${li}
   </ul>
 `;
 
@@ -122,8 +123,8 @@ export const render = async () => {
         <p class="message" id="message"></p>
       </div>
     </div>
-    <div id="winners-view" style="display:none">
-
+    <div id="winners-view" class="displayNone">
+    ${renderWinners()}
     </div>
     <div class="pagination">
       <button class="button prev-button" disabled id="prev">Prev</button>

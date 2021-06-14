@@ -7,7 +7,7 @@ export function getPositionAtCenter(element:HTMLElement) {
   };
 }
 
-export function getDistanceBetweenElements(a:HTMLElement, b:HTMLElement) {
+export function getDistanceBetweenElements(a:any, b:any) {
   const aPosition = getPositionAtCenter(a);
   const bPosition = getPositionAtCenter(b);
   return Math.hypot(aPosition.x - bPosition.x, aPosition.y - bPosition.y);
