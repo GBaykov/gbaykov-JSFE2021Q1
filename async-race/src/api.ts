@@ -28,7 +28,10 @@ export const getCarsCount = async (page:number, limit = 7) => {
 };
 
 
-export const getCar = async (id:number) => { await fetch(`${garage}/${id}`); };
+export const getCar = async (id:number) => {
+  const respons = await fetch(`${garage}/${id}`);
+  return respons.json()
+};
 
 export const createCar = async (body:object) => (await fetch(garage, {
   method: 'POST',

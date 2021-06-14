@@ -108,8 +108,8 @@ export const render = async () => {
         </form>
         <form class="form" id="update">
           <input class="input" id="update-name" name="name" type="text" disabled>
-          <input class="color" id="update-color" name="color" type="color" value="#ffffff" >
-          <button class="button" type="update-submit">Update</button>
+          <input class="color" id="update-color" name="color" type="color" value="#ffffff" disabled>
+          <button class="button" type="update-submit" >Update</button>
         </form>
       </div>
       <div class="race-controls">
