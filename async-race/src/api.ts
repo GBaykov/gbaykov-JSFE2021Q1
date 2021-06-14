@@ -1,4 +1,4 @@
-export const base = 'http:127.0.0.1:3000';// http://localhost:8080/
+export const base = 'http://127.0.0.1:3000';// http://127.0.0.1:3000
 
 export const garage = `${base}/garage`;
 export const engine = `${base}/engine`;
@@ -39,7 +39,10 @@ export const updateCar = async (id:number, body:object) => (await fetch(`${garag
   },
 })).json();
 
-export const startEngine = async (id:number) => (await fetch(`${engine}?id=${id}&status=started`)).json();
+export const startEngine = async (id:number) => {
+  const response = await fetch(`${engine}?id=${id}&status=started`);
+  return response.json()
+};
 
 export const stopEngine = async (id:number) => (await fetch(`${engine}?id=${id}&status=stopped`)).json();
 

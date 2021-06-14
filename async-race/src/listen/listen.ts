@@ -1,4 +1,5 @@
 import { renderWinners } from "../components/winners-page/winners";
+import { startDriving } from "../functions/driving";
 // const garagelist: any = document.getElementById('garage-view');
 // const winnerslist: any = document.getElementById('winners-view');
 
@@ -15,7 +16,11 @@ const winnerslist: any = document.getElementById('winners-view');
 const winnerslist: any = document.getElementById('winners-view');
     garagelist.classList.remove('displayNone');
     winnerslist.classList.add('displayNone')
-  } else('not work')
+  }
+  if (event.target.classList.contains('start-engine-button')) {
+
+   await startDriving(1)
+  }
 
 })
 }

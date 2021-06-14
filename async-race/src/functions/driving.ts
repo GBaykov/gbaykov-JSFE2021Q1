@@ -3,16 +3,17 @@ import store from "../store";
 import { animation } from "./animation";
 import { getDistanceBetweenElements } from "./positionFunctions";
 
-const startDriving = async (id:number) => {
-  const startButton:HTMLElement | null = document.getElementById(`start-engine-car-${id}`);
+export const startDriving = async (id:number) => {
+  const startButton:any = document.getElementById(`start-engine-car-${id}`);
   //startButton.disabled = true;
-  //startButton.classList.toggle('enabling', true);
+  startButton.classList.toggle('enabling', true);
 
   const { velocity, distance } = await startEngine(id);
-  const time = Math.round(distance / velocity);
 
+  const time = Math.round(distance / velocity);
   //startButton.classList.toggle('enabling', false);
   //document.getElementById(`stop-engine-car-${id}`).disabled = false;
+
 
   const car  = document.getElementById(`car-${id}`);
   const flag = document.getElementById(`flag-${id}`);
