@@ -14,16 +14,16 @@ export let selectedCar = {
 }
 
 export function listenProb () {
-document.body.addEventListener('click', async(event:MouseEvent) => {
+document.body.addEventListener('click', async(event:any) => {
   if(event.target.classList.contains('winners-menu-button')) {
-    const garagelist: HTMLElement | null = document.getElementById('garage-view');
-const winnerslist: HTMLElement | null = document.getElementById('winners-view');
+    const garagelist:any = document.getElementById('garage-view');
+const winnerslist:any = document.getElementById('winners-view');
     garagelist.classList.add('displayNone')
     winnerslist.classList.remove('displayNone')
   }
   if(event.target.classList.contains('garage-menu-button')) {
-    const garagelist: HTMLElement | null = document.getElementById('garage-view');
-const winnerslist: HTMLElement | null = document.getElementById('winners-view');
+    const garagelist:any = document.getElementById('garage-view');
+const winnerslist:any = document.getElementById('winners-view');
     garagelist.classList.remove('displayNone');
     winnerslist.classList.add('displayNone')
   }
@@ -46,20 +46,22 @@ const winnerslist: HTMLElement | null = document.getElementById('winners-view');
     const id = + event.target.id.split('-')[2]
     await deleteCar(id);
     await deleteWinner(id);
-
-    document.getElementById('garage').innerHTML = await renderGarage()
+const garage:any = document.getElementById('garage')
+garage.innerHTML = await renderGarage()
   }
 
   if(event.target.classList.contains('select-button')) {
 const id = event.target.id.split('-')[2];
      selectedCar = await getCar(id)
+      const name:any = document.getElementById('update-name')
+      name.value = selectedCar.name;
+      const color:any = document.getElementById('update-color')
+      color.value = selectedCar.color;
 
-    document.getElementById('update-name').value = selectedCar.name;
-    document.getElementById('update-color').value = selectedCar.color;
-
-    document.getElementById('update-name').disabled = false;
-    document.getElementById('update-color').disabled = false;
-    document.getElementById('update-submit').disabled = false;
+    name.disabled = false;
+    color.disabled = false;
+    const submit: any = document.getElementById('update-submit')
+    submit.disabled = false;
 
   }
   if(event.target.classList.contains('create-button')) {
@@ -68,13 +70,16 @@ const id = event.target.id.split('-')[2];
   const carExample = {
   "name": "New Red Car",
   "color": "#ff0000" }
-  carExample.name = document.getElementById('create-name').value;
-  carExample.color = document.getElementById('create-color').value;
+  const createName:any = document.getElementById('create-name')
+  carExample.name = createName.value;
+  const createColor:any = document.getElementById('create-color')
+  carExample.color = createColor.value;
   if(!carExample.name) {
     carExample.name = 'A nazvanie?'
    }
      await createCar(carExample);
-     document.getElementById('garage').innerHTML = await renderGarage();
+     const garage:any = document.getElementById('garage')
+     garage.innerHTML = await renderGarage();
   }
 
   if(event.target.classList.contains('update-button')) {
@@ -82,10 +87,13 @@ const id = event.target.id.split('-')[2];
     const carExample = {
     "name": "New Red Car",
     "color": "#ff0000" }
-    carExample.name = document.getElementById('update-name').value;
-    carExample.color = document.getElementById('update-color').value;
+    const updateName:any = document.getElementById('update-name')
+    carExample.name = updateName.value;
+    const updateColor:any = document.getElementById('update-color')
+    carExample.color = updateColor.value;
      await updateCar(selectedCar.id, carExample);
-     document.getElementById('garage').innerHTML = await renderGarage();
+     const garage:any = document.getElementById('garage')
+     garage.innerHTML = await renderGarage();
   }
   if (event.target.classList.contains('generator-button')) {
     let n:number;
@@ -97,7 +105,8 @@ const id = event.target.id.split('-')[2];
     const cars =  generateRandomCars(n);
     await Promise.all(cars.map(async c => createCar(c)));
     await updateStateGarage();
-    document.getElementById('garage').innerHTML = await renderGarage()
+    const garage:any = document.getElementById('garage')
+     garage.innerHTML = await renderGarage()
     event.target.disabled = false;
   }
   if(event.target.classList.contains('race-button')) {
@@ -105,19 +114,22 @@ const id = event.target.id.split('-')[2];
     event.target.disabled = true;
     const winner = await race(startDriving);
     await saveWinner(winner);
-    const message  = document.getElementById('message');
+    const message: any  = document.getElementById('message');
     message.innerHTML = `${winner.name} went first (${winner.time})!`;
     message?.classList.toggle('visible', true)
-    document.getElementById('reset').disable = false;
+    const reset:any =document.getElementById('reset');
+    reset.disable = false;
   }
   if (event.target.classList.contains('reset-button')) {
 
     event.target.disabled = true;
     store.cars.map(({id}) => stopDriving(id));
-    const message = document.getElementById('message');
-    message?.classList.toggle('visible', false);
-    document.getElementById('race').disabled = false;
-    document.getElementById('reset').disable = false;
+    const message:any = document.getElementById('message');
+    message.classList.toggle('visible', false);
+    const race:any = document.getElementById('race')
+    race.disabled = false;
+    const reset:any =document.getElementById('reset');
+    reset.disable = false;
   }
 })
 }
