@@ -1,8 +1,9 @@
+import store from "../../store";
 import { renderCarImage } from "../garage-page/garage";
 
 export const renderWinners = () => `
-<h1>Winners () </h1>
-<h2>Page # </h2>
+<h1>Winners (1) </h1>
+<h2>Page #1 </h2>
 <table class="table" cellspacing="0" border="0" cellpadding="0">
   <thead>
     <th>Number</th>
@@ -14,9 +15,9 @@ export const renderWinners = () => `
   <tbody>
     <tr>
       <td>1 </td>
-      <td>${renderCarImage('black')} </td>
-      <td>Lamba </td>
+      <td>${renderCarImage('white')} </td>
+      <td>Tesla </td>
       <td>1 </td>
-      <td>2.5 </td>
+      <td>10 </td>
   </tbody>
 `

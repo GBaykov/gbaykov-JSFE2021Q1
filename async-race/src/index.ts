@@ -1,6 +1,6 @@
 import './styles.scss';
-import './components/garage-page/garage.scss';
-import './components/winners-page/winners.scss';
+//import './components/garage-page/garage.scss';
+//import './components/winners-page/winners.scss';
 
 // import { App } from './app';
 import {  render, renderCarImage } from './components/garage-page/garage';

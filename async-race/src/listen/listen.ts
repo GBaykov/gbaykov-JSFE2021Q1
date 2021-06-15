@@ -117,6 +117,7 @@ const id = event.target.id.split('-')[2];
     const message = document.getElementById('message');
     message?.classList.toggle('visible', false);
     document.getElementById('race').disabled = false;
+    document.getElementById('reset').disable = false;
   }
 })
 }

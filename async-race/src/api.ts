@@ -1,7 +1,4 @@
-
-
-
-export const base = 'http://127.0.0.1:3000';// http://127.0.0.1:3000
+export const base = 'http://127.0.0.1:3000';
 
 export const garage = `${base}/garage`;
 export const engine = `${base}/engine`;
@@ -71,13 +68,32 @@ export const getWinners = async ({
   page, limit = 10, sort, order,
 }:{ page: number, limit: number, sort:string, order:string }) => {
   const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${getSortOrder(sort, order)}`);
-  const items:any[] = await response.json(); // :object[] должен быть массив объектов, но тогда "Свойство "id" не существует в типе "object""
+  return await response.json(); // :object[] должен быть массив объектов, но тогда "Свойство "id" не существует в типе "object""
 
-  return {
-    items: await Promise.all(items.map(async (winner) => ({ ...winner, car: await getCar(winner.id) }))),
-    count: response.headers.get('X-Total-Count'),
-  };
 };
+export const getWinnersCount = async ({
+  page, limit = 10, sort, order,
+}:{ page: number, limit: number, sort:string, order:string }) => {
+  const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${getSortOrder(sort, order)}`);
+  return  response.headers.get('X-Total-Count') // :object[] должен быть массив объектов, но тогда "Свойство "id" не существует в типе "object""
+
+};
+
+
+// export const getWinners = async ({
+//   page, limit = 10, sort, order,
+// }:{ page: number, limit: number, sort:string, order:string }) => {
+//   const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${getSortOrder(sort, order)}`);
+//   const items:any[] = await response.json(); // :object[] должен быть массив объектов, но тогда "Свойство "id" не существует в типе "object""
+
+//   return {
+//     items: await Promise.all(items.map(async (winner) => ({ ...winner, car: await getCar(winner.id) }))),
+//     count: response.headers.get('X-Total-Count'),
+//   };
+// };
+
+
+
 
 export const getWinner = async (id:number) => (await fetch(`${winners}/${id}`)).json();
 

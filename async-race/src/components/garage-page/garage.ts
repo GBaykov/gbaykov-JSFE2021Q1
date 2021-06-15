@@ -84,7 +84,7 @@ let li = `<li>${renderCar(carDef)}</li>`
 
 export const renderGarage = async () => `
   <p>Garage (${await getCarsCount(1)})</p>
-  <p>Page #</p>
+  <p>Page #${store.carsPage}</p>
   <ul class="garage">
   ${await getCars(1).then((res) =>  res.map((car) =>
     `<li>${renderCar(car)}</li>`
