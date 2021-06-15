@@ -101,7 +101,7 @@ export const updateWinner = async (id:number, body: object) => (await fetch(`${w
   },
 })).json();
 
-export const saveWinner = async (id:number, time:number) => {
+export const saveWinner = async ({id, time}:{id:number, time:number}) => {
   const winnerStarus = await getWinnerStatus(id);
 
   if (winnerStarus === 404) {

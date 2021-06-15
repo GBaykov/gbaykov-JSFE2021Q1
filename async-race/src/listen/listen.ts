@@ -1,9 +1,10 @@
-import { createCar, deleteCar, deleteWinner, getCar, updateCar } from "../api";
+import { createCar, deleteCar, deleteWinner, getCar, saveWinner, updateCar } from "../api";
 import { carDef, renderGarage } from "../components/garage-page/garage";
 import { updateStateGarage } from "../components/garage-page/updateGarage";
 import { renderWinners } from "../components/winners-page/winners";
 import { startDriving, stopDriving } from "../functions/driving";
 import { generateRandomCars } from "../functions/getRandomFunctions";
+import { race } from "../functions/racing";
 
 export let selectedCar = {
   "name": "Tesla",
@@ -97,6 +98,16 @@ const id = event.target.id.split('-')[2];
     await updateStateGarage();
     document.getElementById('garage').innerHTML = await renderGarage()
     event.target.disabled = false;
+  }
+  if(event.target.classList.contains('race-button')) {
+    alert("race")
+    event.target.disabled = true;
+    const winner = await race(startDriving);
+    await saveWinner(winner);
+    const message  = document.getElementById('message');
+    message.innerHTML = `${winner.name} went first (${winner.time})!`;
+    message?.classList.toggle('visible', true)
+    document.getElementById('reset').disable = false;
   }
 })
 }
