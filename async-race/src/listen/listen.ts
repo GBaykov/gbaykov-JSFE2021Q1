@@ -1,7 +1,9 @@
 import { createCar, deleteCar, deleteWinner, getCar, updateCar } from "../api";
 import { carDef, renderGarage } from "../components/garage-page/garage";
+import { updateStateGarage } from "../components/garage-page/updateGarage";
 import { renderWinners } from "../components/winners-page/winners";
 import { startDriving, stopDriving } from "../functions/driving";
+import { generateRandomCars } from "../functions/getRandomFunctions";
 
 export let selectedCar = {
   "name": "Tesla",
@@ -74,18 +76,27 @@ const id = event.target.id.split('-')[2];
   }
 
   if(event.target.classList.contains('update-button')) {
-
     event.preventDefault();
-
     const carExample = {
     "name": "New Red Car",
     "color": "#ff0000" }
-
     carExample.name = document.getElementById('update-name').value;
     carExample.color = document.getElementById('update-color').value;
-
      await updateCar(selectedCar.id, carExample);
      document.getElementById('garage').innerHTML = await renderGarage();
+  }
+  if (event.target.classList.contains('generator-button')) {
+    let n:number;
+    event.target.disabled = true;
+    if(event.target.id === 'generator') {
+      n = 10;
+    }
+    else n = 100;
+    const cars =  generateRandomCars(n);
+    await Promise.all(cars.map(async c => createCar(c)));
+    await updateStateGarage();
+    document.getElementById('garage').innerHTML = await renderGarage()
+    event.target.disabled = false;
   }
 })
 }

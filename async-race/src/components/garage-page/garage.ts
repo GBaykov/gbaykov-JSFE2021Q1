@@ -73,7 +73,9 @@ export const renderCar = ({
 </div>
 `;
 
-
+// ${await getCars(1).then((res) => res.map((car) =>
+//   `<li>${renderCar(car)}</li>`
+//   ).join(''))}
 
 export const carDef = {
   id: 1, name: 'Car', color: 'rgb(43, 231, 115)', isEngineStarted: false,
@@ -84,9 +86,10 @@ export const renderGarage = async () => `
   <p>Garage (${await getCarsCount(1)})</p>
   <p>Page #</p>
   <ul class="garage">
-  ${await getCars(1).then((res) => res.map((car) =>
+  ${await getCars(1).then((res) =>  res.map((car) =>
     `<li>${renderCar(car)}</li>`
-    ).join(''))}
+    ).join(''))
+  }
   </ul>
 `;
 
@@ -99,7 +102,9 @@ export const render = async () => {
       <button class="button garage-menu-button" id="garage-menu">To garage</bytton>
       <button class="button winners-menu-button" id="winners-menu">To winners</bytton>
     </div>
+
     <div id="garage-view">
+
       <div>
         <form class="form" id="create">
           <input class="input" id="create-name" name="name" type="text" placeholder="Tesla Nitesla">
@@ -112,24 +117,31 @@ export const render = async () => {
           <button class="button update-button" type="submit" >Update</button>
         </form>
       </div>
+
       <div class="race-controls">
         <button class="button race-button" id="race">Race</button>
         <button class="button reset-button" id="reset">Reset</button>
-        <button class="button generator-button" id="generator">Generate</button>
+        <button class="button generator-button" id="generator">Generate(10)</button>
+        <button class="button generator-button" id="generator2">Generate(100)</button>
       </div>
+
       <div id="garage">
       ${await renderGarage()}
       </div>
+
       <div>
         <p class="message" id="message"></p>
       </div>
+
     </div>
-    <div id="winners-view" class="displayNone">
-    ${renderWinners()}
-    </div>
+
     <div class="pagination">
       <button class="button prev-button" disabled id="prev">Prev</button>
       <button class="button next-button" disabled id="next">Next</button>
+    </div>
+
+    <div id="winners-view" class="displayNone">
+    ${renderWinners()}
     </div>
     `;
   const root = document.createElement('div');

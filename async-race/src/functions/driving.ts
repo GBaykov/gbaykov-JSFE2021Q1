@@ -1,6 +1,6 @@
-import { startEngine, stopEngine } from "../api";
+import { drive, getCar, startEngine, stopEngine } from "../api";
 import store from "../store";
-import { animation, stopAnimation } from "./animation";
+import { animation } from "./animation";
 import { getDistanceBetweenElements } from "./positionFunctions";
 
 export const startDriving = async (id:number) => {
@@ -17,13 +17,13 @@ export const startDriving = async (id:number) => {
   const car  = document.getElementById(`car-${id}`);
   const flag = document.getElementById(`flag-${id}`);
   const htmlDistance: number= Math.floor(getDistanceBetweenElements(car, flag) + 100)
-
+  store.animation[id] = await getCar(id)
    animation(car, htmlDistance, time);
 
-  //const {success} = await drive(id);
-  //if(!success) window.cancelAnimationFrame(store.animation[id].id);
+  const {success} = await drive(id)
+  if(!success) window.cancelAnimationFrame(store.animation[id].id);
 
-  //return {success, id, time}
+  return {success, id, time}
 }
 
 export const stopDriving = async (id:number) => {
@@ -31,14 +31,14 @@ export const stopDriving = async (id:number) => {
   stopButton.disabled = true;
   stopButton?.classList.toggle('enabling', true);
 
+
+
   const car = document.getElementById(`car-${id}`);
-
-
-  //await stopEngine(id);
+  await stopEngine(id);
   //stopAnimation(car,0, 0)
   //stopButton?.classList.toggle('enabling', false);
   //document.getElementById(`start-engine-button${id}`).disabled = false;
-  const { velocity, distance } = await stopEngine(id);
-  car.style.transform = `translateX(${Math.pow(velocity, distance)}px)`
-window.cancelAnimationFrame(id)
+  if (store.animation[id]) window.cancelAnimationFrame(store.animation[id].id)
+  car.style.transform = `translateX(0)`;
+
 }

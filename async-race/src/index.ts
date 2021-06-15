@@ -9,6 +9,7 @@ import { updateStateGarage } from './components/garage-page/updateGarage';
 import { listenProb } from './listen/listen';
 
 render();
+await updateStateGarage()
 listenProb()
 // await updateStateGarage();
 

@@ -16,9 +16,6 @@ export const getCars = async (page:number, limit = 7):Promise<[{ id: number; nam
 };
 
 
-
-
-
 export const getCarsCount = async (page:number, limit = 7) => {
   const respons = await fetch(`${garage}?_page={${page}}&_limit={${limit}}`);
   return  respons.headers.get('X-Total-Count')
@@ -54,7 +51,16 @@ export const startEngine = async (id:number) => {
   return response.json()
 };
 
-export const stopEngine = async (id:number) => (await fetch(`${engine}?id=${id}&status=stopped`)).json();
+export const stopEngine = async (id:number) => {
+  const response = await fetch(`${engine}?id=${id}&status=stopped`)
+  return response.json();
+}
+
+export const drive = async (id:number) => {
+  const res = await fetch(`${engine}?id=${id}&status=drive`).catch()
+  return res.status !== 200 ? { success: false } : {...(await res.json())}
+}
+
 
 export const getSortOrder = (sort:string, order:string) => {
   if (sort && order) return `&_sort=${sort}$_order=${order}`;
