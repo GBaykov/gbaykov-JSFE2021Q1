@@ -101,7 +101,7 @@ const id = event.target.id.split('-')[2];
     event.target.disabled = false;
   }
   if(event.target.classList.contains('race-button')) {
-    alert("race")
+
     event.target.disabled = true;
     const winner = await race(startDriving);
     await saveWinner(winner);
@@ -111,12 +111,12 @@ const id = event.target.id.split('-')[2];
     document.getElementById('reset').disable = false;
   }
   if (event.target.classList.contains('reset-button')) {
-    alert('reset')
+
     event.target.disabled = true;
     store.cars.map(({id}) => stopDriving(id));
     const message = document.getElementById('message');
     message?.classList.toggle('visible', false);
-    document.getElementById('raca').disabled = false;
+    document.getElementById('race').disabled = false;
   }
 })
 }
