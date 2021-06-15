@@ -10,9 +10,7 @@ export const winners = `${base}/winners`;
 
 
 
-export const getCars = async (page:number, limit = 7):Promise<{
-  сar:CarModel[];
-}> => {
+export const getCars = async (page:number, limit = 7):Promise<[{ id: number; name: string; color: string; isEngineStarted: boolean; }]> => {
   const respons = await fetch(`${garage}?_page={${page}}&_limit={${limit}}`);
   return respons.json()
 };
