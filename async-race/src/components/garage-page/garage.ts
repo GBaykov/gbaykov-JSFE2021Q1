@@ -136,8 +136,8 @@ export const render = async () => {
     </div>
 
     <div class="pagination">
-      <button class="button prev-button" disabled id="prev">Prev</button>
-      <button class="button next-button" disabled id="next">Next</button>
+      <button class="button prev-button"  id="prev">Prev</button>
+      <button class="button next-button"  id="next">Next</button>
     </div>
 
     <div id="winners-view" class="displayNone">

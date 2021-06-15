@@ -5,6 +5,7 @@ import { renderWinners } from "../components/winners-page/winners";
 import { startDriving, stopDriving } from "../functions/driving";
 import { generateRandomCars } from "../functions/getRandomFunctions";
 import { race } from "../functions/racing";
+import store from "../store";
 
 export let selectedCar = {
   "name": "Tesla",
@@ -108,6 +109,14 @@ const id = event.target.id.split('-')[2];
     message.innerHTML = `${winner.name} went first (${winner.time})!`;
     message?.classList.toggle('visible', true)
     document.getElementById('reset').disable = false;
+  }
+  if (event.target.classList.contains('reset-button')) {
+    alert('reset')
+    event.target.disabled = true;
+    store.cars.map(({id}) => stopDriving(id));
+    const message = document.getElementById('message');
+    message?.classList.toggle('visible', false);
+    document.getElementById('raca').disabled = false;
   }
 })
 }

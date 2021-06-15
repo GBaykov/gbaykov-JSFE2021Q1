@@ -15,8 +15,8 @@ export const raceAll = async (promises:[], ids:[]):Promise<{}>=> {
 
 export const race = async (action:Function) => {
   const promises = store.cars.map(({id}) => action(id));
-  // const cars = await getCars(1).map(({id}) => action(id));
-  // for(let car of cars) {
+   //const promises = await getCars(1).map(({id}) => action(id));
+  // for(let car of promises) {
   //   await action(car)
   // }
   const winner = await raceAll(promises, store.cars.map(car => car.id))
