@@ -120,8 +120,8 @@ export function listenProb() {
     }
     if (event.target.classList.contains('reset-button')) {
       event.target.disabled = true;
-      store.cars.map(function ({id}:{id:number}) {
-        stopDriving(id)
+      store.cars.map(({ id }:{ id:number }) => {
+        stopDriving(id);
       });
       const message:any = document.getElementById('message');
       message.classList.toggle('visible', false);
@@ -129,7 +129,6 @@ export function listenProb() {
       raceBtn.disabled = false;
       const reset:any = document.getElementById('reset');
       reset.disable = false;
-
     }
   });
 }

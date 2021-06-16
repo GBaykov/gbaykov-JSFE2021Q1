@@ -39,7 +39,7 @@ export const stopDriving = async (id:number) => {
   await stopEngine(id);
   // stopAnimation(car,0, 0)
   // stopButton?.classList.toggle('enabling', false);
-  const startBtn:any =  document.getElementById(`start-engine-car-${id}`)
+  const startBtn:any = document.getElementById(`start-engine-car-${id}`);
   startBtn.disabled = false;
   const storAnim: any = store.animation;
   if (storAnim[id]) window.cancelAnimationFrame(storAnim[id].id);
