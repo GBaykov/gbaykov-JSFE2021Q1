@@ -4,25 +4,19 @@ export const garage = `${base}/garage`;
 export const engine = `${base}/engine`;
 export const winners = `${base}/winners`;
 
-
-
-
 export const getCars = async (page:number, limit = 7):Promise<[{ id: number; name: string; color: string; isEngineStarted: boolean; }]> => {
   const respons = await fetch(`${garage}?_page={${page}}&_limit={${limit}}`);
-  return respons.json()
+  return respons.json();
 };
-
 
 export const getCarsCount = async (page:number, limit = 7) => {
   const respons = await fetch(`${garage}?_page={${page}}&_limit={${limit}}`);
-  return  respons.headers.get('X-Total-Count')
-
+  return respons.headers.get('X-Total-Count');
 };
-
 
 export const getCar = async (id:number) => {
   const respons = await fetch(`${garage}/${id}`);
-  return respons.json()
+  return respons.json();
 };
 
 export const createCar = async (body:object) => (await fetch(garage, {
@@ -45,19 +39,18 @@ export const updateCar = async (id:number, body:object) => (await fetch(`${garag
 
 export const startEngine = async (id:number) => {
   const response = await fetch(`${engine}?id=${id}&status=started`);
-  return response.json()
+  return response.json();
 };
 
 export const stopEngine = async (id:number) => {
-  const response = await fetch(`${engine}?id=${id}&status=stopped`)
+  const response = await fetch(`${engine}?id=${id}&status=stopped`);
   return response.json();
-}
+};
 
 export const drive = async (id:number) => {
-  const res = await fetch(`${engine}?id=${id}&status=drive`).catch()
-  return res.status !== 200 ? { success: false } : {...(await res.json())}
-}
-
+  const res = await fetch(`${engine}?id=${id}&status=drive`).catch();
+  return res.status !== 200 ? { success: false } : { ...(await res.json()) };
+};
 
 export const getSortOrder = (sort:string, order:string) => {
   if (sort && order) return `&_sort=${sort}$_order=${order}`;
@@ -68,17 +61,14 @@ export const getWinners = async ({
   page, limit = 10, sort, order,
 }:{ page: number, limit: number, sort:string, order:string }) => {
   const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${getSortOrder(sort, order)}`);
-  return await response.json(); // :object[] должен быть массив объектов, но тогда "Свойство "id" не существует в типе "object""
-
+  return response.json(); // :object[] должен быть массив объектов, но тогда "Свойство "id" не существует в типе "object""
 };
 export const getWinnersCount = async ({
   page, limit = 10, sort, order,
 }:{ page: number, limit: number, sort:string, order:string }) => {
   const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${getSortOrder(sort, order)}`);
-  return  response.headers.get('X-Total-Count') // :object[] должен быть массив объектов, но тогда "Свойство "id" не существует в типе "object""
-
+  return response.headers.get('X-Total-Count'); // :object[] должен быть массив объектов, но тогда "Свойство "id" не существует в типе "object""
 };
-
 
 // export const getWinners = async ({
 //   page, limit = 10, sort, order,
@@ -91,9 +81,6 @@ export const getWinnersCount = async ({
 //     count: response.headers.get('X-Total-Count'),
 //   };
 // };
-
-
-
 
 export const getWinner = async (id:number) => (await fetch(`${winners}/${id}`)).json();
 
@@ -117,7 +104,7 @@ export const updateWinner = async (id:number, body: object) => (await fetch(`${w
   },
 })).json();
 
-export const saveWinner = async ({id, time}:{id:number, time:number}) => {
+export const saveWinner = async ({ id, time }:{ id:number, time:number }) => {
   const winnerStarus = await getWinnerStatus(id);
 
   if (winnerStarus === 404) {

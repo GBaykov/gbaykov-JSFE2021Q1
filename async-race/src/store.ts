@@ -1,15 +1,15 @@
 import {
-  getCars, getCarsCount, getWinners, getWinnersCount
+  getCars, getCarsCount, getWinners, getWinnersCount,
 } from './api';
 
-//const { items: cars, count: carsCount } = await getCars(1);
-let cars:any = async() => {
+// const { items: cars, count: carsCount } = await getCars(1);
+const cars:any = async () => {
   await getCars(1);
-}
-let carsCount:any = async() => {
-  await getCarsCount(1)
-}
-//let carsCount = await getCarsCount(1)
+};
+const carsCount:any = async () => {
+  await getCarsCount(1);
+};
+// let carsCount = await getCarsCount(1)
 
 // let winners = async() => {
 //   await getWinners({page: 1, limit: 10, sort: 'id', order: 'ASC'});

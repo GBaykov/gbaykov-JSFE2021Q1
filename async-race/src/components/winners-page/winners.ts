@@ -1,5 +1,5 @@
-import store from "../../store";
-import { renderCarImage } from "../garage-page/garage";
+import store from '../../store';
+import { renderCarImage } from '../garage-page/garage';
 
 export const renderWinners = () => `
 <h1>Winners (1) </h1>
@@ -20,4 +20,4 @@ export const renderWinners = () => `
       <td>1 </td>
       <td>10 </td>
   </tbody>
-`
+`;

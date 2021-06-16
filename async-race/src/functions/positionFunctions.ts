@@ -1,9 +1,12 @@
-import store from "../store";
+import store from '../store';
+
 export function getPositionAtCenter(element:HTMLElement) {
-  const {top, left, width, height} = element.getBoundingClientRect();
+  const {
+    top, left, width, height,
+  } = element.getBoundingClientRect();
   return {
     x: left + width / 2,
-    y: top + height / 2
+    y: top + height / 2,
   };
 }
 

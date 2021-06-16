@@ -1,18 +1,19 @@
-import { getCar, getCars, getCarsCount } from "../../api";
-import store from "../../store";
+import { getCar, getCars, getCarsCount } from '../../api';
+import store from '../../store';
 
-import { renderWinners } from "../winners-page/winners";
+import { renderWinners } from '../winners-page/winners';
+
 let car:any;
 
 export const renderCarImage = (color:string) => `
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink " x="0px" y="0px"
-	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+  viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
 <g>
-	<g>
-		<path style="fill:${color}" d="M28,13l-4-4H12l-2,4L0,15v6h4c0,0,0-4,4-4c0,0,4,0,4,4h9c0,0,0-4,4-4c0,0,4,0,4,4h3v-6L28,13z"/>
-		<circle style="fill:#010002;" cx="8" cy="21" r="2"/>
-		<circle style="fill:#010002;" cx="25" cy="21" r="2"/>
-	</g>
+  <g>
+    <path style="fill:${color}" d="M28,13l-4-4H12l-2,4L0,15v6h4c0,0,0-4,4-4c0,0,4,0,4,4h9c0,0,0-4,4-4c0,0,4,0,4,4h3v-6L28,13z"/>
+    <circle style="fill:#010002;" cx="8" cy="21" r="2"/>
+    <circle style="fill:#010002;" cx="25" cy="21" r="2"/>
+  </g>
 </g>
 <g>
 </g>
@@ -48,11 +49,9 @@ export const renderCarImage = (color:string) => `
 `;
 // style="fill:${color}"
 
-
-
 export const renderCar = ({
   id, name, color, isEngineStarted,
-}:{id:number, name:string, color:string, isEngineStarted:boolean}) => `
+}:{ id:number, name:string, color:string, isEngineStarted:boolean }) => `
 <div class ="general-buttons">
     <button class = "button select-button" id="select-car-${id}">Select</button>
     <button class = "button remove-button" id="remove-car-${id}">Remove</button>
@@ -62,8 +61,8 @@ export const renderCar = ({
 <div class ="road">
   <div class ="launch-pad">
     <div class = "control-panel">
-      <button class = "icon start-engine-button" id="start-engine-car-${id}" ${isEngineStarted ? 'disbled' : ''}>Start</button>
-      <button class = "icon stop-engine-button" id="stop-engine-car-${id}" ${!isEngineStarted ? 'disbled' : ''}>Stop</button>
+      <button class = "icon start-engine-button" id="start-engine-car-${id}" ${isEngineStarted ? 'disabled' : ''}>Start</button>
+      <button class = "icon stop-engine-button" id="stop-engine-car-${id}" ${!isEngineStarted ? 'disabled' : ''}>Stop</button>
     </div>
     <div class ="car" id="car-${id}">
     ${renderCarImage(color)}
@@ -80,21 +79,18 @@ export const renderCar = ({
 export const carDef = {
   id: 1, name: 'Car', color: 'rgb(43, 231, 115)', isEngineStarted: false,
 };
-let li = `<li>${renderCar(carDef)}</li>`
+const li = `<li>${renderCar(carDef)}</li>`;
 
 export const renderGarage = async () => `
   <p>Garage (${await getCarsCount(1)})</p>
   <p>Page #${store.carsPage}</p>
   <ul class="garage">
-  ${await getCars(1).then((res) =>  res.map((car) =>
-    `<li>${renderCar(car)}</li>`
-    ).join(''))
-  }
+  ${await getCars(1).then((res) => res.map((car) => `<li>${renderCar(car)}</li>`).join(''))
+}
   </ul>
 `;
 
 // TO DO: MAKE WINNERS PAGE(renderWinners)
-
 
 export const render = async () => {
   const html = `

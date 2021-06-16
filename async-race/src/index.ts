@@ -1,16 +1,16 @@
 import './styles.scss';
-//import './components/garage-page/garage.scss';
-//import './components/winners-page/winners.scss';
+// import './components/garage-page/garage.scss';
+// import './components/winners-page/winners.scss';
 
 // import { App } from './app';
-import {  render, renderCarImage } from './components/garage-page/garage';
+import { render, renderCarImage } from './components/garage-page/garage';
 // import { updateWinner } from './api';
 import { updateStateGarage } from './components/garage-page/updateGarage';
 import { listenProb } from './listen/listen';
 
 render();
-await updateStateGarage()
-listenProb()
+await updateStateGarage();
+listenProb();
 // await updateStateGarage();
 
 //  window.onload = () => {

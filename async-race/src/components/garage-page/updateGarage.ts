@@ -7,20 +7,18 @@ export const updateStateGarage = async () => {
   store.cars = items;
   store.carsCount = counts;
 
-    if(store.carsPage * 7 < store.carsCount) {
-      const next:any =document.getElementById('next')
-      next.disabled = false;
-
-   } else {
-    const next:any =document.getElementById('next')
-      next.disabled = true;
-
-   }
-   if(store.carsPage > 1) {
-     const prev:any = document.getElementById('prev')
-     prev.disabled = false;
- } else {
-  const prev:any = document.getElementById('prev')
-     prev.disabled = true;
- }
+  if (store.carsPage * 7 < store.carsCount) {
+    const next:any = document.getElementById('next');
+    next.disabled = false;
+  } else {
+    const next:any = document.getElementById('next');
+    next.disabled = true;
+  }
+  if (store.carsPage > 1) {
+    const prev:any = document.getElementById('prev');
+    prev.disabled = false;
+  } else {
+    const prev:any = document.getElementById('prev');
+    prev.disabled = true;
+  }
 };

@@ -1,8 +1,8 @@
-import store from "../store";
+import store from '../store';
 
-export function  animation(car:any, distance:number, animationTime:number) {
+export function animation(car:any, distance:number, animationTime:number) {
   let start:number | null = null;
-  const state:any = {};  // TO DO: исправить any на объект (при объекте Свойство "id" не существует в типе "{}" )
+  const state:any = {}; // TO DO: исправить any на объект (при объекте Свойство "id" не существует в типе "{}" )
 
   function step(timestamp:number) {
     if (!start) start = timestamp;

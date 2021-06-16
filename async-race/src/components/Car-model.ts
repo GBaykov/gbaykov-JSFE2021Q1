@@ -1,5 +1,3 @@
-
-
 // export class Car {
 //   readonly id:number;
 //   readonly name:string;
@@ -13,9 +11,10 @@
 //   }
 // };
 
-
 class CarModel {
-  create(сar: { id:number, name:string, color:string, isEngineStarted:boolean}) {
-    return {id: сar.id, name: сar.name, color: сar.color,isEngineStarted: сar.isEngineStarted };
+  create(сar: { id:number, name:string, color:string, isEngineStarted:boolean }) {
+    return {
+      id: сar.id, name: сar.name, color: сar.color, isEngineStarted: сar.isEngineStarted,
+    };
   }
 }
