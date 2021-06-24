@@ -1,0 +1,43 @@
+[
+  {
+    "category": "unsorted",
+    "images": [
+     "deer.png",
+     "elephant.png",
+     "shark.png",
+     "squid.png"
+
+    ]
+  },
+  {
+    "category": "unsorted",
+    "images": [
+     "deer.png",
+     "elephant.png",
+     "shark.png",
+     "squid.png",
+     "giraffe.png",
+     "parrot.png"
+    ]
+  },
+  {
+    "category": "starWars",
+    "images": [
+     "clone.jpg",
+     "ren.jpg",
+     "vader.jpg",
+     "yoda.jpg"
+    ]
+  },
+  {
+    "category": "starWars",
+    "images": [
+     "clone.jpg",
+     "ren.jpg",
+     "vader.jpg",
+     "yoda.jpg",
+     "ventres.jpg",
+     "anakin.jpg"
+    ]
+  }
+]

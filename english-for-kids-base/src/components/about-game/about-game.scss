@@ -1,0 +1,68 @@
+.main-aria{
+  margin: 0 auto;
+  background-color: rgb(233, 210, 210);
+  width: 1000px;
+  height: 920px;
+  padding: 36px;
+  display:  flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.first-rule{
+  background-image: url('./assets/first-rule.png');
+  background-position:  center;
+  background-size: cover;
+  width: 360px;
+  height: 230px;
+  margin-bottom: 20px;
+}
+.second-rule{
+  background-image: url('./assets/second-rule.png');
+  background-position:  center;
+  background-size: cover;
+  width: 360px;
+  height: 132px;
+  margin-bottom: 20px;
+}
+.third-rule{
+  background-image: url('./assets/third-rule.png');
+  background-position:  center;
+  background-size: cover;
+  width: 360px;
+  height: 240px;
+  margin-bottom: 20px;
+}
+
+.register-rule{
+  background-image: url('./assets/register-rule.png');
+  background-position:  center;
+  background-size: cover;
+  width: 302px;
+  height: 218px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+ }
+
+ .setting-rule{
+   color: black;
+  font-size: 20px;
+  background-color:  rgb(243, 131, 141);
+  // background-image: url('./assets/settings-rule.png');
+  // background-position:  center;
+  // background-size: cover;
+  width: 100px;
+  height: 64px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+ }
+.field-rule{
+  background-image: url('./assets/field-rule.png');
+  background-position:  center;
+  background-size: cover;
+  width: 330px;
+  height: 240px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
