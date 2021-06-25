@@ -21,22 +21,28 @@ window.onload = () => {
   if (!appElement) throw Error('App root element not found');
   if (!bodyElement) throw Error('bodyElement not found');
 
-  // new HeaderCompil(bodyElement);
-  // var thing = new HeaderCompil(bodyElement);
+
 
   new HeaderCompil(bodyElement).compil();
-  // headerDeclar(bodyElement);
-  // const header:HeaderCompil = new HeaderCompil(bodyElement);
 
-  // new AboutAria(appElement);
   appElement.innerHTML = '';
-  appElement.appendChild(mainAria);
+  //appElement.appendChild(mainAria);
 
-  // new App(appElement).start();
+  startBtn.classList.remove('displayNone');
+  new App(appElement).start();
 
   registrBtn.addEventListener('click', () => {
     new FormPopAp(appElement).open();
   });
+  bodyElement.addEventListener('click', (event:MouseEvent) => {
+    if(event.target === null) return;
+    const target = event.target as HTMLElement;
+
+     if (target.classList.contains('flip-btn-container')) {
+      alert('flip-btn')
+}
+
+  })
 
   submitBtn.addEventListener('click', (event) => {
     if (!event) throw Error('App root element not found');
@@ -48,7 +54,7 @@ window.onload = () => {
   });
 
   cancelBtn.addEventListener('click', () => {
-    // new formPopAp(appElement).cancel();
+
     appElement.innerHTML = '';
     appElement.appendChild(mainAria);
   });
@@ -67,8 +73,7 @@ window.onload = () => {
     new App(appElement).start();
     startBtn.classList.add('displayNone');
     stopBtn.classList.remove('displayNone');
-    // alert(difficulty.value);
-    // alert(gameCards.value)
+
   });
 
   stopBtn.addEventListener('click', () => {
@@ -96,4 +101,5 @@ window.onload = () => {
     sittingAria(mainAria);
     appElement.appendChild(mainAria);
   });
+
 };

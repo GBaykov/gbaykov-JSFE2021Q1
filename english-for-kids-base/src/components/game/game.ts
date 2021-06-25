@@ -3,7 +3,7 @@ import { BaseComponent } from '../base-component';
 import { Card } from '../card/card';
 import { CardsField } from '../cards-field/cards-field';
 
-const FLIP_DELAY = 3000;
+const FLIP_DELAY = 100;
 
 export class Game extends BaseComponent {
   private readonly cardsField: CardsField;

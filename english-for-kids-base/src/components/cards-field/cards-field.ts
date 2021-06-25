@@ -21,6 +21,6 @@ export class CardsField extends BaseComponent {
     this.cards.forEach((card) => this.element.appendChild(card.element));
     setTimeout(() => {
       this.cards.forEach((card) => card.flipToBack());
-    }, SHOW_TIME * 1000);
+    }, SHOW_TIME * 1);
   }
 }

@@ -2,6 +2,9 @@ import { BaseComponent } from '../base-component';
 import './card.scss';
 
 const FLIP_CLASS = 'flipped';
+const SRC = 'https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/evening/07.jpg';
+
+
 
 export class Card extends BaseComponent {
   isFlipped = false;
@@ -11,8 +14,10 @@ export class Card extends BaseComponent {
 
     this.element.innerHTML = `
       <div class="card">
-        <div class="card__front" style="background-image: url('./images/${image}')" ></div>
-        <div class="card__back"></div>
+        <div class="card__front" style="background-image: url('${SRC}')" ></div>
+        <div class="card__back" style="background-image: url('${SRC}')">
+          <div class='flip-btn-container'> </div>
+        </div>
       </div>
     `;
   }
