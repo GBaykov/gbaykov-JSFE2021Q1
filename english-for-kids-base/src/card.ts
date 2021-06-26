@@ -8,13 +8,15 @@ import DATA_OF_CARDS from './data';
 imgPatg
 imgPatр
 const FLIP_CLASS = 'flipped';
+const src = 'https://raw.githubusercontent.com/tropler/english-for-kids-data/master/img/'
 
 
 export const makeCard = (word:string, image:string, translation:string) => `
 <div class="card">
   <div class="card__front" >
-  <div class="card__bgi" style="background-image: url('${image}')"></div>
-    <p>${image}</p>
+  <div class="card__bgi" style="background-image: url('${src}/${image}')"></div>
+  <img src='${src}/${image}' >
+
     <p class="card-name">${word}</p>
     <div class='flip-btn-container'> </div>
   </div>
