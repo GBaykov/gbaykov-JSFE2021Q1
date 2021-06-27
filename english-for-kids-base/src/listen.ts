@@ -23,6 +23,38 @@ export const listenMenu = ():void => {
   };
 }
 
-// export const cardLisener
+//  export const listenCards = () => {
+//   document.addEventListener('click', (event:MouseEvent) => {
+//     if(event === null) throw Error ('MouseEvent === null');
+//     const target = event.target as Element;
+//     if(target.classList.contains('flip-btn')) {
+//       const arr:string[] = target.id.split('-');
+//       const word:string = arr[2];
+//       const card:HTMLElement | null = document.getElementById(`card-${word}`);
+//       if(card === null) throw Error (`card element with id 'card-${word}' not found`);
+//       card.classList.add('flipped');
+//     }
 
+//  })
+// }
 
+export function listenCards() {
+  let rot;
+  const cards:any = document.querySelectorAll('.card');
+  const rotate = document.querySelectorAll('.flip-btn');
+  for (let i = 0, len = cards.length; i < len; i++) {
+    const card = cards[i];
+    rot = rotate[i];
+
+    rot.addEventListener('click', () => {
+      const c = card.classList;
+      if (c.contains('flipped')) {
+        c.remove('flipped'); } else {
+          c.add('flipped');
+      }
+    });
+    // card.onmouseleave = function rotat1() {
+    //   card.classList.remove('flipped');
+    // };
+  }
+};
