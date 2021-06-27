@@ -61,12 +61,12 @@
     background: #FFE4B5;
     color: white;
     padding: 30px;
-    position: fixed;
+    position: absolute;
     left: -320px;
-    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: left 900ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
     height: calc(100vh + 20px);
     z-index: 998;
-    padding-top: 100px;
+
   }
 
 .menu li{
@@ -78,7 +78,7 @@
 .menu.animate{
   top: 0;
   left: 0;
-  position: sticky;
+  position: relative;
 }
 
 .active_menu{

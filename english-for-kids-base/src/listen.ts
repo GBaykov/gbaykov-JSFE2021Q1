@@ -1,4 +1,4 @@
-export const menuListener = ():void => {
+export const listenMenu = ():void => {
   const menuBar: Element | null = document.querySelector('.menu-bar');
   if (!menuBar) throw Error ('menu-bar element not found');
   const span:Element | null = document.querySelector('.menu-bar-span');
@@ -23,6 +23,6 @@ export const menuListener = ():void => {
   };
 }
 
-
+// export const cardLisener
 
 
