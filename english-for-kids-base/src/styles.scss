@@ -6,7 +6,7 @@ html{
   font-size: 20px;
 }
 body{
-  color: white;
+  color: black;
   background-color: darkslategrey;
 }
 
@@ -28,7 +28,6 @@ footer{
 
 
 .cards-field{
-
   width: 90%;
   min-height: 100%;
   display: flex;
@@ -77,10 +76,12 @@ transform: translateZ(2rem);
   height: 100%;
   backface-visibility: hidden;
   border-radius: .5rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
   &__front {
-    background-color: crimson;
+    background-color: white;
 
   }
 
@@ -93,7 +94,21 @@ transform: translateZ(2rem);
     transform: rotateY(180deg);
   }
 }
-
+.card-img-container{
+  width: 10rem;
+  height:8rem;
+}
+.card-text-container{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.card-img{
+  border-radius: .5rem;
+  width: 10rem;
+  height:8rem;
+}
 
 .header {
   position: absolute;
@@ -182,31 +197,16 @@ height: 36px;
   flex-direction: column;
 }
 
-
-
- .setting-rule{
-   color: black;
-  font-size: 20px;
-  background-color:  rgb(243, 131, 141);
-
-  width: 100px;
-  height: 64px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  text-align: center;
- }
-
-
 .displayNone{
   display: none;
 }
 
-.flip-btn-container{
+.flip-btn{
   background-image: url('./assets/flip-btn.svg');
   background-position:  center;
   background-size: cover;
-  width: 15%;
-  height: 15%;
+  width: 2rem;
+  height:2rem;
   align-items: flex-end;
   text-align: end;
 
