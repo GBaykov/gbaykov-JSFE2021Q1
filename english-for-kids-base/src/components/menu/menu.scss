@@ -1,0 +1,88 @@
+.nav{
+  z-index: 997;
+}
+
+.menu-bar {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      z-index: 999;
+  }
+  .menu-bar span, .menu-bar span:before, .menu-bar span:after {
+      width: 100%;
+      position: absolute;
+      height: 10px;
+      background: orange;
+      display: block;
+      transition: .3s;
+      border-radius: 5px;
+
+  }
+  .menu-bar span:before{
+    content: "";
+    top: -20px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu-bar span{
+    top: 20px;
+  }
+  .menu-bar span:after{
+    content: "";
+    bottom: -20px;
+    transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .menu-bar span.active:before{
+    content: "";
+    top: 0px;
+    transform: rotate(45deg);
+    transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
+  }
+  .menu-bar span.active:after{
+    content: "";
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
+  }
+  .menu-bar span.active{
+      background: rgba(255, 255, 255, 0);
+    }
+  ul{
+    list-style: none;
+  }
+  .menu{
+    top: 0;
+    margin-top: -10px;
+    width: 260px;
+    height: auto;
+    background: #FFE4B5;
+    color: white;
+    padding: 30px;
+    position: fixed;
+    left: -320px;
+    transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    height: calc(100vh + 20px);
+    z-index: 998;
+    padding-top: 100px;
+  }
+
+.menu li{
+  padding: 5px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.menu.animate{
+  top: 0;
+  left: 0;
+  position: sticky;
+}
+
+.active_menu{
+  border: 4px solid orange;
+  border-radius: 10px;
+  display: inline-block;
+  }
