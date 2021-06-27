@@ -58,3 +58,15 @@ export function listenCards() {
     // };
   }
 };
+
+export const listenMusic = () => {
+  document.addEventListener('click', (event:MouseEvent) => {
+    if(event === null) throw Error ('MouseEvent === null');
+    const target = event.target as Element;
+    if (target.classList.contains('music-icon')) {
+      alert('music-btn works');
+      const audio:any = document.querySelector('.image-audio')
+      audio.play();
+    }
+  })
+}

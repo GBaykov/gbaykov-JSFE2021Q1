@@ -4,7 +4,7 @@ import './components/card/card.scss';
 import './styles.scss';
 import './components/menu/menu.scss';
 import { makeMenu } from './components/menu/menu';
-import {  listenCards, listenMenu } from './listen';
+import {  listenCards, listenMenu, listenMusic } from './listen';
 
 
 window.onload = () => {
@@ -13,5 +13,6 @@ window.onload = () => {
   makeMenu();
   makeCardField(0)
   listenMenu();
-  listenCards()
+  listenCards();
+  listenMusic()
 }

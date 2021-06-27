@@ -1,18 +1,23 @@
 import { imgPatр } from '../../../public/img/waytest';
+import { AUDIO } from '../../assets/audio/audiotest';
 import { imgPatg } from '../../assets/img/waytest';
 import DATA_OF_CARDS from '../../data';
 const FLIP_CLASS = 'flipped';
-const src = 'https://raw.githubusercontent.com/GBaykov/English-for-kids-data/master/img/'
+const src = 'https://raw.githubusercontent.com/GBaykov/English-for-kids-data/master/img/';
 
-export const makeCard = (word:string, image:string, translation:string) => `
-<div class="card card_page" id="card-${word}">
-  <div class="card__front front" >
+// AUDIO src\assets\audio\smile.mp3
+
+export const makeCard = (word:string, image:string, translation:string, audioSrc:string) => `
+<div class="card " id="card-${word}">
+  <div class="card__front">
+  <audio class="image-audio" src="/src/assets/audio/run.mp3"></audio>
     <div class="card-img-container" >
       <img class="card-img" src='${src}/${image}' >
     </div>
     <div class="card-text-container" >
-      <span class="card-name">${word}</span>
-      <span class='flip-btn' id="flip-btn-${word}"> </span>
+      <p class="card-name">${word}</p>
+      <p class='flip-btn' id="flip-btn-${word}"> </p>
+      <p class="music-icon" id="music-icon-${word}"> </p>
     </div>
   </div>
 
