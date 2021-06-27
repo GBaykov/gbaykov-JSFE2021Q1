@@ -1,6 +1,5 @@
-
-
 import { makeCardField } from './components/card/card-field';
+import './components/card/card.scss';
 import './styles.scss';
 
 window.onload = () => {

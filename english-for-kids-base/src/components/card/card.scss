@@ -17,12 +17,8 @@
 
 perspective: 30rem;
 
-&:hover > .card {
+&:hover > .card{
 transform: translateZ(2rem);
-}
-&.flipped > .card {
-  transform: rotateY(180deg) translateX(-100%);
-transform-origin: left;
 }
 
 }
@@ -37,7 +33,10 @@ transform-origin: left;
   transition: all .5s;
   border-radius: .5rem;
 
-
+  &.flipped{
+    transform: rotateY(180deg) translateX(-100%);
+  transform-origin: left;
+  }
 
 &__front,
 &__back{
@@ -48,20 +47,45 @@ transform-origin: left;
   height: 100%;
   backface-visibility: hidden;
   border-radius: .5rem;
-  background-position:  center;
-    background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
 }
 
   &__front {
-    background-color: crimson;
+    background-color: white;
 
   }
 
   &__back{
 
     background-color: gray;
-    background-image: url('../../assets/card-back.png');
-
+    //background-image: url('./assets/card-back.png');
+    background-position:  center;
+    background-size: cover;
     transform: rotateY(180deg);
   }
+}
+.card-img-container{
+  width: 10rem;
+  height:8rem;
+}
+.card-text-container{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.card-img{
+  border-radius: .5rem;
+  width: 10rem;
+  height:8rem;
+}
+.flip-btn{
+  background-image: url('/src/assets/flip-btn.svg');
+  background-position:  center;
+  background-size: cover;
+  width: 2rem;
+  height:2rem;
+  align-items: flex-end;
+  text-align: end;
 }
