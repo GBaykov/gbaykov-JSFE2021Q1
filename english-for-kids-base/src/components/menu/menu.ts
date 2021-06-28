@@ -7,14 +7,14 @@ export const makeMenu = () => {
       <div class="menu" id="menu">
         <ul>
           <li>Main Page</li>
-          <li class="active_menu">Action (set A)</li>
-          <li>Action (set B)</li>
-          <li>Action (set C)</li>
-          <li>Adjective</li>
-          <li>Animal (set A)</li>
-          <li>Animal (set B)</li>
-          <li>Clothes</li>
-          <li>Emotion</li>
+          <li id="menu-cat-0" class="active_menu menu-element">Action (set A)</li>
+          <li id="menu-cat-1" class="menu-element">Action (set B)</li>
+          <li id="menu-cat-2" class="menu-element">Action (set C)</li>
+          <li id="menu-cat-3" class="menu-element">Adjective</li>
+          <li id="menu-cat-4" class="menu-element">Animal (set A)</li>
+          <li id="menu-cat-5" class="menu-element">Animal (set B)</li>
+          <li id="menu-cat-6" class="menu-element">Clothes</li>
+          <li id="menu-cat-7" class="menu-element">Emotion</li>
           <li>Statistics</li>
         </ul>
       </div>

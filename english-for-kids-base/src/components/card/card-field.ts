@@ -1,7 +1,7 @@
 import DATA_OF_CARDS from "../../data";
 import { makeCard } from "./card";
 
-export const makeCardField =  (category:number):void => {
+export const makeCardField = (category:number):void => {
   const arr = DATA_OF_CARDS[category];
   let html = ``;
  for(let i =0; i < arr.length; i++) {

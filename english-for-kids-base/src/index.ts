@@ -5,6 +5,7 @@ import './styles.scss';
 import './components/menu/menu.scss';
 import { makeMenu } from './components/menu/menu';
 import {  listenCards, listenMenu, listenMusic } from './listen';
+import { chooseCategory } from './components/categories/choose-category';
 
 
 window.onload = () => {
@@ -14,5 +15,6 @@ window.onload = () => {
   makeCardField(0)
   listenMenu();
   listenCards();
-  listenMusic()
+  listenMusic();
+  chooseCategory();
 }

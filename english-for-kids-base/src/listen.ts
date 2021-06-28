@@ -11,7 +11,7 @@ export const listenMenu = ():void => {
     menu.classList.toggle('animate');
   });
 
-  document.onclick = function fbar(event:MouseEvent):void {
+  document.onclick = (event:MouseEvent):void => {
     if(event === null) throw Error ('MouseEvent === null');
     const target = event.target as Element;
     if (target !==null) {
@@ -59,7 +59,7 @@ export const listenMenu = ():void => {
 // };
 
 
-export const listenMusic = () => {
+export const listenMusic = ():void => {
   document.addEventListener('click', (event:MouseEvent) => {
     if(event === null) throw Error ('MouseEvent === null');
     const target = event.target as Element;
@@ -68,8 +68,7 @@ export const listenMusic = () => {
       const word:string = arr[2];
       const audio  = document.getElementById(`audio-${word}`) as HTMLMediaElement;
       if(audio === null) throw Error (`card element with id 'card-${word}' not found`);
-      // const audio:any = document.querySelector('.image-audio') // TO DO: change code to listen all audio( now only first)
-      audio.play()
+      audio.play();
     }
   })
 }
