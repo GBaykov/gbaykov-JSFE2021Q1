@@ -3,16 +3,17 @@ import { AUDIO } from '../../assets/audio/audiotest';
 import { imgPatg } from '../../assets/img/waytest';
 import DATA_OF_CARDS from '../../data';
 const FLIP_CLASS = 'flipped';
-const src = 'https://raw.githubusercontent.com/GBaykov/English-for-kids-data/master/img/';
+const imgURL = 'https://raw.githubusercontent.com/GBaykov/English-for-kids-data/master/img/';
+const audioURL = 'https://raw.githubusercontent.com/GBaykov/English-for-kids-data/master/audio/';
 
 // AUDIO src\assets\audio\smile.mp3
 
 export const makeCard = (word:string, image:string, translation:string, audioSrc:string) => `
 <div class="card " id="card-${word}">
   <div class="card__front">
-  <audio class="image-audio" src="/src/assets/audio/run.mp3"></audio>
+  <audio class="image-audio" id="audio-${word}"src="${audioURL}/${audioSrc}"></audio>
     <div class="card-img-container" >
-      <img class="card-img" src='${src}/${image}' >
+      <img class="card-img" src='${imgURL}/${image}' >
     </div>
     <div class="card-text-container" >
       <p class="card-name">${word}</p>
@@ -23,7 +24,7 @@ export const makeCard = (word:string, image:string, translation:string, audioSrc
 
   <div class="card__back back"  >
   <div class="card-img-container" >
-      <img class="card-img" src='${src}/${image}' >
+      <img class="card-img" src='${imgURL}/${image}' >
     </div>
     <div class="card-text-container" >
     <p class="card-translation">${translation}</p>
