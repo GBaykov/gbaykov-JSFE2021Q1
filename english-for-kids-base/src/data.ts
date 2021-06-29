@@ -2,31 +2,37 @@
 //  ['Categories', 'Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set B)', 'Clothes', 'Emotions', 'Nature', 'Seasons and weather'],
   export const DATA_OF_CATEGORIES = [
     {
-      categ: 'action-a',
+      ids: 0,
+      categ: 'actionA',
       name: 'Action (set A)',
       image: 'dance.jpg',
     },
     {
-      categ: 'action-b',
+      ids: 1,
+      categ: 'actionB',
       name: 'Action (set B)',
       image: 'play.jpg',
     },
     {
-      categ: 'animal-a',
+      ids: 2,
+      categ: 'animalA',
       name: 'Animal (set A)',
       image: 'cat.jpg',
     },
     {
-      categ: 'animal-b',
+      ids: 3,
+      categ: 'animalB',
       name: 'Animal (set B)',
       image: 'frog.jpg',
     },
     {
+      ids: 4,
       categ: 'clothes',
       name: 'Clothes',
       image: 'boot.jpg',
     },
     {
+      ids: 5,
       categ: 'emotions',
       name: 'Emotions',
       image: 'angry.jpg',
