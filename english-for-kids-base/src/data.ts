@@ -1,39 +1,47 @@
 
 //  ['Categories', 'Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set B)', 'Clothes', 'Emotions', 'Nature', 'Seasons and weather'],
-//   [
-//     {
-//       name: 'Action (set A)',
-//       image: 'assets/img/categories/action-a.jpg',
-//     },
-//     {
-//       name: 'Action (set B)',
-//       image: 'assets/img/categories/action-b.jpg',
-//     },
-//     {
-//       name: 'Animal (set A)',
-//       image: 'assets/img/categories/animal-a.jpg',
-//     },
-//     {
-//       name: 'Animal (set B)',
-//       image: 'assets/img/categories/animal-b.jpg',
-//     },
-//     {
-//       name: 'Clothes',
-//       image: 'assets/img/categories/clothes.jpg',
-//     },
-//     {
-//       name: 'Emotions',
-//       image: 'assets/img/categories/emotions.jpg',
-//     },
-//     {
-//       name: 'Nature',
-//       image: 'assets/img/categories/plants.jpg',
-//     },
-//     {
-//       name: 'Seasons and weather',
-//       image: 'assets/img/categories/seasons.jpg',
-//     }
-//   ],
+  export const DATA_OF_CATEGORIES = [
+    {
+      categ: 'action-a',
+      name: 'Action (set A)',
+      image: 'dance.jpg',
+    },
+    {
+      categ: 'action-b',
+      name: 'Action (set B)',
+      image: 'play.jpg',
+    },
+    {
+      categ: 'animal-a',
+      name: 'Animal (set A)',
+      image: 'cat.jpg',
+    },
+    {
+      categ: 'animal-b',
+      name: 'Animal (set B)',
+      image: 'frog.jpg',
+    },
+    {
+      categ: 'clothes',
+      name: 'Clothes',
+      image: 'boot.jpg',
+    },
+    {
+      categ: 'emotions',
+      name: 'Emotions',
+      image: 'angry.jpg',
+    }
+    // {
+    //   categ: 'action-b',
+    //   name: 'Nature',
+    //   image: 'assets/img/categories/plants.jpg',
+    // },
+    // {
+    //   categ: 'action-b',
+    //   name: 'Seasons and weather',
+    //   image: 'assets/img/categories/seasons.jpg',
+    // }
+  ]
 
 export const DATA_OF_CARDS = [
   [
