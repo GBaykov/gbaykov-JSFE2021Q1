@@ -1,12 +1,4 @@
-import { imgPatр } from '../../../public/img/waytest';
-import { AUDIO } from '../../assets/audio/audiotest';
-import { imgPatg } from '../../assets/img/waytest';
 import { AUDIO_URL, IMG_URL } from '../../constants';
-import DATA_OF_CARDS from '../../data';
-const FLIP_CLASS = 'flipped';
-
-
-// AUDIO src\assets\audio\smile.mp3
 
 export const makeCard = (word:string, image:string, translation:string, audioSrc:string) => `
 <div class="card " id="card-${word}">

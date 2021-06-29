@@ -1,4 +1,3 @@
-
 export const makeMenu = () => {
   const html = `
     <div class="menu-bar">
@@ -25,7 +24,5 @@ export const makeMenu = () => {
   nav.innerHTML = html;
   mainElement.appendChild(nav)
   document.body.appendChild(mainElement);
-
-
 }
 
