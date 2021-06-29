@@ -6,7 +6,7 @@ export const makeMenu = () => {
       </div>
       <div class="menu" id="menu">
         <ul>
-          <li>Main Page</li>
+          <li id="menu-cat-10" class="menu-element">Main Page</li>
           <li id="menu-cat-0" class="active_menu menu-element">Action (set A)</li>
           <li id="menu-cat-1" class="menu-element">Action (set B)</li>
           <li id="menu-cat-2" class="menu-element">Animal (set A)</li>

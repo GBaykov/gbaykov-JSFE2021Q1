@@ -1,7 +1,5 @@
-import { makeCardField } from './components/card/card-field';
 import './components/card/card.scss';
 import './components/main-page/main-page.scss';
-//import { menu } from './components/menu/menu';
 import './styles.scss';
 import './components/menu/menu.scss';
 import { makeMenu } from './components/menu/menu';
@@ -16,7 +14,6 @@ window.onload = () => {
   if (!bodyElement) throw Error('bodyElement not found');
   makeMenu();
   makeMainField();
-  // makeCardField(0)
   listenMenu();
   listenCards();
   listenMusic();

@@ -1,4 +1,6 @@
+import { deleteCardField } from "../../shared/delete-card-field";
 import { makeCardField } from "../card/card-field";
+import { makeMainField } from "../main-page/main-page";
 
 export const chooseCategory = ():void => {
   document.addEventListener('click', (event:MouseEvent) => {
@@ -7,16 +9,12 @@ export const chooseCategory = ():void => {
     if(target.classList.contains('menu-element')) {
       const id:number = Number(target.id.split('-')[2]);
       deleteCardField();
-      makeCardField(id)
+      if(id === 10) {
+        makeMainField();
+      }
+       else makeCardField(id)
     }
   })
 }
 
-export const deleteCardField = () => {
-  const cardField: HTMLElement | null = document.querySelector('.cards-field');
-  if(cardField) {
-    const main:HTMLElement | null = document.getElementById('main');
-    if(main === null) throw Error;
-    main.removeChild(cardField)
-  }
-}
+
