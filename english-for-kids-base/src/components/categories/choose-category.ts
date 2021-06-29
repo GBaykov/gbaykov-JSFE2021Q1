@@ -6,7 +6,7 @@ export const chooseCategory = ():void => {
     const target = event.target as Element;
     if(target.classList.contains('menu-element')) {
       const id:number = Number(target.id.split('-')[2]);
-      deleteCardField()
+      deleteCardField();
       makeCardField(id)
     }
   })
