@@ -27,6 +27,4 @@ const main:HTMLElement | null = document.getElementById('main');
 if(!main) throw Error;
 const image:string = DATA_OF_CATEGORIES[id].image;
 main.style.backgroundImage = `${IMG_URL}/${image}`;
-//alert(main.style);
-//alert(`${IMG_URL}/${image}`)
 }
