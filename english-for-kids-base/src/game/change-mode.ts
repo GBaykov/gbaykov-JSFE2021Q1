@@ -13,6 +13,7 @@ export const changeMode = () => {
       toggleStartGameBtn();
       if(!RepeatBtn.classList.contains(DISPLAY_NONE)) {
         RepeatBtn.classList.add(DISPLAY_NONE)
+        toggleStartGameBtn();
       }
     }
   })
