@@ -81,3 +81,24 @@
   transform: translateY(20%);
   box-shadow: 5px 5px 20px rgba(48, 9, 9, 0.1);
 }
+.repeat-btn{
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  margin: 0 auto ;
+  // margin-left: -100px;
+  color: white;
+  width: 70px;
+  height: 25px;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #16c565a8, #7bff00af);
+  //background-size: 200% auto;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+  transition: .25s;
+  cursor: pointer;
+  border:1px solid rgb(5, 54, 21)
+}
+.repeat-btn:hover {
+  transform: translateY(10%);
+
+}

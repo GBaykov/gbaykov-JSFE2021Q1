@@ -10,12 +10,12 @@ export const makeHeader = () => {
     <div class="menu-bar">
         <span class="menu-bar-span"></span>
     </div>
-    <div class="game-switcher">
-      <label  class="toggleSwitch large" onclick="setColor()">
-      <input id="but" type="checkbox" checked >
-      <span>
-        <span>PLAY</span>
-        <span>TRAIN</span>
+    <div class="game-switcher mode">
+      <label  class="toggleSwitch large mode">
+      <input class="mode" id="but" type="checkbox" checked >
+      <span class="mode">
+        <span class="mode">PLAY</span>
+        <span class="mode">TRAIN</span>
       </span>
       <a></a>
 </label>

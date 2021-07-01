@@ -10,6 +10,8 @@ import { makeMainField } from './components/main-page/main-page';
 import  './components/header/header.scss';
 import { makeHeader } from './components/header/header';
 import { makeFooter, makeStartGameBtn } from './components/footer/footer';
+import { startGame } from './game/game-start';
+import { changeMode } from './game/change-mode';
 
 
 
@@ -25,4 +27,6 @@ window.onload = () => {
   listenMusic();
   chooseCategory();
   makeFooter();
+  startGame()
+  changeMode()
 }

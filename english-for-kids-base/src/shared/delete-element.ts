@@ -1,3 +1,12 @@
+export const deleteElement = (childClass: string, parentId:string) => {
+  const child: HTMLElement | null = document.querySelector(`.${childClass}`);
+  if(child) {
+    const parent:HTMLElement | null = document.getElementById(`${parentId}`);
+    if(parent === null) throw Error;
+    parent.removeChild(child)
+  }
+}
+
 // export const deleteCardField = () => {
 //   const cardField: HTMLElement | null = document.querySelector('.cards-field');
 //   if(cardField) {
@@ -14,11 +23,3 @@
 //     body.removeChild(footer)
 //   }
 // }
-export const deleteElement = (childClass: string, parentId:string) => {
-  const child: HTMLElement | null = document.querySelector(`.${childClass}`);
-  if(child) {
-    const parent:HTMLElement | null = document.getElementById(`${parentId}`);
-    if(parent === null) throw Error;
-    parent.removeChild(child)
-  }
-}
