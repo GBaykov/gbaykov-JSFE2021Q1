@@ -4,7 +4,7 @@
 
 .menu-bar {
       position: absolute;
-      top: 30px;
+      top: 5px;
       left: 30px;
       width: 50px;
       height: 50px;
@@ -14,7 +14,7 @@
   .menu-bar span, .menu-bar span:before, .menu-bar span:after {
       width: 100%;
       position: absolute;
-      height: 10px;
+      height: 5px;
       background: orange;
       display: block;
       transition: .3s;
@@ -23,15 +23,15 @@
   }
   .menu-bar span:before{
     content: "";
-    top: -20px;
+    top: -8px;
     transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
   .menu-bar span{
-    top: 20px;
+    top: 8px;
   }
   .menu-bar span:after{
     content: "";
-    bottom: -20px;
+    bottom: -8px;
     transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 

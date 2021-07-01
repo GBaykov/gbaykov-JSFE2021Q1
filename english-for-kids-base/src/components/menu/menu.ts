@@ -1,8 +1,10 @@
+import { createElement } from "../../shared/add-element";
+// <div class="menu-bar">
+//         <span class="menu-bar-span"></span>
+//       </div>
 export const makeMenu = () => {
   const html = `
-    <div class="menu-bar">
-        <span class="menu-bar-span"></span>
-      </div>
+
       <div class="menu" id="menu">
         <ul>
           <li id="menu-cat-10" class="menu-element">Main Page</li>
@@ -16,13 +18,13 @@ export const makeMenu = () => {
         </ul>
       </div>
   `;
-  const mainElement:HTMLElement | null = document.getElementById('main');
-  if (!mainElement) throw Error('mainElement element not found');
-
-  const nav:HTMLElement = document.createElement('nav')
-  nav.classList.add('nav');
-  nav.innerHTML = html;
-  mainElement.appendChild(nav)
-  document.body.appendChild(mainElement);
+  createElement('nav','nav', html, 'main')
+  // const mainElement:HTMLElement | null = document.getElementById('main');
+  // if (!mainElement) throw Error('mainElement element not found');
+  // const nav:HTMLElement = document.createElement('nav')
+  // nav.classList.add('nav');
+  // nav.innerHTML = html;
+  // mainElement.appendChild(nav)
+  // document.body.appendChild(mainElement);
 }
 
