@@ -1,3 +1,4 @@
+import { AUDIO_URL } from "../../constants";
 import { createElement } from "../../shared/add-element";
 
 export const makeFooter = () => {
@@ -22,6 +23,9 @@ export const makeStartGameBtn = () => {
   const html = `
 <input id="game"  class="button display-none" type="button" value="Start game ">
 <div id="repeat" class="repeat-btn display-none">Repeat</div>
+<audio class="correct-audio" id="correct" src="${AUDIO_URL}/correct.mp3"></audio>
+    <audio class="error-audio" id="error" src="${AUDIO_URL}/error.mp3"></audio>
+
   `;
   createElement('div', 'start-game', html, 'body')
 }

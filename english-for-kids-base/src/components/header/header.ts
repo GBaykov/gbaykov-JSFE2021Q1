@@ -1,6 +1,7 @@
 // <div class="game-switcher">
 //     <input type="range">
 //   </div>
+import { AUDIO_URL } from "../../constants";
 import { createElement } from "../../shared/add-element";
 
 

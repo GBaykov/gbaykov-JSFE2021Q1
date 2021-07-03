@@ -50,8 +50,21 @@ export const DATA_OF_CATEGORIES = [
     //   image: 'assets/img/categories/seasons.jpg',
     // }
   ]
+export type CARD = {
+  category: string,
+      word: string,
+      translation: string,
+      image: string,
+      audioSrc: string,
+      train: number,
+      correct: number,
+      errors: number,
+      percentOfErrors: number
+}
+export type CATEGORY = CARD[]
 
-export const DATA_OF_CARDS = [
+
+export let DATA_OF_CARDS:CATEGORY[] = [
   [
     {
       category: 'Action (set A)',
