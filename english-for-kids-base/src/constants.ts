@@ -2,3 +2,4 @@ export const IMG_URL = 'https://raw.githubusercontent.com/GBaykov/English-for-ki
 export const AUDIO_URL = 'https://raw.githubusercontent.com/GBaykov/English-for-kids-data/master/audio';
 export const DISPLAY_NONE = 'display-none';
 export const EXTEND_IMG_BGI = 'extend-bgi'
+

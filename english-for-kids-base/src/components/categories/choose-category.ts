@@ -1,9 +1,12 @@
 import { IMG_URL } from "../../constants";
 import { DATA_OF_CATEGORIES } from "../../data";
+import { CURRENT_STATE } from "../../game/current-state";
+//import { makeAproptiateMode, mode } from "../../game/change-mode";
 import { deleteElement } from "../../shared/delete-element";
 import { makeCardField } from "../card/card-field";
 import { makeFooter, makeStartGameBtn } from "../footer/footer";
 import { makeMainField } from "../main-page/main-page";
+
 
 export const chooseCategory = ():void => {
   document.addEventListener('click', (event:MouseEvent) => {
@@ -11,14 +14,16 @@ export const chooseCategory = ():void => {
     const target = event.target as Element;
     if(target.classList.contains('menu-element')) {
       const id:number = Number(target.id.split('-')[2]);
+      CURRENT_STATE.category = id;
       deleteElement('cards-field','main');
       deleteElement('footer','body');
-      deleteElement('start-game','body')
+      deleteElement('start-game','body');
+
       if(id === 10) {
         makeMainField();
         makeFooter()
       }
-       else makeCardField(id),makeStartGameBtn(), makeFooter();
+       else makeCardField(id),makeStartGameBtn(), makeFooter()//makeAproptiateMode(mode);
     }
   })
 }
