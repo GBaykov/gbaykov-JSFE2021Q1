@@ -4,6 +4,7 @@ import { createElement } from "../../shared/add-element";
 export const makeFooter = () => {
   const html = `
   <div class="footer-wrapper" >
+
   <div class="footer-links">
     <div class="gitHub-link">
       <a class="gitHub-link" href="https://github.com/GBaykov"></a>
@@ -23,9 +24,9 @@ export const makeStartGameBtn = () => {
   const html = `
 <input id="game"  class="button display-none" type="button" value="Start game ">
 <div id="repeat" class="repeat-btn display-none">Repeat</div>
-<audio class="correct-audio" id="correct" src="${AUDIO_URL}/correct.mp3"></audio>
-    <audio class="error-audio" id="error" src="${AUDIO_URL}/error.mp3"></audio>
-
   `;
   createElement('div', 'start-game', html, 'body')
 }
+
+// <audio class="correct-audio" id="correct" src="${AUDIO_URL}/correct.mp3"></audio>
+//     <audio class="error-audio" id="error" src="${AUDIO_URL}/error.mp3"></audio>

@@ -44,11 +44,13 @@ export const showRepeatBtn = ():void => {
 
 export const Audio =  (i:number):string => {
   const arrOfAudio:NodeListOf<HTMLAudioElement> = document.querySelectorAll('audio')
-  const sortedArr = sortArr(arrOfAudio) ;
+  const sortedArr = arrOfAudio //sortArr(arrOfAudio) ;
   if(!sortedArr) throw Error ('sortedArr not found');
     sortedArr[i].play();
     const audio:string = sortedArr[i].src.split('/')[7];
     const audioWord:string = audio.split('.')[0];
+    // console.log('audioWord',audioWord)
+    // console.log('sortedArr[i]',sortedArr[i])
     return audioWord;
   }
 

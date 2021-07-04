@@ -2,6 +2,7 @@ import { IMG_URL } from "../../constants";
 import { DATA_OF_CATEGORIES } from "../../data";
 import { createElement } from "../../shared/add-element";
 import {  deleteElement } from "../../shared/delete-element";
+import { makeFooter } from "../footer/footer";
 
 export const makeCardCategory  = (ids:number | string, categ:string, name:string, image:string) => `
 <div class="card menu-element" id="card-${categ}-${ids}">
@@ -22,7 +23,9 @@ export const makeMainField = ():void => {
      html +=`<div class ="card-container menu-element" id="card-cont-${arr[i].ids}">${makeCardCategory(arr[i].ids, arr[i].categ, arr[i].name, arr[i].image)} </div>`
  }
  deleteElement('cards-field','main');
- createElement('div','cards-field', html, 'main')
+ //deleteElement('footer', 'body')
+ createElement('div','cards-field', html, 'main');
+ //makeFooter()
 //  const mainElement:HTMLElement | null = document.getElementById('main');
 //  if (!mainElement) throw Error('mainElement element not found');
 //  const cardField:HTMLElement = document.createElement('div');

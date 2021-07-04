@@ -4,7 +4,8 @@ export const CURRENT_STATE: CURENT = {
   errors: 0,
   correct: 0,
   currentCard:0,
-  endGame: false
+  endGame: false,
+  curentAudio:''
 }
 
 export type CURENT = {
@@ -13,5 +14,6 @@ export type CURENT = {
   errors: number,
   correct: number,
   currentCard:number,
-  endGame: boolean
+  endGame: boolean,
+  curentAudio:string
 }

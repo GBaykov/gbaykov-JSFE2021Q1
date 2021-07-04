@@ -1,12 +1,19 @@
+import { makeFooter } from "../components/footer/footer";
+import { makeMainField } from "../components/main-page/main-page";
 import { AUDIO_URL } from "../constants";
 import DATA_OF_CARDS from "../data";
 import { createElement } from "../shared/add-element";
+import { deleteElement } from "../shared/delete-element";
 import { CURRENT_STATE } from "./current-state";
+import { endGame, showEndGameMessage } from "./end-game";
 import { Audio } from "./game-start";
+let audioWord:string;
 
-export const playGame =  (i = 0):void => {
+export const playGame =  (i=0):void => {
+ CURRENT_STATE.curentAudio = Audio(i);
   let word = '';
-  const audioWord =  Audio(i)
+
+   //audioWord =  Audio(i)
 
   document.addEventListener('click', (event) => {
    if (!event) throw Error ('event(click on startBtn) error');
@@ -16,47 +23,58 @@ export const playGame =  (i = 0):void => {
     const image = <HTMLImageElement>target;
     const imageWord:string = image.src.split('/')[7];
     word = imageWord.split('.')[0];
-    if(audioWord === word) {
+
+    if(CURRENT_STATE.curentAudio === word) {
+      if( i === 7) {
+        if(CURRENT_STATE.errors > 21) {
+          showEndGameMessage('failure')
+        } else showEndGameMessage('success')
+        endGame()
+        return;
+      };
 
       i +=1;
-      playCorrectAudio()
-      //addCorrect(i, word);
+      console.log('correct:',word, CURRENT_STATE.curentAudio)
+     // playCorrectAudio()
+      addCorrect(i, word);
+      image.style.opacity = '0.4';
       playGame(i);
-      if( i = 7) {
-        return;
-      }
+      return
     }
-    if(audioWord !== word) {
-      i = i;
-      playErrorAudio();
+    else {
+      //console.log('error:',word, CURRENT_STATE.curentAudio);
       CURRENT_STATE.errors += 1;
+      console.log('CURRENT_STATE.errors:',CURRENT_STATE.errors);
+     // playErrorAudio();
+return
+      //playErrorAudio();
     }
    }
  })
  }
 
-//  export const addCorrect = (i:number, word:string) => {
-//   CURRENT_STATE.correct += 1;
-//   if( DATA_OF_CARDS[i]) {
-//    let correctCard = DATA_OF_CARDS[i].find(card => card.word === word)?.correct;
-//    if(correctCard) {
-//      correctCard +=1; // не получается напрямую увеличить значение DATA_OF_CARDS[i].find(card => card.word === word)?.correct +=1
-//    }
-//   }
-//  }
-
- export const playCorrectAudio = () => {
-     const audio:HTMLAudioElement | null  = document.querySelector(`.correct-audio`);
-     if(!audio) throw Error ('correct audio not found');
-     audio.play();
-   console.log(audio.src)
-
+ export const addCorrect = (i:number, word:string) => {
+  CURRENT_STATE.correct += 1;
+  if( DATA_OF_CARDS[i]) {
+   let correctCard = DATA_OF_CARDS[i].find(card => card.word === word)?.correct;
+   if(correctCard) {
+     correctCard +=1; // не получается напрямую увеличить значение DATA_OF_CARDS[i].find(card => card.word === word)?.correct +=1
+   }
+  }
  }
- export const playErrorAudio = () => {
-   const audio:HTMLAudioElement | null  = document.querySelector(`.error-audio`);
-   if(!audio) throw Error ('correct audio not found');
-   audio.play();
-  console.log(audio.src)
-}
+
+//  export const playCorrectAudio = () => {
+//      const audio:HTMLAudioElement | null  = document.querySelector(`.correct-audio`);
+//      if(!audio) throw Error ('correct audio not found');
+//      audio.play();
+//    console.log(audio.src)
+
+//  }
+//  export const playErrorAudio = () => {
+//    const audio:HTMLAudioElement | null  = document.querySelector(`.error-audio`);
+//    if(!audio) throw Error ('correct audio not found');
+//    audio.play();
+//   console.log(audio.src)
+// }
 
 
