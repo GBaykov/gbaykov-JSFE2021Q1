@@ -1,3 +1,6 @@
+import { makeStatistics } from "./components/statistics/statistics";
+import DATA_OF_CARDS from "./data";
+
 export const listenMenu = ():void => {
   // const menuBar: Element | null = document.querySelector('.menu-bar');
   // if (!menuBar) throw Error ('menu-bar element not found');
@@ -74,9 +77,21 @@ export const listenMusic = ():void => {
   })
 }
 
-export const listenRepeatBtn = () => {
+export const listenRepeatBtn = (audio:HTMLAudioElement) => {
   document.addEventListener('click', (event) => {
     if(event === null) throw Error ('MouseEvent === null');
     const target = event.target as Element;
+    if(target.classList.contains('repeat-btn')) {
+      audio.play()
+    }
+  })
+}
+export const listenStatOfMeny = ():void => {
+  document.addEventListener('click', (event) => {
+    if(event === null) throw Error ('MouseEvent === null');
+    const target = event.target as Element;
+    if(target.classList.contains('statistics')) {
+      makeStatistics(DATA_OF_CARDS)
+    }
   })
 }

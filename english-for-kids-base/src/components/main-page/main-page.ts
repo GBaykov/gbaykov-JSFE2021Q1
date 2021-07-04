@@ -23,14 +23,7 @@ export const makeMainField = ():void => {
      html +=`<div class ="card-container menu-element" id="card-cont-${arr[i].ids}">${makeCardCategory(arr[i].ids, arr[i].categ, arr[i].name, arr[i].image)} </div>`
  }
  deleteElement('cards-field','main');
- //deleteElement('footer', 'body')
+
  createElement('div','cards-field', html, 'main');
- //makeFooter()
-//  const mainElement:HTMLElement | null = document.getElementById('main');
-//  if (!mainElement) throw Error('mainElement element not found');
-//  const cardField:HTMLElement = document.createElement('div');
-//  cardField.classList.add('cards-field');
-//  cardField.innerHTML = html;
-//  mainElement.appendChild(cardField)
-//  document.body.appendChild(mainElement);
+
 };

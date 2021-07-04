@@ -1,7 +1,8 @@
 import { NoEmitOnErrorsPlugin } from "webpack";
 import { DISPLAY_NONE, EXTEND_IMG_BGI } from "../constants";
+import { listenRepeatBtn } from "../listen";
 import { CURRENT_STATE } from "./current-state";
-import { playGame } from "./play-game";
+import { countOfError, playGame } from "./play-game";
 import { sortArr } from "./sort-arr";
 
 export const startGame = ():void => {
@@ -44,13 +45,16 @@ export const showRepeatBtn = ():void => {
 
 export const Audio =  (i:number):string => {
   const arrOfAudio:NodeListOf<HTMLAudioElement> = document.querySelectorAll('audio')
-  const sortedArr = sortArr(arrOfAudio) ;//sort(arrOfAudio) //
+  const sortedArr = sortArr(arrOfAudio);
   if(!sortedArr) throw Error ('sortedArr not found');
-    sortedArr[i].play();
+  const au: HTMLAudioElement = sortedArr[i]
+  au.play();
     const audio:string = sortedArr[i].src.split('/')[7];
     const audioWord:string = audio.split('.')[0];
+    listenRepeatBtn(au)
     return audioWord;
-  }
+  }  //  ПОЧЕМУ ? функция  не только текущее аудио, но и все предыдущие аудио из массива.
+  // От этой функции идет и идет баг с кучей ошибок, для которых пришлось придумывать костыли
 
 
 

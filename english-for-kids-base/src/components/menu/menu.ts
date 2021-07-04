@@ -14,7 +14,9 @@ export const makeMenu = () => {
           <li id="menu-cat-3" class="menu-element">Animal (set B)</li>
           <li id="menu-cat-4" class="menu-element">Clothes</li>
           <li id="menu-cat-5" class="menu-element">Emotion</li>
-          <li>Statistics</li>
+          <li id="menu-cat-6" class="menu-element">Drinks</li>
+          <li id="menu-cat-7" class="menu-element">Food</li>
+          <li class="statistics" id="statistics">Statistics</li>
         </ul>
       </div>
   `;

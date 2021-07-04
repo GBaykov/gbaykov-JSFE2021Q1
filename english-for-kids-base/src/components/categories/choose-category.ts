@@ -3,8 +3,9 @@ import { DATA_OF_CATEGORIES } from "../../data";
 import { CURRENT_STATE } from "../../game/current-state";
 import { deleteElement } from "../../shared/delete-element";
 import { makeCardField } from "../card/card-field";
-import { makeFooter, makeStartGameBtn } from "../footer/footer";
+import { makeFooter } from "../footer/footer";
 import { makeMainField } from "../main-page/main-page";
+import { makeStartGameBtn } from "../start-game-btn";
 
 
 export const chooseCategory = ():void => {

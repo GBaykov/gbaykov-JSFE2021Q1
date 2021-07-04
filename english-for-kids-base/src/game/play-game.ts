@@ -2,13 +2,14 @@ import { makeFooter } from "../components/footer/footer";
 import { makeMainField } from "../components/main-page/main-page";
 import { AUDIO_URL, MIN_ERR } from "../constants";
 import DATA_OF_CARDS from "../data";
+import { listenRepeatBtn } from "../listen";
 import { createElement } from "../shared/add-element";
 import { deleteElement } from "../shared/delete-element";
 import { addStar, playAudioOfAnswer } from "./answer-reaction";
 import { CURRENT_STATE } from "./current-state";
 import { endGame, showEndGameMessage } from "./end-game";
 import { Audio } from "./game-start";
-let countOfError = 0
+export let countOfError = 0
 
 export const playGame =  (i=0):void => {
  CURRENT_STATE.curentAudio = Audio(i);
