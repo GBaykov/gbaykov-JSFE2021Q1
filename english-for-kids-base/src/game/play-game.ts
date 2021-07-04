@@ -29,9 +29,10 @@ export const playGame =  (i=0):void => {
 
     if(CURRENT_STATE.curentAudio === word) {
       if( i === 7) {
-        if(CURRENT_STATE.errors > MIN_ERR) {
-          showEndGameMessage('failure')
-        } else showEndGameMessage('success')
+        // if(CURRENT_STATE.errors > MIN_ERR) {
+        //   showEndGameMessage('failure')
+        // } else showEndGameMessage('success')
+        showEndGameMessage()
         endGame()
         return;
       };
@@ -51,13 +52,14 @@ export const playGame =  (i=0):void => {
       //CURRENT_STATE.errors += 1;
       //
       //fixCountError(i);
+      CURRENT_STATE.errors += 1;
       countError(i)
       if(CURRENT_STATE.errors > countOfError) {
         playAudioOfAnswer('error');
+        addStar('star');
       }
       console.log('CURRENT_STATE.errors:',CURRENT_STATE.errors);
       console.log('countOfError:',countOfError);
-      CURRENT_STATE.errors += 1;
 return
     }
    }

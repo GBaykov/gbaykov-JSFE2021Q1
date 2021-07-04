@@ -13,16 +13,21 @@ export const endGame = () => {
   setTimeout(reloadWindow, 3000);
 }
 
-export const showEndGameMessage = (result:string) => {
+export const showEndGameMessage = () => {
+  let res = 'success';
+  const star:HTMLElement | null = document.querySelector('.star');
+  if(star) {
+    res = 'failure'
+  }
 const html = `
 <div class="message">
-  <audio class="image-audio" id="${result}-message" src="${AUDIO_URL}/${result}.mp3"></audio>
-  <img class="card-img" src='${IMG_URL}/${result}.jpg' >
+  <audio class="image-audio" id="${res}-message" src="${AUDIO_URL}/${res}.mp3"></audio>
+  <img class="card-img" src='${IMG_URL}/${res}.jpg' >
 </div>
 `;
 createElement('div', 'end-game-message', html, 'main');
-const audio  = document.getElementById(`${result}-message`) as HTMLAudioElement;
-if(!audio ) throw Error(`${result}-message not found`);
+const audio  = document.getElementById(`${res}-message`) as HTMLAudioElement;
+if(!audio ) throw Error(`${res}-message not found`);
 audio.play();
 
 }

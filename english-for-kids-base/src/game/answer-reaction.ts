@@ -21,7 +21,7 @@ export const playAudioOfAnswer = (answer:string) => {
     marginLeft +=64;
     starId +=1;
     const html = `
-      <img class="star-win" id="${answer}-img-star-${starId}" src="${IMG_URL}/${answer}.svg"></audio>
+      <img class="general-star ${answer}" id="${answer}-img-star-${starId}" src="${IMG_URL}/${answer}.svg"></audio>
     `;
     createElement('div', 'answer-stars', html, 'body');
 
