@@ -32,6 +32,6 @@ window.onload = () => {
   makeFooter();
   startGame()
   changeMode()
-  makeStatistics(DATA_OF_CARDS)
+  //makeStatistics(DATA_OF_CARDS)
   listenStatOfMeny()
 }

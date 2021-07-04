@@ -4,22 +4,23 @@ import { deleteElement } from "../../shared/delete-element";
 import { makeFooter } from "../footer/footer";
 
 export const makeStatistics = (arrAllCards:CATEGORY[]) => {
+  let id = 0;
   let table = `<table class="table">
   <thead class="thead">
       <th>Category</th>
-      <th>word</th>
-      <th>translate</th>
-      <th>clicks</th>
-      <th>correct</th>
-      <th>wrong</th>
-      <th>%errors</th>
+      <th>Word</th>
+      <th>Translate</th>
+      <th>Clicks</th>
+      <th>Correct</th>
+      <th>Wrong</th>
+      <th>% Errors</th>
   </thead>
   <tbody class="tbody">`
   for(let arr of arrAllCards) {
     for (let item of arr) {
       table = table +
-      `<tr>
-      <td><b>${item.category}</b></td>
+      `<tr id="tr-${id}">
+      <td id="td-category"><b>${item.category}</b></td>
             <td>${item.word}</td>
             <td>${item.translation}</td>
             <td>${item.train}</td>
@@ -27,7 +28,7 @@ export const makeStatistics = (arrAllCards:CATEGORY[]) => {
             <td>${item.errors}</td>
             <td>${item.percentOfErrors}%</td>
       </tr>`
-    }
+    } id +=1;
   }
   table = table + `</tbody>
   </table>`

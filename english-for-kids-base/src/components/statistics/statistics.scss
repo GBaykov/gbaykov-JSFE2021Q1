@@ -1,3 +1,8 @@
+.table-wrapper{
+  overflow: scroll;
+  max-width: 70%;
+  max-height: 1080px;
+}
 .table{
   margin: 0 auto;
   max-width: 100%;
@@ -13,6 +18,38 @@ th{
   border: 1px solid blue;
 }
 
-td{
-  border: 1px solid blue;
+#tr-0{
+  border: 1px solid rgb(255, 72, 0);
+  background-color: rgb(216, 235, 172);
+}
+#tr-1{
+  border: 1px solid rgb(212, 21, 101);
+  background-color: rgb(243, 167, 171);
+}
+#tr-2{
+  border: 1px solid rgb(17, 114, 8);
+  background-color: rgb(189, 219, 193);
+}
+#tr-3{
+  border: 1px solid rgb(255, 72, 0);
+  background-color: rgb(210, 226, 173);
+}
+#tr-4{
+  border: 1px solid rgb(212, 21, 101);
+  background-color: rgb(230, 198, 200);
+}
+#tr-5{
+  border: 1px solid rgb(17, 114, 8);
+  background-color: rgb(184, 230, 188);
+}
+#tr-6{
+  border: 1px solid rgb(255, 72, 0);
+  background-color: rgb(240, 241, 176);
+}
+#tr-7{
+  border: 1px solid rgb(212, 21, 101);
+  background-color: rgb(221, 195, 252);
+}
+.td-category{
+  border: 2px solid rgb(6, 6, 70);
 }

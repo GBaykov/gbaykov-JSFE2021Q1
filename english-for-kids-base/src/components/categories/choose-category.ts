@@ -18,6 +18,7 @@ export const chooseCategory = ():void => {
       deleteElement('cards-field','main');
       deleteElement('footer','body');
       deleteElement('start-game','body');
+      deleteElement('table-wrapper', 'main');
 
       if(id === 10) {
         makeMainField();
