@@ -1,7 +1,6 @@
 import { IMG_URL } from "../../constants";
 import { DATA_OF_CATEGORIES } from "../../data";
 import { CURRENT_STATE } from "../../game/current-state";
-//import { makeAproptiateMode, mode } from "../../game/change-mode";
 import { deleteElement } from "../../shared/delete-element";
 import { makeCardField } from "../card/card-field";
 import { makeFooter, makeStartGameBtn } from "../footer/footer";

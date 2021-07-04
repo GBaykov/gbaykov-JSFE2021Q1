@@ -11,12 +11,16 @@ export const sortArr = (arr:NodeListOf<HTMLAudioElement>):HTMLAudioElement[] => 
   return newArr;
 }
 
-// export function shuffle(e) {
-//   for (let c = e.length - 1; c > 0; c -= 1) {
-//     const b = Math.floor(Math.random() * (c + 1));
-//     const a = e[c];
-//     e[c] = e[b];
-//     e[b] = a;
+// export function sort(e:any) {
+//   const newArr = [];
+//   for(let i of e) {
+//     newArr.push(e[i])
 //   }
-//   return e;
+//   for (let c = newArr.length - 1; c > 0; c -= 1) {
+//     const b = Math.floor(Math.random() * (c + 1));
+//     const a:any = newArr[c];
+//     newArr[c] = newArr[b];
+//     newArr[b] = a;
+//   }
+//   return newArr;
 // }

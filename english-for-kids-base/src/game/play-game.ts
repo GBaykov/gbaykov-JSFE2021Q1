@@ -8,7 +8,6 @@ import { addStar, playAudioOfAnswer } from "./answer-reaction";
 import { CURRENT_STATE } from "./current-state";
 import { endGame, showEndGameMessage } from "./end-game";
 import { Audio } from "./game-start";
-let audioWord:string;
 let countOfError = 0
 
 export const playGame =  (i=0):void => {
@@ -48,10 +47,6 @@ export const playGame =  (i=0):void => {
       return;
     }
     else {
-      //console.log('error:',word, CURRENT_STATE.curentAudio);
-      //CURRENT_STATE.errors += 1;
-      //
-      //fixCountError(i);
       CURRENT_STATE.errors += 1;
       countError(i)
       if(CURRENT_STATE.errors > countOfError) {

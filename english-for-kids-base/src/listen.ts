@@ -73,3 +73,10 @@ export const listenMusic = ():void => {
     }
   })
 }
+
+export const listenRepeatBtn = () => {
+  document.addEventListener('click', (event) => {
+    if(event === null) throw Error ('MouseEvent === null');
+    const target = event.target as Element;
+  })
+}
