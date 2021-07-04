@@ -10,7 +10,7 @@ export const endGame = () => {
   deleteElement('footer', 'body')
   //makeMainField();
   //makeFooter()
-  setTimeout(reloadWindow, 3500);
+  setTimeout(reloadWindow, 3000);
 }
 
 export const showEndGameMessage = (result:string) => {

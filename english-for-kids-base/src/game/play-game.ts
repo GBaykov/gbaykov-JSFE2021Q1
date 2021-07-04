@@ -1,9 +1,10 @@
 import { makeFooter } from "../components/footer/footer";
 import { makeMainField } from "../components/main-page/main-page";
-import { AUDIO_URL } from "../constants";
+import { AUDIO_URL, MIN_ERR } from "../constants";
 import DATA_OF_CARDS from "../data";
 import { createElement } from "../shared/add-element";
 import { deleteElement } from "../shared/delete-element";
+import { addStar, playAudioOfAnswer } from "./answer-reaction";
 import { CURRENT_STATE } from "./current-state";
 import { endGame, showEndGameMessage } from "./end-game";
 import { Audio } from "./game-start";
@@ -26,7 +27,7 @@ export const playGame =  (i=0):void => {
 
     if(CURRENT_STATE.curentAudio === word) {
       if( i === 7) {
-        if(CURRENT_STATE.errors > 21) {
+        if(CURRENT_STATE.errors > MIN_ERR) {
           showEndGameMessage('failure')
         } else showEndGameMessage('success')
         endGame()
@@ -34,20 +35,19 @@ export const playGame =  (i=0):void => {
       };
 
       i +=1;
-      console.log('correct:',word, CURRENT_STATE.curentAudio)
-     // playCorrectAudio()
+      console.log('correct:',word, CURRENT_STATE.curentAudio);
+      addStar('star-win');
+      playAudioOfAnswer('correct');
       addCorrect(i, word);
       image.style.opacity = '0.4';
       playGame(i);
-      return
+      return;
     }
     else {
       //console.log('error:',word, CURRENT_STATE.curentAudio);
       CURRENT_STATE.errors += 1;
       console.log('CURRENT_STATE.errors:',CURRENT_STATE.errors);
-     // playErrorAudio();
 return
-      //playErrorAudio();
     }
    }
  })
@@ -63,18 +63,5 @@ return
   }
  }
 
-//  export const playCorrectAudio = () => {
-//      const audio:HTMLAudioElement | null  = document.querySelector(`.correct-audio`);
-//      if(!audio) throw Error ('correct audio not found');
-//      audio.play();
-//    console.log(audio.src)
-
-//  }
-//  export const playErrorAudio = () => {
-//    const audio:HTMLAudioElement | null  = document.querySelector(`.error-audio`);
-//    if(!audio) throw Error ('correct audio not found');
-//    audio.play();
-//   console.log(audio.src)
-// }
 
 

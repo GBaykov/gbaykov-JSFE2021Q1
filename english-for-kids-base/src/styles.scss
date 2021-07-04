@@ -47,3 +47,18 @@ footer{
   max-width: 320px;
   max-height: 520px;
 }
+.answer-stars{
+  position: fixed;
+  width: 64px;
+  height: 64px;
+top: 0;
+left:10%
+}
+.star-win{
+position: absolute;
+}
+.stars-count{
+  position: absolute;
+  color: rgb(7, 107, 49);
+  font-size: 32px;
+}
