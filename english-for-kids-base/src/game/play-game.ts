@@ -9,10 +9,12 @@ import { CURRENT_STATE } from "./current-state";
 import { endGame, showEndGameMessage } from "./end-game";
 import { Audio } from "./game-start";
 let audioWord:string;
+let countOfError = 0
 
 export const playGame =  (i=0):void => {
  CURRENT_STATE.curentAudio = Audio(i);
   let word = '';
+
 
    //audioWord =  Audio(i)
 
@@ -40,13 +42,22 @@ export const playGame =  (i=0):void => {
       playAudioOfAnswer('correct');
       addCorrect(i, word);
       image.style.opacity = '0.4';
+      countBagError(i)
       playGame(i);
       return;
     }
     else {
       //console.log('error:',word, CURRENT_STATE.curentAudio);
-      CURRENT_STATE.errors += 1;
+      //CURRENT_STATE.errors += 1;
+      //
+      //fixCountError(i);
+      countError(i)
+      if(CURRENT_STATE.errors > countOfError) {
+        playAudioOfAnswer('error');
+      }
       console.log('CURRENT_STATE.errors:',CURRENT_STATE.errors);
+      console.log('countOfError:',countOfError);
+      CURRENT_STATE.errors += 1;
 return
     }
    }
@@ -65,3 +76,17 @@ return
 
 
 
+//
+
+export const countBagError = (i:number) => {
+  if(i > 0 ) {
+    return countOfError = countOfError + (i-1);
+  }
+
+}
+export const countError = (i:number) => {
+  if(i > 1 ) {
+    return CURRENT_STATE.errors =  countOfError;
+  }
+
+}
