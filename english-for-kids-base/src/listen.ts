@@ -1,5 +1,5 @@
 import { makeStatistics } from './components/statistics/statistics';
-import DATA_OF_CARDS from './data';
+import { DATA_OF_CARDS } from './data';
 
 export const listenMenu = ():void => {
   const span:Element | null = document.querySelector('.menu-bar-span');

@@ -1,20 +1,8 @@
-import { NoEmitOnErrorsPlugin } from 'webpack';
 import { DISPLAY_NONE, EXTEND_IMG_BGI } from '../constants';
 import { listenRepeatBtn } from '../listen';
 import { playGame } from './play-game';
 import { sortArr } from './sort-arr';
 
-export const startGame = ():void => {
-  document.addEventListener('click', (event:MouseEvent) => {
-    if (!event) throw Error('event(click on startBtn) error');
-    const target = event.target as Element;
-    if (target.classList.contains('button')) {
-      toggleStartGameBtn();
-      showRepeatBtn();
-      playGame();
-    }
-  });
-};
 export const extendBgiOfCards = ():void => {
   const cards: NodeListOf<Element> = document.querySelectorAll('.card-img');
   for (const card of cards) {
@@ -65,4 +53,16 @@ export const listenImageClick = ():string => {
     }
   });
   return word;
+};
+
+export const startGame = ():void => {
+  document.addEventListener('click', (event:MouseEvent) => {
+    if (!event) throw Error('event(click on startBtn) error');
+    const target = event.target as Element;
+    if (target.classList.contains('button')) {
+      toggleStartGameBtn();
+      showRepeatBtn();
+      playGame();
+    }
+  });
 };

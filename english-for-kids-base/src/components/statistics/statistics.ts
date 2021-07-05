@@ -3,7 +3,7 @@ import { createElement } from '../../shared/add-element';
 import { deleteElement } from '../../shared/delete-element';
 import { makeFooter } from '../footer/footer';
 
-export const makeStatistics = (arrAllCards:CATEGORY[]) => {
+export const makeStatistics = (arrAllCards:CATEGORY[]):void => {
   let id = 0;
   let table = `<table class="table">
   <thead class="thead">

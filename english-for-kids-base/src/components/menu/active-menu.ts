@@ -1,7 +1,7 @@
 export const makeMenuElemActive = ():void => {
   const elements = document.querySelectorAll('.menu-element');
-  for (const elem of elements) {
-    elem.classList.remove('active_menu');
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].classList.remove('active_menu');
   }
   document.addEventListener('click', (event) => {
     if (event === null) throw Error('MouseEvent === null');

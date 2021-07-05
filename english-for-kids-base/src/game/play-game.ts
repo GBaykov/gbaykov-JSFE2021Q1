@@ -1,10 +1,30 @@
-import DATA_OF_CARDS from '../data';
+import { DATA_OF_CARDS } from '../data';
 import { addStar, playAudioOfAnswer } from './answer-reaction';
 import { CURRENT_STATE } from './current-state';
 import { endGame, showEndGameMessage } from './end-game';
 import { Audio } from './game-start';
 
 export let countOfError = 0;
+export const addCorrect = (i:number, word:string) => {
+  CURRENT_STATE.correct += 1;
+  if (DATA_OF_CARDS[i]) {
+    let correctCard = DATA_OF_CARDS[i].find((card) => card.word === word)?.correct;
+    if (correctCard) {
+      correctCard += 1; // не получается напрямую увеличить значение DATA_OF_CARDS[i].find(card => card.word === word)?.correct +=1
+    }
+  }
+};
+
+export const countBagError = (i:number) => {
+  if (i > 0) {
+    return countOfError += (i - 1);
+  }
+};
+export const countError = (i:number) => {
+  if (i > 1) {
+    return CURRENT_STATE.errors = countOfError;
+  }
+};
 
 export const playGame = (i = 0):void => {
   CURRENT_STATE.curentAudio = Audio(i);
@@ -42,25 +62,4 @@ export const playGame = (i = 0):void => {
       }
     }
   });
-};
-
-export const addCorrect = (i:number, word:string) => {
-  CURRENT_STATE.correct += 1;
-  if (DATA_OF_CARDS[i]) {
-    let correctCard = DATA_OF_CARDS[i].find((card) => card.word === word)?.correct;
-    if (correctCard) {
-      correctCard += 1; // не получается напрямую увеличить значение DATA_OF_CARDS[i].find(card => card.word === word)?.correct +=1
-    }
-  }
-};
-
-export const countBagError = (i:number) => {
-  if (i > 0) {
-    return countOfError += (i - 1);
-  }
-};
-export const countError = (i:number) => {
-  if (i > 1) {
-    return CURRENT_STATE.errors = countOfError;
-  }
 };

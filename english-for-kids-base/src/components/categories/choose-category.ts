@@ -8,6 +8,14 @@ import { makeMainField } from '../main-page/main-page';
 import { makeMenuElemActive } from '../menu/active-menu';
 import { makeStartGameBtn } from '../start-game-btn';
 
+export const setBgImage = (id:number) => {
+  const main:HTMLElement | null = document.getElementById('main');
+  if (!main) throw Error;
+  const image = `${DATA_OF_CATEGORIES[id].image}`;
+
+  main.style.backgroundImage = `URL(${IMG_URL}/${image})`;
+};
+
 export const chooseCategory = ():void => {
   document.addEventListener('click', (event:MouseEvent) => {
     if (event === null) throw Error('MouseEvent === null');
@@ -23,14 +31,12 @@ export const chooseCategory = ():void => {
       if (id === 10) {
         makeMainField();
         makeFooter();
-      } else makeCardField(id), makeStartGameBtn(), makeFooter(), setBgImage(id);
+      } else {
+        makeCardField(id);
+        makeStartGameBtn();
+        makeFooter();
+        setBgImage(id);
+      }
     }
   });
-};
-export const setBgImage = (id:number) => {
-  const main:HTMLElement | null = document.getElementById('main');
-  if (!main) throw Error;
-  const image = `${DATA_OF_CATEGORIES[id].image}`;
-
-  main.style.backgroundImage = `URL(${IMG_URL}/${image})`;
 };

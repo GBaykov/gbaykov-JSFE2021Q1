@@ -1,4 +1,4 @@
-import DATA_OF_CARDS from '../../data';
+import { DATA_OF_CARDS } from '../../data';
 import { createElement } from '../../shared/add-element';
 import { makeCard } from './card';
 

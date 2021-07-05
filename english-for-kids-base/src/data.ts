@@ -786,5 +786,3 @@ export const DATA_OF_CARDS:CATEGORY[] = [
     },
   ],
 ];
-
-export default DATA_OF_CARDS;
