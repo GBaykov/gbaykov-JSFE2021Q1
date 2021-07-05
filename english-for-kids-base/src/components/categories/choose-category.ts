@@ -24,13 +24,15 @@ export const chooseCategory = ():void => {
         makeMainField();
         makeFooter()
       }
-       else makeCardField(id),makeStartGameBtn(), makeFooter()//makeAproptiateMode(mode);
+       else makeCardField(id),makeStartGameBtn(), makeFooter(),setBgImage(id)//makeAproptiateMode(mode);
     }
   })
 }
 export const setBgImage = (id:number) => {
 const main:HTMLElement | null = document.getElementById('main');
 if(!main) throw Error;
-const image:string = DATA_OF_CATEGORIES[id].image;
-main.style.backgroundImage = `${IMG_URL}/${image}`;
+const image:string = `${DATA_OF_CATEGORIES[id].image}`;
+//alert(image)
+
+main.style.backgroundImage = `URL(${IMG_URL}/${image})`;//прикольно, но лучше убрать
 }
