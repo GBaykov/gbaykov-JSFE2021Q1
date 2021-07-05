@@ -1,4 +1,3 @@
-import { AUDIO_URL } from "../../constants";
 import { createElement } from "../../shared/add-element";
 
 export const makeFooter = () => {

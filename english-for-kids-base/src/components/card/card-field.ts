@@ -1,6 +1,5 @@
 import DATA_OF_CARDS from "../../data";
 import { createElement } from "../../shared/add-element";
-import { deleteElement } from "../../shared/delete-element";
 import { makeCard } from "./card";
 
 export const makeCardField = (category:number):void => {

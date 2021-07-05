@@ -1,8 +1,7 @@
 import { NoEmitOnErrorsPlugin } from "webpack";
 import { DISPLAY_NONE, EXTEND_IMG_BGI } from "../constants";
 import { listenRepeatBtn } from "../listen";
-import { CURRENT_STATE } from "./current-state";
-import { countOfError, playGame } from "./play-game";
+import {  playGame } from "./play-game";
 import { sortArr } from "./sort-arr";
 
 export const startGame = ():void => {
@@ -54,7 +53,7 @@ export const Audio =  (i:number):string => {
     listenRepeatBtn(au)
     return audioWord;
   }  //  ПОЧЕМУ ? функция  не только текущее аудио, но и все предыдущие аудио из массива.
-  // От этой функции идет и идет баг с кучей ошибок, для которых пришлось придумывать костыли
+  // От этой функции идет и идет баг с кучей ошибок , для которых пришлось придумывать костыли
 
 
 

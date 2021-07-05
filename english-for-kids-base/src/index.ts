@@ -15,6 +15,7 @@ import { changeMode } from './game/change-mode';
 import './components/statistics/statistics.scss';
 import { makeStatistics } from './components/statistics/statistics';
 import DATA_OF_CARDS from './data';
+import { makeMenuElemActive } from './components/menu/active-menu';
 
 
 
@@ -32,6 +33,5 @@ window.onload = () => {
   makeFooter();
   startGame()
   changeMode()
-  //makeStatistics(DATA_OF_CARDS)
-  listenStatOfMeny()
+  listenStatOfMeny();
 }

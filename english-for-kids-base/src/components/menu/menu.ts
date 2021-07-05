@@ -4,11 +4,10 @@ import { createElement } from "../../shared/add-element";
 //       </div>
 export const makeMenu = () => {
   const html = `
-
       <div class="menu" id="menu">
         <ul>
-          <li id="menu-cat-10" class="menu-element">Main Page</li>
-          <li id="menu-cat-0" class="active_menu menu-element">Action (set A)</li>
+          <li id="menu-cat-10" class="active_menu menu-element">Main Page</li>
+          <li id="menu-cat-0" class="menu-element">Action (set A)</li>
           <li id="menu-cat-1" class="menu-element">Action (set B)</li>
           <li id="menu-cat-2" class="menu-element">Animal (set A)</li>
           <li id="menu-cat-3" class="menu-element">Animal (set B)</li>
@@ -16,17 +15,10 @@ export const makeMenu = () => {
           <li id="menu-cat-5" class="menu-element">Emotion</li>
           <li id="menu-cat-6" class="menu-element">Drinks</li>
           <li id="menu-cat-7" class="menu-element">Food</li>
-          <li class="statistics" id="statistics">Statistics</li>
+          <li class="statistics menu-element" id="statistics">Statistics</li>
         </ul>
       </div>
   `;
   createElement('nav','nav', html, 'main')
-  // const mainElement:HTMLElement | null = document.getElementById('main');
-  // if (!mainElement) throw Error('mainElement element not found');
-  // const nav:HTMLElement = document.createElement('nav')
-  // nav.classList.add('nav');
-  // nav.innerHTML = html;
-  // mainElement.appendChild(nav)
-  // document.body.appendChild(mainElement);
 }
 

@@ -2,27 +2,20 @@ import { makeStatistics } from "./components/statistics/statistics";
 import DATA_OF_CARDS from "./data";
 
 export const listenMenu = ():void => {
-  // const menuBar: Element | null = document.querySelector('.menu-bar');
-  // if (!menuBar) throw Error ('menu-bar element not found');
   const span:Element | null = document.querySelector('.menu-bar-span');
   if (!span) throw Error ('menu-bar-span element not found');
   const menu:Element | null = document.querySelector('.menu');
   if (!menu) throw Error ('menu-bar-span element not found');
-  // menuBar.addEventListener('click', ():void => {
-  //   span.classList.toggle('active');
-  //   menu.classList.toggle('animate');
-  // });
+
   document.onclick = (event:MouseEvent):void => {
     if(event === null) throw Error ('MouseEvent === null');
     const target = event.target as Element;
-    //if (target !==null) {
       if (target.classList.contains('menu-bar') || target.classList.contains('menu-bar-span')) {
         span.classList.toggle('active');
         menu.classList.toggle('animate');
       } else {
         span.classList.remove('active');
         menu.classList.remove('animate');
-      //}
     }
   };
 }
@@ -40,27 +33,6 @@ export const listenMenu = ():void => {
       }
    })
 }
-
-// export function listenCards() {
-//   let rot;
-//   const cards:NodeListOf<Element> = document.querySelectorAll('.card');
-//   const rotate:NodeListOf<Element> = document.querySelectorAll('.flip-btn');
-//   for (let i = 0, len = cards.length; i < len; i++) {
-//     const card = cards[i];
-//     rot = rotate[i];
-
-//     rot.addEventListener('click', () => {
-//       const c = card.classList;
-//       if (c.contains('flipped')) {
-//         c.remove('flipped'); } else {
-//           c.add('flipped');
-//       }
-//     });
-//     // card.onmouseleave = function rotat1() {
-//     //   card.classList.remove('flipped');
-//     // };
-//   }
-// };
 
 
 export const listenMusic = ():void => {

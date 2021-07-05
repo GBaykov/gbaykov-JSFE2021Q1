@@ -5,6 +5,7 @@ import { deleteElement } from "../../shared/delete-element";
 import { makeCardField } from "../card/card-field";
 import { makeFooter } from "../footer/footer";
 import { makeMainField } from "../main-page/main-page";
+import { makeMenuElemActive } from "../menu/active-menu";
 import { makeStartGameBtn } from "../start-game-btn";
 
 
@@ -19,12 +20,12 @@ export const chooseCategory = ():void => {
       deleteElement('footer','body');
       deleteElement('start-game','body');
       deleteElement('table-wrapper', 'main');
-
+      makeMenuElemActive()
       if(id === 10) {
         makeMainField();
         makeFooter()
       }
-       else makeCardField(id),makeStartGameBtn(), makeFooter(),setBgImage(id)//makeAproptiateMode(mode);
+       else makeCardField(id),makeStartGameBtn(), makeFooter(),setBgImage(id)
     }
   })
 }
@@ -32,7 +33,7 @@ export const setBgImage = (id:number) => {
 const main:HTMLElement | null = document.getElementById('main');
 if(!main) throw Error;
 const image:string = `${DATA_OF_CATEGORIES[id].image}`;
-//alert(image)
 
-main.style.backgroundImage = `URL(${IMG_URL}/${image})`;//прикольно, но лучше убрать
+
+main.style.backgroundImage = `URL(${IMG_URL}/${image})`;
 }

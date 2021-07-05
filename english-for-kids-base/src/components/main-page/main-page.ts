@@ -2,7 +2,6 @@ import { IMG_URL } from "../../constants";
 import { DATA_OF_CATEGORIES } from "../../data";
 import { createElement } from "../../shared/add-element";
 import {  deleteElement } from "../../shared/delete-element";
-import { makeFooter } from "../footer/footer";
 
 export const makeCardCategory  = (ids:number | string, categ:string, name:string, image:string) => `
 <div class="card menu-element" id="card-${categ}-${ids}">

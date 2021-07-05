@@ -1,7 +1,4 @@
 
-//  ['Categories', 'Action (set A)', 'Action (set B)', 'Animal (set A)', 'Animal (set B)', 'Clothes', 'Emotions', 'Nature', 'Seasons and weather'],
-
-
 export const DATA_OF_CATEGORIES = [
     {
       ids: 0,

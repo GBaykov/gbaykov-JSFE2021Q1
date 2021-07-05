@@ -1,15 +1,11 @@
-import { makeFooter } from "../components/footer/footer";
-import { makeMainField } from "../components/main-page/main-page";
 import { AUDIO_URL, IMG_URL } from "../constants";
 import { createElement } from "../shared/add-element";
 import { deleteElement } from "../shared/delete-element";
-import { playGame } from "./play-game";
+
 
 export const endGame = () => {
   deleteElement('start-game','body')
   deleteElement('footer', 'body')
-  //makeMainField();
-  //makeFooter()
   setTimeout(reloadWindow, 3000);
 }
 

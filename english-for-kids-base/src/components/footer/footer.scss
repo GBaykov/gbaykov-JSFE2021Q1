@@ -11,18 +11,14 @@
 .footer-wrapper{
   width: 100%;
   height: 100px;
-  // display: flex;
-  // flex-wrap: wrap;
   margin: 0 auto;
   text-align: center;
 }
 .start-game{
   width: 20%;
-  // height: 500px;
   align-items: center;
   margin: 0 auto;
   text-align: center;
-  // margin-top: 2%;
   margin-bottom: 10%;
 }
 .game{
@@ -63,7 +59,6 @@
   outline: none;
   text-align: center;
   margin: 0 auto ;
-  // margin-left: -100px;
   color: white;
   width: 100%;
   height: 50px;
@@ -86,13 +81,11 @@
   outline: none;
   text-align: center;
   margin: 0 auto ;
-  // margin-left: -100px;
   color: white;
   width: 70px;
   height: 25px;
   border-radius: 50%;
   background-image: linear-gradient(to right, #16c565a8, #7bff00af);
-  //background-size: 200% auto;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
   transition: .25s;
   cursor: pointer;

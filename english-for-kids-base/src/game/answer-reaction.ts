@@ -1,6 +1,5 @@
 import { AUDIO_URL, IMG_URL } from "../constants";
 import { createElement } from "../shared/add-element";
-import { deleteElement } from "../shared/delete-element";
 
 export const playAudioOfAnswer = (answer:string) => {
   const html = `
@@ -27,7 +26,5 @@ export const playAudioOfAnswer = (answer:string) => {
 
     const star:HTMLElement | null  = document.getElementById(`${answer}-img-star-${starId}`);
     if(!star ) throw Error(`${answer}-img-star-${starId} not found`);
-   // if(starsCount > 1)  deleteElement('answer-stars','body');
     star.style.marginLeft = `${marginLeft}px`
     }
-//<p class="stars-count">${starsCount}</p>
