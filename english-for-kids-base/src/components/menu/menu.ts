@@ -1,4 +1,4 @@
-import { createElement } from "../../shared/add-element";
+import { createElement } from '../../shared/add-element';
 // <div class="menu-bar">
 //         <span class="menu-bar-span"></span>
 //       </div>
@@ -19,6 +19,5 @@ export const makeMenu = () => {
         </ul>
       </div>
   `;
-  createElement('nav','nav', html, 'main')
-}
-
+  createElement('nav', 'nav', html, 'main');
+};

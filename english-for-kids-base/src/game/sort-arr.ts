@@ -9,5 +9,4 @@ export const sortArr = (arr:NodeListOf<HTMLAudioElement>):HTMLAudioElement[] => 
   newArr.push(arr[1]);
   newArr.push(arr[6]);
   return newArr;
-}
-
+};

@@ -25,4 +25,3 @@ export const makeCard = (word:string, image:string, translation:string, audioSrc
   </div>
 </div>
 `;
-

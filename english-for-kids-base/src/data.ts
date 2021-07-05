@@ -1,69 +1,67 @@
-
 export const DATA_OF_CATEGORIES = [
-    {
-      ids: 0,
-      categ: 'actionA',
-      name: 'Action (set A)',
-      image: 'dance.jpg',
-    },
-    {
-      ids: 1,
-      categ: 'actionB',
-      name: 'Action (set B)',
-      image: 'play.jpg',
-    },
-    {
-      ids: 2,
-      categ: 'animalA',
-      name: 'Animal (set A)',
-      image: 'cat.jpg',
-    },
-    {
-      ids: 3,
-      categ: 'animalB',
-      name: 'Animal (set B)',
-      image: 'frog.jpg',
-    },
-    {
-      ids: 4,
-      categ: 'clothes',
-      name: 'Clothes',
-      image: 'boot.jpg',
-    },
-    {
-      ids: 5,
-      categ: 'emotions',
-      name: 'Emotions',
-      image: 'angry.jpg',
-    },
-    {
-      ids: 6,
-      categ: 'drinks',
-      name: 'Drinks',
-      image: 'milkshake.jpg',
-    },
-    {
-      ids: 7,
-      categ: 'food',
-      name: 'Food',
-      image: 'sandwich.jpg',
-    }
-  ]
+  {
+    ids: 0,
+    categ: 'actionA',
+    name: 'Action (set A)',
+    image: 'dance.jpg',
+  },
+  {
+    ids: 1,
+    categ: 'actionB',
+    name: 'Action (set B)',
+    image: 'play.jpg',
+  },
+  {
+    ids: 2,
+    categ: 'animalA',
+    name: 'Animal (set A)',
+    image: 'cat.jpg',
+  },
+  {
+    ids: 3,
+    categ: 'animalB',
+    name: 'Animal (set B)',
+    image: 'frog.jpg',
+  },
+  {
+    ids: 4,
+    categ: 'clothes',
+    name: 'Clothes',
+    image: 'boot.jpg',
+  },
+  {
+    ids: 5,
+    categ: 'emotions',
+    name: 'Emotions',
+    image: 'angry.jpg',
+  },
+  {
+    ids: 6,
+    categ: 'drinks',
+    name: 'Drinks',
+    image: 'milkshake.jpg',
+  },
+  {
+    ids: 7,
+    categ: 'food',
+    name: 'Food',
+    image: 'sandwich.jpg',
+  },
+];
 export type CARD = {
   category: string,
-      word: string,
-      translation: string,
-      image: string,
-      audioSrc: string,
-      train: number,
-      correct: number,
-      errors: number,
-      percentOfErrors: number
-}
-export type CATEGORY = CARD[]
+  word: string,
+  translation: string,
+  image: string,
+  audioSrc: string,
+  train: number,
+  correct: number,
+  errors: number,
+  percentOfErrors: number
+};
+export type CATEGORY = CARD[];
 
-
-export let DATA_OF_CARDS:CATEGORY[] = [
+export const DATA_OF_CARDS:CATEGORY[] = [
   [
     {
       category: 'Action (set A)',
@@ -74,7 +72,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set A)',
@@ -85,7 +83,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set A)',
@@ -96,7 +94,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set A)',
@@ -107,7 +105,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set A)',
@@ -118,7 +116,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set A)',
@@ -129,7 +127,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set A)',
@@ -140,7 +138,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set A)',
@@ -151,8 +149,8 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
-    }
+      percentOfErrors: 0,
+    },
   ],
   [
     {
@@ -164,7 +162,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set B)',
@@ -175,7 +173,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set B)',
@@ -186,7 +184,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set B)',
@@ -197,7 +195,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set B)',
@@ -208,7 +206,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set B)',
@@ -219,7 +217,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
 
     },
     {
@@ -231,7 +229,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Action (set B)',
@@ -242,8 +240,8 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
-    }
+      percentOfErrors: 0,
+    },
   ],
   [
     {
@@ -255,7 +253,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
 
     },
     {
@@ -267,7 +265,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set A)',
@@ -278,7 +276,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set A)',
@@ -289,7 +287,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set A)',
@@ -300,7 +298,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set A)',
@@ -311,7 +309,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set A)',
@@ -322,7 +320,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set A)',
@@ -333,8 +331,8 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
-    }
+      percentOfErrors: 0,
+    },
   ],
   [
     {
@@ -346,7 +344,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set B)',
@@ -357,7 +355,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set B)',
@@ -368,7 +366,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set B)',
@@ -379,7 +377,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set B)',
@@ -390,7 +388,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set B)',
@@ -401,7 +399,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set B)',
@@ -412,7 +410,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Animal (set B)',
@@ -423,8 +421,8 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
-    }
+      percentOfErrors: 0,
+    },
   ],
   [
     {
@@ -436,7 +434,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Clothes',
@@ -447,7 +445,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Clothes',
@@ -458,7 +456,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Clothes',
@@ -469,7 +467,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Clothes',
@@ -480,7 +478,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Clothes',
@@ -491,7 +489,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Clothes',
@@ -502,7 +500,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Clothes',
@@ -513,8 +511,8 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
-    }
+      percentOfErrors: 0,
+    },
   ],
   [
     {
@@ -526,7 +524,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Emotions',
@@ -537,7 +535,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
 
     },
     {
@@ -549,7 +547,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Emotions',
@@ -560,7 +558,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Emotions',
@@ -571,7 +569,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Emotions',
@@ -582,7 +580,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Emotions',
@@ -593,7 +591,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Emotions',
@@ -604,8 +602,8 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
-    }
+      percentOfErrors: 0,
+    },
   ],
   [
     {
@@ -617,7 +615,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Drinks',
@@ -628,7 +626,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Drinks',
@@ -639,7 +637,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Drinks',
@@ -650,7 +648,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Drinks',
@@ -661,7 +659,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Drinks',
@@ -672,7 +670,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Drinks',
@@ -683,7 +681,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Drinks',
@@ -694,8 +692,8 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
-    }
+      percentOfErrors: 0,
+    },
   ],
   [
     {
@@ -707,7 +705,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Food',
@@ -718,7 +716,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Food',
@@ -729,7 +727,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Food',
@@ -740,7 +738,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Food',
@@ -751,7 +749,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Food',
@@ -762,7 +760,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Food',
@@ -773,7 +771,7 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
+      percentOfErrors: 0,
     },
     {
       category: 'Food',
@@ -784,9 +782,9 @@ export let DATA_OF_CARDS:CATEGORY[] = [
       train: 0,
       correct: 0,
       errors: 0,
-      percentOfErrors: 0
-    }
-  ]
-]
+      percentOfErrors: 0,
+    },
+  ],
+];
 
 export default DATA_OF_CARDS;

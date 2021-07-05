@@ -1,4 +1,4 @@
-import { createElement } from "../../shared/add-element";
+import { createElement } from '../../shared/add-element';
 
 export const makeHeader = () => {
   const html = `
@@ -19,5 +19,5 @@ export const makeHeader = () => {
     </div>
   </div>
   `;
-  createElement('header', 'header', html, 'body')
-}
+  createElement('header', 'header', html, 'body');
+};

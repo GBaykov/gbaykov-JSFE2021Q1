@@ -3,10 +3,10 @@ export const CURRENT_STATE: CURENT = {
   play: false,
   errors: 0,
   correct: 0,
-  currentCard:0,
+  currentCard: 0,
   endGame: false,
-  curentAudio:''
-}
+  curentAudio: '',
+};
 
 export type CURENT = {
   category: number,
@@ -16,4 +16,4 @@ export type CURENT = {
   currentCard:number,
   endGame: boolean,
   curentAudio:string
-}
+};

@@ -1,7 +1,7 @@
-import { CATEGORY } from "../../data";
-import { createElement } from "../../shared/add-element";
-import { deleteElement } from "../../shared/delete-element";
-import { makeFooter } from "../footer/footer";
+import { CATEGORY } from '../../data';
+import { createElement } from '../../shared/add-element';
+import { deleteElement } from '../../shared/delete-element';
+import { makeFooter } from '../footer/footer';
 
 export const makeStatistics = (arrAllCards:CATEGORY[]) => {
   let id = 0;
@@ -15,11 +15,11 @@ export const makeStatistics = (arrAllCards:CATEGORY[]) => {
       <th>Wrong</th>
       <th>% Errors</th>
   </thead>
-  <tbody class="tbody">`
-  for(let arr of arrAllCards) {
-    for (let item of arr) {
-      table = table +
-      `<tr id="tr-${id}">
+  <tbody class="tbody">`;
+  for (const arr of arrAllCards) {
+    for (const item of arr) {
+      table
+      += `<tr id="tr-${id}">
       <td id="td-category"><b>${item.category}</b></td>
             <td>${item.word}</td>
             <td>${item.translation}</td>
@@ -27,13 +27,13 @@ export const makeStatistics = (arrAllCards:CATEGORY[]) => {
             <td>${item.correct}</td>
             <td>${item.errors}</td>
             <td>${item.percentOfErrors}%</td>
-      </tr>`
-    } id +=1;
+      </tr>`;
+    } id += 1;
   }
-  table = table + `</tbody>
-  </table>`
-  deleteElement('cards-field','main');
+  table += `</tbody>
+  </table>`;
+  deleteElement('cards-field', 'main');
   deleteElement('footer', 'body');
-createElement('div', 'table-wrapper',table, 'main' )
-makeFooter()
-}
+  createElement('div', 'table-wrapper', table, 'main');
+  makeFooter();
+};

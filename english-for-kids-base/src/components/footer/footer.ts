@@ -1,4 +1,4 @@
-import { createElement } from "../../shared/add-element";
+import { createElement } from '../../shared/add-element';
 
 export const makeFooter = () => {
   const html = `
@@ -15,10 +15,5 @@ export const makeFooter = () => {
   </div>
 </div>
   `;
-  createElement('footer', 'footer', html, 'body')
-}
-
-
-
-
-
+  createElement('footer', 'footer', html, 'body');
+};
