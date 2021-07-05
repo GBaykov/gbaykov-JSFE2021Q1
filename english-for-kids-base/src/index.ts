@@ -15,9 +15,6 @@ import { makeFooter } from './components/footer/footer';
 import { startGame } from './game/game-start';
 import { changeMode } from './game/change-mode';
 import './components/statistics/statistics.scss';
-import { makeStatistics } from './components/statistics/statistics';
-import DATA_OF_CARDS from './data';
-import { makeMenuElemActive } from './components/menu/active-menu';
 
 window.onload = () => {
   const bodyElement:HTMLElement | null = document.getElementById('body');
