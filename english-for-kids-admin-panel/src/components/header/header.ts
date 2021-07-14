@@ -7,6 +7,10 @@ export const makeHeader = () => {
         <span class="menu-bar-span"></span>
     </div>
 
+    <div class="registr-btn">
+      <p class="register-btn-text">Log In</p>
+    </div>
+
     <div class="game-switcher">
       <label  class="toggleSwitch large">
       <input class="mode" id="but" type="checkbox" checked >

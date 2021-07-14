@@ -15,20 +15,24 @@ import { makeFooter } from './components/footer/footer';
 import { startGame } from './game/game-start';
 import { changeMode } from './game/change-mode';
 import './components/statistics/statistics.scss';
+import { listenAdminScroll, makeAdminCategories } from './components/admin-panel/admin-categories';
+import  './components/admin-panel/admin.scss';
 
 window.onload = () => {
   const bodyElement:HTMLElement | null = document.getElementById('body');
   if (!bodyElement) throw Error('bodyElement not found');
-  makeMenu();
+  //makeMenu();
   makeHeader();
 
-  makeMainField();
-  listenMenu();
-  listenCards();
-  listenMusic();
-  chooseCategory();
+  makeAdminCategories()
+  listenAdminScroll()
+  //makeMainField();
+  //listenMenu();
+  //listenCards();
+  //listenMusic();
+  //chooseCategory();
   makeFooter();
-  startGame();
-  changeMode();
-  listenStatOfMeny();
+  //startGame();
+  //changeMode();
+  //listenStatOfMeny();
 };

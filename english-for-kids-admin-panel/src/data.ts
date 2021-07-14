@@ -1,53 +1,4 @@
-export const DATA_OF_CATEGORIES = [
-  {
-    ids: 0,
-    categ: 'actionA',
-    name: 'Action (set A)',
-    image: 'dance.jpg',
-  },
-  {
-    ids: 1,
-    categ: 'actionB',
-    name: 'Action (set B)',
-    image: 'play.jpg',
-  },
-  {
-    ids: 2,
-    categ: 'animalA',
-    name: 'Animal (set A)',
-    image: 'cat.jpg',
-  },
-  {
-    ids: 3,
-    categ: 'animalB',
-    name: 'Animal (set B)',
-    image: 'frog.jpg',
-  },
-  {
-    ids: 4,
-    categ: 'clothes',
-    name: 'Clothes',
-    image: 'boot.jpg',
-  },
-  {
-    ids: 5,
-    categ: 'emotions',
-    name: 'Emotions',
-    image: 'angry.jpg',
-  },
-  {
-    ids: 6,
-    categ: 'drinks',
-    name: 'Drinks',
-    image: 'milkshake.jpg',
-  },
-  {
-    ids: 7,
-    categ: 'food',
-    name: 'Food',
-    image: 'sandwich.jpg',
-  },
-];
+
 export type CARD = {
   category: string,
   word: string,
@@ -785,4 +736,64 @@ export const DATA_OF_CARDS:CATEGORY[] = [
       percentOfErrors: 0,
     },
   ],
+];
+
+
+export const DATA_OF_CATEGORIES = [
+  {
+    ids: 0,
+    categ: 'actionA',
+    name: 'Action (set A)',
+    image: 'dance.jpg',
+    length: DATA_OF_CARDS[0].length,
+  },
+  {
+    ids: 1,
+    categ: 'actionB',
+    name: 'Action (set B)',
+    image: 'play.jpg',
+    length: DATA_OF_CARDS[1].length,
+  },
+  {
+    ids: 2,
+    categ: 'animalA',
+    name: 'Animal (set A)',
+    image: 'cat.jpg',
+    length: DATA_OF_CARDS[2].length,
+  },
+  {
+    ids: 3,
+    categ: 'animalB',
+    name: 'Animal (set B)',
+    image: 'frog.jpg',
+    length: DATA_OF_CARDS[3].length,
+  },
+  {
+    ids: 4,
+    categ: 'clothes',
+    name: 'Clothes',
+    image: 'boot.jpg',
+    length: DATA_OF_CARDS[4].length,
+  },
+  {
+    ids: 5,
+    categ: 'emotions',
+    name: 'Emotions',
+    image: 'angry.jpg',
+    length: DATA_OF_CARDS[5].length,
+  },
+  {
+    ids: 6,
+    categ: 'drinks',
+    name: 'Drinks',
+    image: 'milkshake.jpg',
+    length: DATA_OF_CARDS[6].length,
+  },
+  {
+    ids: 7,
+    categ: 'food',
+    name: 'Food',
+    image: 'sandwich.jpg',
+    length: DATA_OF_CARDS[7].length,
+  },
 ];
