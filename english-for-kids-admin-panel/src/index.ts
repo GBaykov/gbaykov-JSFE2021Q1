@@ -17,20 +17,21 @@ import { changeMode } from './game/change-mode';
 import './components/statistics/statistics.scss';
 import { makeAdminCategories } from './components/admin-panel/admin-categories';
 import  './components/admin-panel/admin.scss';
+import { makeAdminWords } from './components/admin-panel/admin-words';
 
 window.onload = () => {
   const bodyElement:HTMLElement | null = document.getElementById('body');
   if (!bodyElement) throw Error('bodyElement not found');
   //makeMenu();
   makeHeader();
-
+  //makeAdminWords(0)
   makeAdminCategories()
   //listenAdminScroll()
   //makeMainField();
   //listenMenu();
   //listenCards();
   //listenMusic();
-  //chooseCategory();
+  chooseCategory();
   makeFooter();
   //startGame();
   //changeMode();

@@ -2,6 +2,8 @@ import { IMG_URL } from '../../constants';
 import { DATA_OF_CATEGORIES } from '../../data';
 import { CURRENT_STATE } from '../../game/current-state';
 import { deleteElement } from '../../shared/delete-element';
+import { makeAdminCategories } from '../admin-panel/admin-categories';
+import { makeAdminWords } from '../admin-panel/admin-words';
 import { makeCardField } from '../card/card-field';
 import { makeFooter } from '../footer/footer';
 import { makeMainField } from '../main-page/main-page';
@@ -32,10 +34,16 @@ export const chooseCategory = ():void => {
         makeMainField();
         makeFooter();
       } else {
-        makeCardField(id);
-        makeStartGameBtn();
-        makeFooter();
-        setBgImage(id);
+        if(target.classList.contains('menu-admin-elem')) {
+          makeAdminWords(id)
+         // makeFooter();
+        } else {
+          makeCardField(id);
+          makeStartGameBtn();
+          makeFooter();
+          setBgImage(id);
+        }
+
       }
     }
   });

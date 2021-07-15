@@ -4,10 +4,10 @@ import { createElement } from "../../shared/add-element";
 import { deleteElement } from "../../shared/delete-element";
 
 export const makeAdminCategoryCard = (ids:number | string, categ:string, name:string, length:number) => `
-<div class="card" id="card-${categ}-${ids}">
-  <div class="card__front" id="card-front-${ids}">
+<div class="card menu-element menu-admin-elem" id="card-${categ}-${ids}">
+  <div class="card__front menu-element menu-admin-elem" id="card-front-${ids}">
     <p class="card-cross"></p>
-    <div class="card-text-container admin-text" id="card-text-${ids}">
+    <div class="card-text-container admin-text menu-element menu-admin-elem" id="card-text-${ids}">
       <p class="card-name"><b>${name}</b></p>
       <p class="card-count">Words:${length}</p>
     </div>
