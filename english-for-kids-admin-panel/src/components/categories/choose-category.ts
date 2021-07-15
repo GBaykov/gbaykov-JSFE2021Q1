@@ -41,7 +41,7 @@ export const chooseCategory = ():void => {
           makeCardField(id);
           makeStartGameBtn();
           makeFooter();
-          setBgImage(id);
+          //setBgImage(id);
         }
 
       }
