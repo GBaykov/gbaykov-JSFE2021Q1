@@ -15,7 +15,7 @@ import { makeFooter } from './components/footer/footer';
 import { startGame } from './game/game-start';
 import { changeMode } from './game/change-mode';
 import './components/statistics/statistics.scss';
-import { listenAdminScroll, makeAdminCategories } from './components/admin-panel/admin-categories';
+import { makeAdminCategories } from './components/admin-panel/admin-categories';
 import  './components/admin-panel/admin.scss';
 
 window.onload = () => {
@@ -25,7 +25,7 @@ window.onload = () => {
   makeHeader();
 
   makeAdminCategories()
-  listenAdminScroll()
+  //listenAdminScroll()
   //makeMainField();
   //listenMenu();
   //listenCards();
