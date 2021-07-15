@@ -32,7 +32,7 @@ transform: translateZ(2rem);
   transform-origin: right;
   transition: all .5s;
   border-radius: .5rem;
-  border: 5px solid red;
+  border: 2px solid rgb(54, 53, 53);
 
   &.flipped{
     transform: rotateY(180deg) translateX(-100%);

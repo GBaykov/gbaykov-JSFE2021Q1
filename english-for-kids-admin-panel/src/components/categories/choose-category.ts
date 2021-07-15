@@ -36,7 +36,7 @@ export const chooseCategory = ():void => {
       } else {
         if(target.classList.contains('menu-admin-elem')) {
           makeAdminWords(id)
-         // makeFooter();
+          makeFooter();
         } else {
           makeCardField(id);
           makeStartGameBtn();
