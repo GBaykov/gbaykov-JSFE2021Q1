@@ -18,22 +18,24 @@ import './components/statistics/statistics.scss';
 import { makeAdminCategories } from './components/admin-panel/admin-categories';
 import  './components/admin-panel/admin.scss';
 import { makeAdminWords } from './components/admin-panel/admin-words';
+import { listenLogIn } from './components/admin-panel/listen-logIn';
 
 window.onload = () => {
   const bodyElement:HTMLElement | null = document.getElementById('body');
   if (!bodyElement) throw Error('bodyElement not found');
-  //makeMenu();
+  makeMenu();
   makeHeader();
-  //makeAdminWords(0)
+
   makeAdminCategories()
   //listenAdminScroll()
-  //makeMainField();
-  //listenMenu();
-  //listenCards();
-  //listenMusic();
+  makeMainField();
+  listenMenu();
+  listenCards();
+  listenMusic();
   chooseCategory();
   makeFooter();
-  //startGame();
-  //changeMode();
-  //listenStatOfMeny();
+  startGame();
+  changeMode();
+  listenStatOfMeny();
+  listenLogIn()
 };
